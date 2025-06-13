@@ -1,0 +1,24 @@
+[0.011s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo -- -j8 -l8
+[0.057s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo -- -j8 -l8
+[0.059s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo
+[0.067s] -- Install configuration: ""
+[0.067s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/launch
+[0.067s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/launch/gazebo.launch.py
+[0.067s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/worlds
+[0.067s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/worlds/empty.world
+[0.067s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/ament_index/resource_index/package_run_dependencies/annin_ar4_gazebo
+[0.067s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/ament_index/resource_index/parent_prefix_path/annin_ar4_gazebo
+[0.067s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/ament_prefix_path.sh
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/ament_prefix_path.dsv
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/path.sh
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/path.dsv
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.bash
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.sh
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.zsh
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.dsv
+[0.068s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/package.dsv
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/ament_index/resource_index/packages/annin_ar4_gazebo
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/cmake/annin_ar4_gazeboConfig.cmake
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/cmake/annin_ar4_gazeboConfig-version.cmake
+[0.068s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/package.xml
+[0.070s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo

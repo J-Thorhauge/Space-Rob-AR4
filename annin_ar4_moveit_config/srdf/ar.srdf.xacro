@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
   <xacro:arg name="include_gripper" default="true"/>
+  <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+  <xacro:arg name="ros2_control_hardware_type" default="mock_components" />
 
   <xacro:arg name="tf_prefix" default="" />
 
   <xacro:include filename="$(find annin_ar4_moveit_config)/srdf/ar_macro.srdf.xacro"/>
   <xacro:ar_srdf tf_prefix="$(arg tf_prefix)"/>
+
+  <!-- <xacro:ros2_control name="ArFakeSystem" initial_positions_file="$(arg initial_positions_file)" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/> -->
 
   <xacro:if value="$(arg include_gripper)">
     <xacro:include filename="$(find annin_ar4_moveit_config)/srdf/ar_gripper_macro.srdf.xacro"/>

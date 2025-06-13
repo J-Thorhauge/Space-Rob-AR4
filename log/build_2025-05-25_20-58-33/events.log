@@ -1,0 +1,1541 @@
+[0.000000] (-) TimerEvent: {}
+[0.000416] (annin_ar4_description) JobQueued: {'identifier': 'annin_ar4_description', 'dependencies': OrderedDict()}
+[0.000508] (moveit_servo) JobQueued: {'identifier': 'moveit_servo', 'dependencies': OrderedDict()}
+[0.000525] (annin_ar4_driver) JobQueued: {'identifier': 'annin_ar4_driver', 'dependencies': OrderedDict([('annin_ar4_description', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description')])}
+[0.000541] (annin_ar4_moveit_config) JobQueued: {'identifier': 'annin_ar4_moveit_config', 'dependencies': OrderedDict([('annin_ar4_description', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description')])}
+[0.000555] (annin_ar4_gazebo) JobQueued: {'identifier': 'annin_ar4_gazebo', 'dependencies': OrderedDict([('annin_ar4_description', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description'), ('annin_ar4_driver', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver')])}
+[0.000570] (annin_ar4_description) JobStarted: {'identifier': 'annin_ar4_description'}
+[0.005352] (moveit_servo) JobStarted: {'identifier': 'moveit_servo'}
+[0.009621] (annin_ar4_description) JobProgress: {'identifier': 'annin_ar4_description', 'progress': 'cmake'}
+[0.010241] (annin_ar4_description) JobProgress: {'identifier': 'annin_ar4_description', 'progress': 'build'}
+[0.010865] (annin_ar4_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_description', '--', '-j8', '-l8'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble')]), 'shell': False}
+[0.015101] (moveit_servo) JobProgress: {'identifier': 'moveit_servo', 'progress': 'cmake'}
+[0.015561] (moveit_servo) Command: {'cmd': ['/usr/bin/cmake', '/home/johnbuntu/ar4_ros_driver/moveit_servo', '-DCMAKE_INSTALL_PREFIX=/home/johnbuntu/ar4_ros_driver/install/moveit_servo'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/moveit_servo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/moveit_servo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble')]), 'shell': False}
+[0.048524] (annin_ar4_description) CommandEnded: {'returncode': 0}
+[0.049088] (annin_ar4_description) JobProgress: {'identifier': 'annin_ar4_description', 'progress': 'install'}
+[0.055853] (annin_ar4_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_description'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble')]), 'shell': False}
+[0.061927] (annin_ar4_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.062232] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes\n'}
+[0.062308] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4\n'}
+[0.062363] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_5.STL\n'}
+[0.062414] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_6.STL\n'}
+[0.062467] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_1.STL\n'}
+[0.062520] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_3.STL\n'}
+[0.062598] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_2.STL\n'}
+[0.062649] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_4.STL\n'}
+[0.062694] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/base_link.STL\n'}
+[0.062749] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3\n'}
+[0.062799] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_5.STL\n'}
+[0.062854] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_6.STL\n'}
+[0.062903] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_1.STL\n'}
+[0.062948] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_3.STL\n'}
+[0.063002] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_2.STL\n'}
+[0.063051] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_4.STL\n'}
+[0.063096] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/base_link.STL\n'}
+[0.063141] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_gripper\n'}
+[0.063185] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_gripper/gripper_jaw1_link.stl\n'}
+[0.063230] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_gripper/gripper_jaw2_link.stl\n'}
+[0.063275] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_gripper/gripper_base_link.stl\n'}
+[0.063425] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/urdf\n'}
+[0.063470] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/urdf/ar.urdf.xacro\n'}
+[0.063512] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_gazebo.urdf.xacro\n'}
+[0.063555] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_macro.xacro\n'}
+[0.063601] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_gripper_macro.xacro\n'}
+[0.063646] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/urdf/ar.ros2_control.xacro\n'}
+[0.063688] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_gripper.ros2_control.xacro\n'}
+[0.063754] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/config\n'}
+[0.063928] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/config/mk2.yaml\n'}
+[0.063980] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/config/mk1.yaml\n'}
+[0.064026] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/config/mk3.yaml\n'}
+[0.064070] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/ament_index/resource_index/package_run_dependencies/annin_ar4_description\n'}
+[0.064232] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/ament_index/resource_index/parent_prefix_path/annin_ar4_description\n'}
+[0.064288] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/environment/ament_prefix_path.sh\n'}
+[0.064334] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/environment/ament_prefix_path.dsv\n'}
+[0.064377] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/environment/path.sh\n'}
+[0.064420] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/environment/path.dsv\n'}
+[0.064464] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/local_setup.bash\n'}
+[0.064507] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/local_setup.sh\n'}
+[0.064550] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/local_setup.zsh\n'}
+[0.064614] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/local_setup.dsv\n'}
+[0.064754] (annin_ar4_description) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/package.dsv\n'}
+[0.064903] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/ament_index/resource_index/packages/annin_ar4_description\n'}
+[0.064949] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/cmake/annin_ar4_descriptionConfig.cmake\n'}
+[0.064993] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/cmake/annin_ar4_descriptionConfig-version.cmake\n'}
+[0.065036] (annin_ar4_description) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_description/share/annin_ar4_description/package.xml\n'}
+[0.065338] (annin_ar4_description) CommandEnded: {'returncode': 0}
+[0.080200] (annin_ar4_description) JobEnded: {'identifier': 'annin_ar4_description', 'rc': 0}
+[0.081183] (annin_ar4_driver) JobStarted: {'identifier': 'annin_ar4_driver'}
+[0.083743] (annin_ar4_moveit_config) JobStarted: {'identifier': 'annin_ar4_moveit_config'}
+[0.087490] (annin_ar4_driver) JobProgress: {'identifier': 'annin_ar4_driver', 'progress': 'cmake'}
+[0.088090] (annin_ar4_driver) JobProgress: {'identifier': 'annin_ar4_driver', 'progress': 'build'}
+[0.088482] (annin_ar4_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver', '--', '-j8', '-l8'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble')]), 'shell': False}
+[0.090518] (annin_ar4_moveit_config) JobProgress: {'identifier': 'annin_ar4_moveit_config', 'progress': 'cmake'}
+[0.091328] (annin_ar4_moveit_config) JobProgress: {'identifier': 'annin_ar4_moveit_config', 'progress': 'build'}
+[0.091720] (annin_ar4_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config', '--', '-j8', '-l8'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble')]), 'shell': False}
+[0.099696] (-) TimerEvent: {}
+[0.116778] (moveit_servo) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.127902] (annin_ar4_moveit_config) CommandEnded: {'returncode': 0}
+[0.128475] (annin_ar4_moveit_config) JobProgress: {'identifier': 'annin_ar4_moveit_config', 'progress': 'install'}
+[0.128674] (annin_ar4_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble')]), 'shell': False}
+[0.136014] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.136412] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config\n'}
+[0.136545] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/ompl_planning.yaml\n'}
+[0.137187] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/joint_limits.yaml\n'}
+[0.137562] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/ros2_controllers.yaml\n'}
+[0.137697] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/servo_config.yaml\n'}
+[0.137803] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/controllers.yaml\n'}
+[0.137933] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/pilz_planning.yaml\n'}
+[0.138002] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/kinematics.yaml\n'}
+[0.138053] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/launch\n'}
+[0.138107] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/launch/demo.launch.py\n'}
+[0.138155] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/launch/servo.launch.py\n'}
+[0.138202] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/launch/moveit.launch.py\n'}
+[0.138273] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/rviz\n'}
+[0.138331] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/rviz/moveit.rviz\n'}
+[0.138379] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/rviz/moveit_with_camera.rviz\n'}
+[0.138585] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/rviz/servo_rviz_config.rviz\n'}
+[0.138640] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf\n'}
+[0.138719] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf/ar_macro.srdf.xacro\n'}
+[0.138886] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf/ar.srdf.xacro\n'}
+[0.138969] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf/ar_gripper_macro.srdf.xacro\n'}
+[0.139053] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/urdf\n'}
+[0.139142] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/urdf/fake_ar.urdf.xacro\n'}
+[0.139220] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/ament_index/resource_index/package_run_dependencies/annin_ar4_moveit_config\n'}
+[0.139305] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/ament_index/resource_index/parent_prefix_path/annin_ar4_moveit_config\n'}
+[0.139386] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/ament_prefix_path.sh\n'}
+[0.139468] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/ament_prefix_path.dsv\n'}
+[0.139551] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/path.sh\n'}
+[0.139647] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/path.dsv\n'}
+[0.139747] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.bash\n'}
+[0.139901] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.sh\n'}
+[0.139996] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.zsh\n'}
+[0.140093] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.dsv\n'}
+[0.140335] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.dsv\n'}
+[0.140436] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/ament_index/resource_index/packages/annin_ar4_moveit_config\n'}
+[0.140522] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/cmake/annin_ar4_moveit_configConfig.cmake\n'}
+[0.140667] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/cmake/annin_ar4_moveit_configConfig-version.cmake\n'}
+[0.141562] (annin_ar4_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.xml\n'}
+[0.143008] (annin_ar4_moveit_config) CommandEnded: {'returncode': 0}
+[0.156184] (annin_ar4_moveit_config) JobEnded: {'identifier': 'annin_ar4_moveit_config', 'rc': 0}
+[0.161441] (annin_ar4_driver) StdoutLine: {'line': b'[ 71%] Built target annin_ar4_driver\n'}
+[0.171228] (moveit_servo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.178926] (moveit_servo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.195473] (annin_ar4_driver) StdoutLine: {'line': b'[100%] Built target run_arduino_nano\n'}
+[0.199798] (-) TimerEvent: {}
+[0.206585] (annin_ar4_driver) CommandEnded: {'returncode': 0}
+[0.207543] (annin_ar4_driver) JobProgress: {'identifier': 'annin_ar4_driver', 'progress': 'install'}
+[0.207916] (annin_ar4_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble')]), 'shell': False}
+[0.216328] (annin_ar4_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.216652] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib/annin_ar4_driver/run_arduino_nano\n'}
+[0.216917] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/hardware_interface_plugin.xml\n'}
+[0.217135] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib/libannin_ar4_driver.so\n'}
+[0.217313] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/include/annin_ar4_driver\n'}
+[0.217426] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver\n'}
+[0.217531] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/ar_hardware_interface.hpp\n'}
+[0.217614] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/arduino_nano_driver.hpp\n'}
+[0.217694] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/teensy_driver.hpp\n'}
+[0.217869] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/ar_servo_gripper_hw_interface.hpp\n'}
+[0.217984] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config\n'}
+[0.218066] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config/driver.yaml\n'}
+[0.218143] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config/controllers.yaml\n'}
+[0.218215] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config/joint_offsets\n'}
+[0.218302] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config/joint_offsets/mk2.yaml\n'}
+[0.218372] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config/joint_offsets/mk1.yaml\n'}
+[0.218480] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config/joint_offsets/mk3.yaml\n'}
+[0.218549] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/config/controller_update_rate.yaml\n'}
+[0.218620] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/launch\n'}
+[0.218688] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/launch/driver.launch.py\n'}
+[0.218799] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/urdf\n'}
+[0.218874] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/urdf/ar.urdf.xacro\n'}
+[0.218972] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib/annin_ar4_driver/reset_estop.sh\n'}
+[0.219046] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/environment/library_path.sh\n'}
+[0.219115] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/environment/library_path.dsv\n'}
+[0.219166] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/ament_index/resource_index/package_run_dependencies/annin_ar4_driver\n'}
+[0.219215] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/ament_index/resource_index/parent_prefix_path/annin_ar4_driver\n'}
+[0.219262] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/environment/ament_prefix_path.sh\n'}
+[0.219310] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/environment/ament_prefix_path.dsv\n'}
+[0.219357] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/environment/path.sh\n'}
+[0.219401] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/environment/path.dsv\n'}
+[0.219446] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.bash\n'}
+[0.219492] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.sh\n'}
+[0.219540] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.zsh\n'}
+[0.219632] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.dsv\n'}
+[0.219709] (annin_ar4_driver) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/package.dsv\n'}
+[0.219812] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/ament_index/resource_index/packages/annin_ar4_driver\n'}
+[0.219909] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/annin_ar4_driver\n'}
+[0.219993] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/cmake/export_annin_ar4_driverExport.cmake\n'}
+[0.220072] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/cmake/export_annin_ar4_driverExport-noconfig.cmake\n'}
+[0.220205] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.220312] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.220360] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/cmake/annin_ar4_driverConfig.cmake\n'}
+[0.220408] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/cmake/annin_ar4_driverConfig-version.cmake\n'}
+[0.220474] (annin_ar4_driver) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/share/annin_ar4_driver/package.xml\n'}
+[0.221210] (annin_ar4_driver) CommandEnded: {'returncode': 0}
+[0.242388] (annin_ar4_driver) JobEnded: {'identifier': 'annin_ar4_driver', 'rc': 0}
+[0.243483] (annin_ar4_gazebo) JobStarted: {'identifier': 'annin_ar4_gazebo'}
+[0.244316] (moveit_servo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.251577] (moveit_servo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.251942] (annin_ar4_gazebo) JobProgress: {'identifier': 'annin_ar4_gazebo', 'progress': 'cmake'}
+[0.251977] (moveit_servo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.252383] (annin_ar4_gazebo) JobProgress: {'identifier': 'annin_ar4_gazebo', 'progress': 'build'}
+[0.252669] (annin_ar4_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo', '--', '-j8', '-l8'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/opt/ros/humble')]), 'shell': False}
+[0.254071] (moveit_servo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.255185] (moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.284287] (annin_ar4_gazebo) CommandEnded: {'returncode': 0}
+[0.284953] (annin_ar4_gazebo) JobProgress: {'identifier': 'annin_ar4_gazebo', 'progress': 'install'}
+[0.285237] (annin_ar4_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_gazebo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/opt/ros/humble')]), 'shell': False}
+[0.291183] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.291446] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/launch\n'}
+[0.291512] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/launch/gazebo.launch.py\n'}
+[0.291562] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/worlds\n'}
+[0.291609] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/worlds/empty.world\n'}
+[0.291655] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/ament_index/resource_index/package_run_dependencies/annin_ar4_gazebo\n'}
+[0.291704] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/ament_index/resource_index/parent_prefix_path/annin_ar4_gazebo\n'}
+[0.291763] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/ament_prefix_path.sh\n'}
+[0.291812] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/ament_prefix_path.dsv\n'}
+[0.291889] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/path.sh\n'}
+[0.291995] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/path.dsv\n'}
+[0.292044] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.bash\n'}
+[0.292089] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.sh\n'}
+[0.292132] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.zsh\n'}
+[0.292193] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.dsv\n'}
+[0.292247] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/package.dsv\n'}
+[0.292296] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/ament_index/resource_index/packages/annin_ar4_gazebo\n'}
+[0.292344] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/cmake/annin_ar4_gazeboConfig.cmake\n'}
+[0.292392] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/cmake/annin_ar4_gazeboConfig-version.cmake\n'}
+[0.292473] (annin_ar4_gazebo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo/share/annin_ar4_gazebo/package.xml\n'}
+[0.294201] (annin_ar4_gazebo) CommandEnded: {'returncode': 0}
+[0.299914] (-) TimerEvent: {}
+[0.305335] (annin_ar4_gazebo) JobEnded: {'identifier': 'annin_ar4_gazebo', 'rc': 0}
+[0.324522] (moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.332554] (moveit_servo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.332759] (moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.333206] (moveit_servo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.335402] (moveit_servo) StdoutLine: {'line': b'-- Found moveit_common: 2.5.9 (/opt/ros/humble/share/moveit_common/cmake)\n'}
+[0.342217] (moveit_servo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400012] (-) TimerEvent: {}
+[0.478941] (moveit_servo) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.500122] (-) TimerEvent: {}
+[0.600389] (-) TimerEvent: {}
+[0.623092] (moveit_servo) StderrLine: {'line': b"\x1b[0mmoveit_servo: You did not request a specific build type: Choosing 'Release' for maximum performance\x1b[0m\n"}
+[0.624755] (moveit_servo) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.632850] (moveit_servo) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[0.634451] (moveit_servo) StdoutLine: {'line': b'-- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[0.668440] (moveit_servo) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.673118] (moveit_servo) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.680985] (moveit_servo) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.692300] (moveit_servo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700519] (-) TimerEvent: {}
+[0.706642] (moveit_servo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.800640] (-) TimerEvent: {}
+[0.826737] (moveit_servo) StdoutLine: {'line': b'-- Found control_toolbox: 3.6.1 (/opt/ros/humble/share/control_toolbox/cmake)\n'}
+[0.872759] (moveit_servo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.875664] (moveit_servo) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.900763] (-) TimerEvent: {}
+[0.959240] (moveit_servo) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.987200] (moveit_servo) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.000841] (-) TimerEvent: {}
+[1.035371] (moveit_servo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.049327] (moveit_servo) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.100923] (-) TimerEvent: {}
+[1.151013] (moveit_servo) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.151298] (moveit_servo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.201027] (-) TimerEvent: {}
+[1.254201] (moveit_servo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.255360] (moveit_servo) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.301114] (-) TimerEvent: {}
+[1.397696] (moveit_servo) StdoutLine: {'line': b'-- Found moveit_core: 2.5.9 (/opt/ros/humble/share/moveit_core/cmake)\n'}
+[1.401195] (-) TimerEvent: {}
+[1.425450] (moveit_servo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[1.461008] (moveit_servo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[1.501290] (-) TimerEvent: {}
+[1.529283] (moveit_servo) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[1.575439] (moveit_servo) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.601407] (-) TimerEvent: {}
+[1.701793] (-) TimerEvent: {}
+[1.749347] (moveit_servo) StdoutLine: {'line': b'-- Found moveit_ros_planning: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning/cmake)\n'}
+[1.754214] (moveit_servo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[1.778004] (moveit_servo) StdoutLine: {'line': b'-- Found std_srvs: 4.8.0 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[1.801888] (-) TimerEvent: {}
+[1.836089] (moveit_servo) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.837670] (moveit_servo) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.11 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.839294] (moveit_servo) StdoutLine: {'line': b'-- Found ros_testing: 0.4.0 (/opt/ros/humble/share/ros_testing/cmake)\n'}
+[1.841335] (moveit_servo) StdoutLine: {'line': b'-- Found launch_testing_ament_cmake: 1.0.8 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)\n'}
+[1.843232] (moveit_servo) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.861680] (moveit_servo) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.866446] (moveit_servo) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.866647] (moveit_servo) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.866707] (moveit_servo) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.866773] (moveit_servo) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.884573] (moveit_servo) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.888542] (moveit_servo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[1.901983] (-) TimerEvent: {}
+[1.945298] (moveit_servo) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.978291] (moveit_servo) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.979637] (moveit_servo) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/johnbuntu/ar4_ros_driver/moveit_servo/include\n'}
+[1.979825] (moveit_servo) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.980465] (moveit_servo) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.980976] (moveit_servo) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.981491] (moveit_servo) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.982763] (moveit_servo) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.002102] (-) TimerEvent: {}
+[2.102367] (-) TimerEvent: {}
+[2.124938] (moveit_servo) StdoutLine: {'line': b'-- Generating done\n'}
+[2.178746] (moveit_servo) StdoutLine: {'line': b'-- Build files have been written to: /home/johnbuntu/ar4_ros_driver/build/moveit_servo\n'}
+[2.195713] (moveit_servo) CommandEnded: {'returncode': 0}
+[2.196332] (moveit_servo) JobProgress: {'identifier': 'moveit_servo', 'progress': 'build'}
+[2.196748] (moveit_servo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/johnbuntu/ar4_ros_driver/build/moveit_servo', '--', '-j8', '-l8'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/moveit_servo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/moveit_servo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble')]), 'shell': False}
+[2.202472] (-) TimerEvent: {}
+[2.243998] (moveit_servo) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[2.245003] (moveit_servo) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/moveit_servo_lib_parameters.dir/src/parameter_descriptor_builder.cpp.o\x1b[0m\n'}
+[2.245627] (moveit_servo) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/moveit_servo_lib_parameters.dir/src/servo_parameters.cpp.o\x1b[0m\n'}
+[2.245825] (moveit_servo) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o\x1b[0m\n'}
+[2.246564] (moveit_servo) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[2.247290] (moveit_servo) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/fake_command_publisher.dir/test/publish_fake_jog_commands.cpp.o\x1b[0m\n'}
+[2.302592] (-) TimerEvent: {}
+[2.403156] (-) TimerEvent: {}
+[2.503472] (-) TimerEvent: {}
+[2.603811] (-) TimerEvent: {}
+[2.704181] (-) TimerEvent: {}
+[2.804816] (-) TimerEvent: {}
+[2.905177] (-) TimerEvent: {}
+[3.005577] (-) TimerEvent: {}
+[3.106285] (-) TimerEvent: {}
+[3.206844] (-) TimerEvent: {}
+[3.307531] (-) TimerEvent: {}
+[3.324445] (moveit_servo) StdoutLine: {'line': b'[ 21%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[3.358376] (moveit_servo) StdoutLine: {'line': b'[ 21%] Built target gtest_main\n'}
+[3.407634] (-) TimerEvent: {}
+[3.507954] (-) TimerEvent: {}
+[3.608288] (-) TimerEvent: {}
+[3.708807] (-) TimerEvent: {}
+[3.809148] (-) TimerEvent: {}
+[3.909504] (-) TimerEvent: {}
+[4.010023] (-) TimerEvent: {}
+[4.110417] (-) TimerEvent: {}
+[4.210759] (-) TimerEvent: {}
+[4.311088] (-) TimerEvent: {}
+[4.411598] (-) TimerEvent: {}
+[4.511957] (-) TimerEvent: {}
+[4.612288] (-) TimerEvent: {}
+[4.712718] (-) TimerEvent: {}
+[4.813255] (-) TimerEvent: {}
+[4.913631] (-) TimerEvent: {}
+[5.013990] (-) TimerEvent: {}
+[5.114363] (-) TimerEvent: {}
+[5.214708] (-) TimerEvent: {}
+[5.315064] (-) TimerEvent: {}
+[5.415413] (-) TimerEvent: {}
+[5.515962] (-) TimerEvent: {}
+[5.616435] (-) TimerEvent: {}
+[5.716792] (-) TimerEvent: {}
+[5.817142] (-) TimerEvent: {}
+[5.917487] (-) TimerEvent: {}
+[6.017812] (-) TimerEvent: {}
+[6.118214] (-) TimerEvent: {}
+[6.218619] (-) TimerEvent: {}
+[6.318991] (-) TimerEvent: {}
+[6.419350] (-) TimerEvent: {}
+[6.519691] (-) TimerEvent: {}
+[6.620073] (-) TimerEvent: {}
+[6.720425] (-) TimerEvent: {}
+[6.821669] (-) TimerEvent: {}
+[6.922150] (-) TimerEvent: {}
+[7.022771] (-) TimerEvent: {}
+[7.123119] (-) TimerEvent: {}
+[7.223622] (-) TimerEvent: {}
+[7.324160] (-) TimerEvent: {}
+[7.424659] (-) TimerEvent: {}
+[7.525024] (-) TimerEvent: {}
+[7.625893] (-) TimerEvent: {}
+[7.726628] (-) TimerEvent: {}
+[7.827082] (-) TimerEvent: {}
+[7.874656] (moveit_servo) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking CXX executable fake_command_publisher\x1b[0m\n'}
+[7.927199] (-) TimerEvent: {}
+[8.018239] (moveit_servo) StdoutLine: {'line': b'[ 24%] Built target fake_command_publisher\n'}
+[8.027316] (-) TimerEvent: {}
+[8.127615] (-) TimerEvent: {}
+[8.227908] (-) TimerEvent: {}
+[8.328257] (-) TimerEvent: {}
+[8.428562] (-) TimerEvent: {}
+[8.528818] (-) TimerEvent: {}
+[8.629079] (-) TimerEvent: {}
+[8.729385] (-) TimerEvent: {}
+[8.829748] (-) TimerEvent: {}
+[8.930160] (-) TimerEvent: {}
+[9.030493] (-) TimerEvent: {}
+[9.130893] (-) TimerEvent: {}
+[9.231236] (-) TimerEvent: {}
+[9.331562] (-) TimerEvent: {}
+[9.431925] (-) TimerEvent: {}
+[9.532264] (-) TimerEvent: {}
+[9.632627] (-) TimerEvent: {}
+[9.732994] (-) TimerEvent: {}
+[9.833600] (-) TimerEvent: {}
+[9.934015] (-) TimerEvent: {}
+[10.034418] (-) TimerEvent: {}
+[10.134779] (-) TimerEvent: {}
+[10.235107] (-) TimerEvent: {}
+[10.335416] (-) TimerEvent: {}
+[10.435760] (-) TimerEvent: {}
+[10.536142] (-) TimerEvent: {}
+[10.636480] (-) TimerEvent: {}
+[10.681541] (moveit_servo) StdoutLine: {'line': b'[ 27%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[10.718320] (moveit_servo) StdoutLine: {'line': b'[ 27%] Built target gtest\n'}
+[10.736593] (-) TimerEvent: {}
+[10.836947] (-) TimerEvent: {}
+[10.937267] (-) TimerEvent: {}
+[11.037583] (-) TimerEvent: {}
+[11.137917] (-) TimerEvent: {}
+[11.238220] (-) TimerEvent: {}
+[11.338524] (-) TimerEvent: {}
+[11.438883] (-) TimerEvent: {}
+[11.539216] (-) TimerEvent: {}
+[11.639577] (-) TimerEvent: {}
+[11.739917] (-) TimerEvent: {}
+[11.840224] (-) TimerEvent: {}
+[11.940570] (-) TimerEvent: {}
+[12.041228] (-) TimerEvent: {}
+[12.141589] (-) TimerEvent: {}
+[12.242000] (-) TimerEvent: {}
+[12.342344] (-) TimerEvent: {}
+[12.442694] (-) TimerEvent: {}
+[12.543015] (-) TimerEvent: {}
+[12.643319] (-) TimerEvent: {}
+[12.743669] (-) TimerEvent: {}
+[12.843985] (-) TimerEvent: {}
+[12.944306] (-) TimerEvent: {}
+[13.044617] (-) TimerEvent: {}
+[13.144886] (-) TimerEvent: {}
+[13.245160] (-) TimerEvent: {}
+[13.345454] (-) TimerEvent: {}
+[13.445742] (-) TimerEvent: {}
+[13.546068] (-) TimerEvent: {}
+[13.646373] (-) TimerEvent: {}
+[13.746646] (-) TimerEvent: {}
+[13.820289] (moveit_servo) StdoutLine: {'line': b'[ 30%] \x1b[32m\x1b[1mLinking CXX shared library libmoveit_servo_lib_parameters.so\x1b[0m\n'}
+[13.846814] (-) TimerEvent: {}
+[13.947217] (-) TimerEvent: {}
+[14.005835] (moveit_servo) StdoutLine: {'line': b'[ 30%] Built target moveit_servo_lib_parameters\n'}
+[14.028575] (moveit_servo) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/test_servo_integration.dir/test/test_servo_interface.cpp.o\x1b[0m\n'}
+[14.030055] (moveit_servo) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/test_servo_collision.dir/test/test_servo_collision.cpp.o\x1b[0m\n'}
+[14.030329] (moveit_servo) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/utilities.cpp.o\x1b[0m\n'}
+[14.030625] (moveit_servo) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/servo.cpp.o\x1b[0m\n'}
+[14.031345] (moveit_servo) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/enforce_limits.cpp.o\x1b[0m\n'}
+[14.031889] (moveit_servo) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/servo_calcs.cpp.o\x1b[0m\n'}
+[14.033552] (moveit_servo) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/collision_check.cpp.o\x1b[0m\n'}
+[14.048819] (-) TimerEvent: {}
+[14.149230] (-) TimerEvent: {}
+[14.251295] (-) TimerEvent: {}
+[14.351702] (-) TimerEvent: {}
+[14.453907] (-) TimerEvent: {}
+[14.554249] (-) TimerEvent: {}
+[14.654549] (-) TimerEvent: {}
+[14.755039] (-) TimerEvent: {}
+[14.857872] (-) TimerEvent: {}
+[14.958565] (-) TimerEvent: {}
+[15.059169] (-) TimerEvent: {}
+[15.160971] (-) TimerEvent: {}
+[15.261390] (-) TimerEvent: {}
+[15.361937] (-) TimerEvent: {}
+[15.463167] (-) TimerEvent: {}
+[15.563887] (-) TimerEvent: {}
+[15.666155] (-) TimerEvent: {}
+[15.766601] (-) TimerEvent: {}
+[15.869923] (-) TimerEvent: {}
+[15.970667] (-) TimerEvent: {}
+[15.974019] (moveit_servo) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libservo_controller_input.so\x1b[0m\n'}
+[16.070811] (-) TimerEvent: {}
+[16.171904] (-) TimerEvent: {}
+[16.274340] (-) TimerEvent: {}
+[16.374698] (-) TimerEvent: {}
+[16.478822] (-) TimerEvent: {}
+[16.579207] (-) TimerEvent: {}
+[16.679568] (-) TimerEvent: {}
+[16.779975] (-) TimerEvent: {}
+[16.883815] (-) TimerEvent: {}
+[16.924001] (moveit_servo) StdoutLine: {'line': b'[ 54%] Built target servo_controller_input\n'}
+[16.983928] (-) TimerEvent: {}
+[17.084306] (-) TimerEvent: {}
+[17.184955] (-) TimerEvent: {}
+[17.286806] (-) TimerEvent: {}
+[17.387202] (-) TimerEvent: {}
+[17.487916] (-) TimerEvent: {}
+[17.588481] (-) TimerEvent: {}
+[17.689061] (-) TimerEvent: {}
+[17.789765] (-) TimerEvent: {}
+[17.891368] (-) TimerEvent: {}
+[17.992836] (-) TimerEvent: {}
+[18.093349] (-) TimerEvent: {}
+[18.193896] (-) TimerEvent: {}
+[18.294263] (-) TimerEvent: {}
+[18.394681] (-) TimerEvent: {}
+[18.495261] (-) TimerEvent: {}
+[18.597384] (-) TimerEvent: {}
+[18.698795] (-) TimerEvent: {}
+[18.799744] (-) TimerEvent: {}
+[18.901768] (-) TimerEvent: {}
+[19.002191] (-) TimerEvent: {}
+[19.103346] (-) TimerEvent: {}
+[19.205579] (-) TimerEvent: {}
+[19.306617] (-) TimerEvent: {}
+[19.408260] (-) TimerEvent: {}
+[19.508636] (-) TimerEvent: {}
+[19.610486] (-) TimerEvent: {}
+[19.710844] (-) TimerEvent: {}
+[19.813195] (-) TimerEvent: {}
+[19.914832] (-) TimerEvent: {}
+[20.015630] (-) TimerEvent: {}
+[20.116099] (-) TimerEvent: {}
+[20.216452] (-) TimerEvent: {}
+[20.316818] (-) TimerEvent: {}
+[20.417559] (-) TimerEvent: {}
+[20.518073] (-) TimerEvent: {}
+[20.619563] (-) TimerEvent: {}
+[20.721445] (-) TimerEvent: {}
+[20.821874] (-) TimerEvent: {}
+[20.922426] (-) TimerEvent: {}
+[21.023376] (-) TimerEvent: {}
+[21.124809] (-) TimerEvent: {}
+[21.228667] (-) TimerEvent: {}
+[21.329603] (-) TimerEvent: {}
+[21.430703] (-) TimerEvent: {}
+[21.531995] (-) TimerEvent: {}
+[21.632796] (-) TimerEvent: {}
+[21.734745] (-) TimerEvent: {}
+[21.835392] (-) TimerEvent: {}
+[21.936097] (-) TimerEvent: {}
+[22.036880] (-) TimerEvent: {}
+[22.137411] (-) TimerEvent: {}
+[22.237986] (-) TimerEvent: {}
+[22.338566] (-) TimerEvent: {}
+[22.438966] (-) TimerEvent: {}
+[22.539310] (-) TimerEvent: {}
+[22.639720] (-) TimerEvent: {}
+[22.740229] (-) TimerEvent: {}
+[22.840586] (-) TimerEvent: {}
+[22.940991] (-) TimerEvent: {}
+[23.042201] (-) TimerEvent: {}
+[23.143312] (-) TimerEvent: {}
+[23.244909] (-) TimerEvent: {}
+[23.345507] (-) TimerEvent: {}
+[23.446097] (-) TimerEvent: {}
+[23.546671] (-) TimerEvent: {}
+[23.647097] (-) TimerEvent: {}
+[23.747521] (-) TimerEvent: {}
+[23.848220] (-) TimerEvent: {}
+[23.948933] (-) TimerEvent: {}
+[24.049297] (-) TimerEvent: {}
+[24.150145] (-) TimerEvent: {}
+[24.250538] (-) TimerEvent: {}
+[24.351003] (-) TimerEvent: {}
+[24.453869] (-) TimerEvent: {}
+[24.554752] (-) TimerEvent: {}
+[24.655314] (-) TimerEvent: {}
+[24.755678] (-) TimerEvent: {}
+[24.856089] (-) TimerEvent: {}
+[24.956480] (-) TimerEvent: {}
+[25.057725] (-) TimerEvent: {}
+[25.158225] (-) TimerEvent: {}
+[25.260038] (-) TimerEvent: {}
+[25.360903] (-) TimerEvent: {}
+[25.461291] (-) TimerEvent: {}
+[25.561891] (-) TimerEvent: {}
+[25.662703] (-) TimerEvent: {}
+[25.763269] (-) TimerEvent: {}
+[25.866884] (-) TimerEvent: {}
+[25.967841] (-) TimerEvent: {}
+[26.068445] (-) TimerEvent: {}
+[26.168831] (-) TimerEvent: {}
+[26.269248] (-) TimerEvent: {}
+[26.370093] (-) TimerEvent: {}
+[26.470828] (-) TimerEvent: {}
+[26.571447] (-) TimerEvent: {}
+[26.673267] (-) TimerEvent: {}
+[26.773667] (-) TimerEvent: {}
+[26.874337] (-) TimerEvent: {}
+[26.974744] (-) TimerEvent: {}
+[27.075128] (-) TimerEvent: {}
+[27.177095] (-) TimerEvent: {}
+[27.277711] (-) TimerEvent: {}
+[27.378840] (-) TimerEvent: {}
+[27.479285] (-) TimerEvent: {}
+[27.579813] (-) TimerEvent: {}
+[27.680651] (-) TimerEvent: {}
+[27.781091] (-) TimerEvent: {}
+[27.881876] (-) TimerEvent: {}
+[27.982404] (-) TimerEvent: {}
+[28.082889] (-) TimerEvent: {}
+[28.183263] (-) TimerEvent: {}
+[28.283634] (-) TimerEvent: {}
+[28.384024] (-) TimerEvent: {}
+[28.485499] (-) TimerEvent: {}
+[28.586412] (-) TimerEvent: {}
+[28.687286] (-) TimerEvent: {}
+[28.787724] (-) TimerEvent: {}
+[28.888326] (-) TimerEvent: {}
+[28.988853] (-) TimerEvent: {}
+[29.089249] (-) TimerEvent: {}
+[29.189679] (-) TimerEvent: {}
+[29.290486] (-) TimerEvent: {}
+[29.390894] (-) TimerEvent: {}
+[29.491263] (-) TimerEvent: {}
+[29.591779] (-) TimerEvent: {}
+[29.694515] (-) TimerEvent: {}
+[29.795040] (-) TimerEvent: {}
+[29.895629] (-) TimerEvent: {}
+[29.996860] (-) TimerEvent: {}
+[30.097198] (-) TimerEvent: {}
+[30.197553] (-) TimerEvent: {}
+[30.298082] (-) TimerEvent: {}
+[30.401242] (-) TimerEvent: {}
+[30.501629] (-) TimerEvent: {}
+[30.602486] (-) TimerEvent: {}
+[30.703590] (-) TimerEvent: {}
+[30.806063] (-) TimerEvent: {}
+[30.906563] (-) TimerEvent: {}
+[31.007840] (-) TimerEvent: {}
+[31.108220] (-) TimerEvent: {}
+[31.209633] (-) TimerEvent: {}
+[31.310359] (-) TimerEvent: {}
+[31.410924] (-) TimerEvent: {}
+[31.511476] (-) TimerEvent: {}
+[31.612168] (-) TimerEvent: {}
+[31.712549] (-) TimerEvent: {}
+[31.814005] (-) TimerEvent: {}
+[31.915130] (-) TimerEvent: {}
+[32.017883] (-) TimerEvent: {}
+[32.118244] (-) TimerEvent: {}
+[32.218614] (-) TimerEvent: {}
+[32.318995] (-) TimerEvent: {}
+[32.419371] (-) TimerEvent: {}
+[32.519753] (-) TimerEvent: {}
+[32.620670] (-) TimerEvent: {}
+[32.721013] (-) TimerEvent: {}
+[32.821614] (-) TimerEvent: {}
+[32.922825] (-) TimerEvent: {}
+[33.024942] (-) TimerEvent: {}
+[33.125597] (-) TimerEvent: {}
+[33.226353] (-) TimerEvent: {}
+[33.326820] (-) TimerEvent: {}
+[33.427311] (-) TimerEvent: {}
+[33.528040] (-) TimerEvent: {}
+[33.628420] (-) TimerEvent: {}
+[33.728797] (-) TimerEvent: {}
+[33.829193] (-) TimerEvent: {}
+[33.929671] (-) TimerEvent: {}
+[34.030142] (-) TimerEvent: {}
+[34.130510] (-) TimerEvent: {}
+[34.230894] (-) TimerEvent: {}
+[34.331270] (-) TimerEvent: {}
+[34.431643] (-) TimerEvent: {}
+[34.532017] (-) TimerEvent: {}
+[34.632403] (-) TimerEvent: {}
+[34.732789] (-) TimerEvent: {}
+[34.833176] (-) TimerEvent: {}
+[34.933543] (-) TimerEvent: {}
+[35.033925] (-) TimerEvent: {}
+[35.134310] (-) TimerEvent: {}
+[35.234673] (-) TimerEvent: {}
+[35.335049] (-) TimerEvent: {}
+[35.435407] (-) TimerEvent: {}
+[35.535774] (-) TimerEvent: {}
+[35.636124] (-) TimerEvent: {}
+[35.736560] (-) TimerEvent: {}
+[35.836981] (-) TimerEvent: {}
+[35.937414] (-) TimerEvent: {}
+[36.037872] (-) TimerEvent: {}
+[36.138392] (-) TimerEvent: {}
+[36.238789] (-) TimerEvent: {}
+[36.339126] (-) TimerEvent: {}
+[36.439489] (-) TimerEvent: {}
+[36.539966] (-) TimerEvent: {}
+[36.640488] (-) TimerEvent: {}
+[36.740948] (-) TimerEvent: {}
+[36.841656] (-) TimerEvent: {}
+[36.942280] (-) TimerEvent: {}
+[37.042601] (-) TimerEvent: {}
+[37.143039] (-) TimerEvent: {}
+[37.243421] (-) TimerEvent: {}
+[37.343819] (-) TimerEvent: {}
+[37.444204] (-) TimerEvent: {}
+[37.544659] (-) TimerEvent: {}
+[37.645209] (-) TimerEvent: {}
+[37.745583] (-) TimerEvent: {}
+[37.845903] (-) TimerEvent: {}
+[37.946253] (-) TimerEvent: {}
+[38.046600] (-) TimerEvent: {}
+[38.146952] (-) TimerEvent: {}
+[38.247319] (-) TimerEvent: {}
+[38.347664] (-) TimerEvent: {}
+[38.448015] (-) TimerEvent: {}
+[38.548386] (-) TimerEvent: {}
+[38.648766] (-) TimerEvent: {}
+[38.749133] (-) TimerEvent: {}
+[38.849549] (-) TimerEvent: {}
+[38.949927] (-) TimerEvent: {}
+[39.050342] (-) TimerEvent: {}
+[39.150740] (-) TimerEvent: {}
+[39.251084] (-) TimerEvent: {}
+[39.351451] (-) TimerEvent: {}
+[39.451771] (-) TimerEvent: {}
+[39.552052] (-) TimerEvent: {}
+[39.652422] (-) TimerEvent: {}
+[39.752749] (-) TimerEvent: {}
+[39.853131] (-) TimerEvent: {}
+[39.953550] (-) TimerEvent: {}
+[40.053936] (-) TimerEvent: {}
+[40.154287] (-) TimerEvent: {}
+[40.255813] (-) TimerEvent: {}
+[40.356178] (-) TimerEvent: {}
+[40.456471] (-) TimerEvent: {}
+[40.556873] (-) TimerEvent: {}
+[40.657280] (-) TimerEvent: {}
+[40.757643] (-) TimerEvent: {}
+[40.857992] (-) TimerEvent: {}
+[40.958323] (-) TimerEvent: {}
+[41.058646] (-) TimerEvent: {}
+[41.158940] (-) TimerEvent: {}
+[41.259233] (-) TimerEvent: {}
+[41.359525] (-) TimerEvent: {}
+[41.459858] (-) TimerEvent: {}
+[41.560229] (-) TimerEvent: {}
+[41.660597] (-) TimerEvent: {}
+[41.761030] (-) TimerEvent: {}
+[41.861467] (-) TimerEvent: {}
+[41.961899] (-) TimerEvent: {}
+[42.062222] (-) TimerEvent: {}
+[42.162475] (-) TimerEvent: {}
+[42.262792] (-) TimerEvent: {}
+[42.363059] (-) TimerEvent: {}
+[42.463346] (-) TimerEvent: {}
+[42.563636] (-) TimerEvent: {}
+[42.663921] (-) TimerEvent: {}
+[42.764227] (-) TimerEvent: {}
+[42.864519] (-) TimerEvent: {}
+[42.964814] (-) TimerEvent: {}
+[43.065110] (-) TimerEvent: {}
+[43.165390] (-) TimerEvent: {}
+[43.265668] (-) TimerEvent: {}
+[43.365975] (-) TimerEvent: {}
+[43.466272] (-) TimerEvent: {}
+[43.566603] (-) TimerEvent: {}
+[43.666951] (-) TimerEvent: {}
+[43.767292] (-) TimerEvent: {}
+[43.867622] (-) TimerEvent: {}
+[43.968010] (-) TimerEvent: {}
+[44.068341] (-) TimerEvent: {}
+[44.168918] (-) TimerEvent: {}
+[44.269362] (-) TimerEvent: {}
+[44.369691] (-) TimerEvent: {}
+[44.470028] (-) TimerEvent: {}
+[44.570348] (-) TimerEvent: {}
+[44.670647] (-) TimerEvent: {}
+[44.770933] (-) TimerEvent: {}
+[44.871240] (-) TimerEvent: {}
+[44.971535] (-) TimerEvent: {}
+[45.071785] (-) TimerEvent: {}
+[45.172099] (-) TimerEvent: {}
+[45.272398] (-) TimerEvent: {}
+[45.372698] (-) TimerEvent: {}
+[45.472998] (-) TimerEvent: {}
+[45.573347] (-) TimerEvent: {}
+[45.673790] (-) TimerEvent: {}
+[45.774178] (-) TimerEvent: {}
+[45.874470] (-) TimerEvent: {}
+[45.974771] (-) TimerEvent: {}
+[46.075045] (-) TimerEvent: {}
+[46.175344] (-) TimerEvent: {}
+[46.275644] (-) TimerEvent: {}
+[46.375935] (-) TimerEvent: {}
+[46.476230] (-) TimerEvent: {}
+[46.576589] (-) TimerEvent: {}
+[46.676934] (-) TimerEvent: {}
+[46.777249] (-) TimerEvent: {}
+[46.877598] (-) TimerEvent: {}
+[46.977888] (-) TimerEvent: {}
+[47.078206] (-) TimerEvent: {}
+[47.178547] (-) TimerEvent: {}
+[47.278865] (-) TimerEvent: {}
+[47.379129] (-) TimerEvent: {}
+[47.479407] (-) TimerEvent: {}
+[47.579701] (-) TimerEvent: {}
+[47.680025] (-) TimerEvent: {}
+[47.780326] (-) TimerEvent: {}
+[47.880640] (-) TimerEvent: {}
+[47.981080] (-) TimerEvent: {}
+[48.081465] (-) TimerEvent: {}
+[48.181832] (-) TimerEvent: {}
+[48.282161] (-) TimerEvent: {}
+[48.382494] (-) TimerEvent: {}
+[48.482804] (-) TimerEvent: {}
+[48.583130] (-) TimerEvent: {}
+[48.683464] (-) TimerEvent: {}
+[48.783805] (-) TimerEvent: {}
+[48.884140] (-) TimerEvent: {}
+[48.984479] (-) TimerEvent: {}
+[49.084809] (-) TimerEvent: {}
+[49.185144] (-) TimerEvent: {}
+[49.285511] (-) TimerEvent: {}
+[49.385910] (-) TimerEvent: {}
+[49.486309] (-) TimerEvent: {}
+[49.586650] (-) TimerEvent: {}
+[49.687011] (-) TimerEvent: {}
+[49.787346] (-) TimerEvent: {}
+[49.887683] (-) TimerEvent: {}
+[49.988049] (-) TimerEvent: {}
+[50.088404] (-) TimerEvent: {}
+[50.188847] (-) TimerEvent: {}
+[50.289213] (-) TimerEvent: {}
+[50.389569] (-) TimerEvent: {}
+[50.489965] (-) TimerEvent: {}
+[50.590303] (-) TimerEvent: {}
+[50.690620] (-) TimerEvent: {}
+[50.790945] (-) TimerEvent: {}
+[50.891231] (-) TimerEvent: {}
+[50.991577] (-) TimerEvent: {}
+[51.091907] (-) TimerEvent: {}
+[51.192229] (-) TimerEvent: {}
+[51.292553] (-) TimerEvent: {}
+[51.392924] (-) TimerEvent: {}
+[51.493373] (-) TimerEvent: {}
+[51.593887] (-) TimerEvent: {}
+[51.694292] (-) TimerEvent: {}
+[51.794627] (-) TimerEvent: {}
+[51.894932] (-) TimerEvent: {}
+[51.995213] (-) TimerEvent: {}
+[52.095536] (-) TimerEvent: {}
+[52.195820] (-) TimerEvent: {}
+[52.296127] (-) TimerEvent: {}
+[52.368101] (moveit_servo) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX executable test_servo_collision\x1b[0m\n'}
+[52.396267] (-) TimerEvent: {}
+[52.496625] (-) TimerEvent: {}
+[52.596981] (-) TimerEvent: {}
+[52.697384] (-) TimerEvent: {}
+[52.796223] (moveit_servo) StdoutLine: {'line': b'[ 57%] Built target test_servo_collision\n'}
+[52.797478] (-) TimerEvent: {}
+[52.897765] (-) TimerEvent: {}
+[52.998098] (-) TimerEvent: {}
+[53.098391] (-) TimerEvent: {}
+[53.198709] (-) TimerEvent: {}
+[53.298989] (-) TimerEvent: {}
+[53.399358] (-) TimerEvent: {}
+[53.499683] (-) TimerEvent: {}
+[53.600008] (-) TimerEvent: {}
+[53.700296] (-) TimerEvent: {}
+[53.800626] (-) TimerEvent: {}
+[53.900976] (-) TimerEvent: {}
+[54.001372] (-) TimerEvent: {}
+[54.101737] (-) TimerEvent: {}
+[54.202029] (-) TimerEvent: {}
+[54.302324] (-) TimerEvent: {}
+[54.402628] (-) TimerEvent: {}
+[54.502942] (-) TimerEvent: {}
+[54.603253] (-) TimerEvent: {}
+[54.703568] (-) TimerEvent: {}
+[54.803866] (-) TimerEvent: {}
+[54.904180] (-) TimerEvent: {}
+[55.004490] (-) TimerEvent: {}
+[55.104800] (-) TimerEvent: {}
+[55.205162] (-) TimerEvent: {}
+[55.305571] (-) TimerEvent: {}
+[55.405904] (-) TimerEvent: {}
+[55.506225] (-) TimerEvent: {}
+[55.606532] (-) TimerEvent: {}
+[55.706808] (-) TimerEvent: {}
+[55.807113] (-) TimerEvent: {}
+[55.834264] (moveit_servo) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX executable test_servo_integration\x1b[0m\n'}
+[55.907238] (-) TimerEvent: {}
+[56.007596] (-) TimerEvent: {}
+[56.107977] (-) TimerEvent: {}
+[56.208342] (-) TimerEvent: {}
+[56.268646] (moveit_servo) StdoutLine: {'line': b'[ 60%] Built target test_servo_integration\n'}
+[56.308510] (-) TimerEvent: {}
+[56.408905] (-) TimerEvent: {}
+[56.509217] (-) TimerEvent: {}
+[56.609535] (-) TimerEvent: {}
+[56.709928] (-) TimerEvent: {}
+[56.810274] (-) TimerEvent: {}
+[56.910555] (-) TimerEvent: {}
+[57.010881] (-) TimerEvent: {}
+[57.111177] (-) TimerEvent: {}
+[57.211466] (-) TimerEvent: {}
+[57.311744] (-) TimerEvent: {}
+[57.412010] (-) TimerEvent: {}
+[57.512295] (-) TimerEvent: {}
+[57.612598] (-) TimerEvent: {}
+[57.712875] (-) TimerEvent: {}
+[57.813167] (-) TimerEvent: {}
+[57.913445] (-) TimerEvent: {}
+[58.013719] (-) TimerEvent: {}
+[58.113971] (-) TimerEvent: {}
+[58.214211] (-) TimerEvent: {}
+[58.314552] (-) TimerEvent: {}
+[58.414819] (-) TimerEvent: {}
+[58.515111] (-) TimerEvent: {}
+[58.615362] (-) TimerEvent: {}
+[58.715646] (-) TimerEvent: {}
+[58.815928] (-) TimerEvent: {}
+[58.916208] (-) TimerEvent: {}
+[59.016521] (-) TimerEvent: {}
+[59.116849] (-) TimerEvent: {}
+[59.217139] (-) TimerEvent: {}
+[59.317431] (-) TimerEvent: {}
+[59.417712] (-) TimerEvent: {}
+[59.518004] (-) TimerEvent: {}
+[59.618322] (-) TimerEvent: {}
+[59.718610] (-) TimerEvent: {}
+[59.818895] (-) TimerEvent: {}
+[59.919163] (-) TimerEvent: {}
+[60.019450] (-) TimerEvent: {}
+[60.119751] (-) TimerEvent: {}
+[60.220043] (-) TimerEvent: {}
+[60.320317] (-) TimerEvent: {}
+[60.420886] (-) TimerEvent: {}
+[60.521445] (-) TimerEvent: {}
+[60.621777] (-) TimerEvent: {}
+[60.722030] (-) TimerEvent: {}
+[60.822311] (-) TimerEvent: {}
+[60.922589] (-) TimerEvent: {}
+[61.022855] (-) TimerEvent: {}
+[61.123120] (-) TimerEvent: {}
+[61.223408] (-) TimerEvent: {}
+[61.323701] (-) TimerEvent: {}
+[61.424098] (-) TimerEvent: {}
+[61.524381] (-) TimerEvent: {}
+[61.624668] (-) TimerEvent: {}
+[61.724937] (-) TimerEvent: {}
+[61.825300] (-) TimerEvent: {}
+[61.925621] (-) TimerEvent: {}
+[62.025936] (-) TimerEvent: {}
+[62.126261] (-) TimerEvent: {}
+[62.226550] (-) TimerEvent: {}
+[62.326819] (-) TimerEvent: {}
+[62.427103] (-) TimerEvent: {}
+[62.527429] (-) TimerEvent: {}
+[62.627726] (-) TimerEvent: {}
+[62.728131] (-) TimerEvent: {}
+[62.828532] (-) TimerEvent: {}
+[62.928856] (-) TimerEvent: {}
+[63.029166] (-) TimerEvent: {}
+[63.129470] (-) TimerEvent: {}
+[63.229835] (-) TimerEvent: {}
+[63.330181] (-) TimerEvent: {}
+[63.430469] (-) TimerEvent: {}
+[63.530713] (-) TimerEvent: {}
+[63.630993] (-) TimerEvent: {}
+[63.731306] (-) TimerEvent: {}
+[63.831578] (-) TimerEvent: {}
+[63.931868] (-) TimerEvent: {}
+[64.032170] (-) TimerEvent: {}
+[64.132501] (-) TimerEvent: {}
+[64.232783] (-) TimerEvent: {}
+[64.333126] (-) TimerEvent: {}
+[64.433434] (-) TimerEvent: {}
+[64.533755] (-) TimerEvent: {}
+[64.634030] (-) TimerEvent: {}
+[64.734383] (-) TimerEvent: {}
+[64.834679] (-) TimerEvent: {}
+[64.934951] (-) TimerEvent: {}
+[65.035226] (-) TimerEvent: {}
+[65.135515] (-) TimerEvent: {}
+[65.235858] (-) TimerEvent: {}
+[65.336169] (-) TimerEvent: {}
+[65.436479] (-) TimerEvent: {}
+[65.536816] (-) TimerEvent: {}
+[65.637083] (-) TimerEvent: {}
+[65.737407] (-) TimerEvent: {}
+[65.837712] (-) TimerEvent: {}
+[65.937974] (-) TimerEvent: {}
+[66.038281] (-) TimerEvent: {}
+[66.138584] (-) TimerEvent: {}
+[66.238877] (-) TimerEvent: {}
+[66.339204] (-) TimerEvent: {}
+[66.439476] (-) TimerEvent: {}
+[66.539792] (-) TimerEvent: {}
+[66.640125] (-) TimerEvent: {}
+[66.740475] (-) TimerEvent: {}
+[66.840797] (-) TimerEvent: {}
+[66.941113] (-) TimerEvent: {}
+[67.041540] (-) TimerEvent: {}
+[67.141952] (-) TimerEvent: {}
+[67.242324] (-) TimerEvent: {}
+[67.342599] (-) TimerEvent: {}
+[67.442847] (-) TimerEvent: {}
+[67.543198] (-) TimerEvent: {}
+[67.643563] (-) TimerEvent: {}
+[67.743820] (-) TimerEvent: {}
+[67.844107] (-) TimerEvent: {}
+[67.944499] (-) TimerEvent: {}
+[68.044848] (-) TimerEvent: {}
+[68.145107] (-) TimerEvent: {}
+[68.245441] (-) TimerEvent: {}
+[68.345769] (-) TimerEvent: {}
+[68.446049] (-) TimerEvent: {}
+[68.546355] (-) TimerEvent: {}
+[68.646635] (-) TimerEvent: {}
+[68.746913] (-) TimerEvent: {}
+[68.847156] (-) TimerEvent: {}
+[68.947431] (-) TimerEvent: {}
+[69.047755] (-) TimerEvent: {}
+[69.148056] (-) TimerEvent: {}
+[69.248396] (-) TimerEvent: {}
+[69.348755] (-) TimerEvent: {}
+[69.449117] (-) TimerEvent: {}
+[69.549462] (-) TimerEvent: {}
+[69.649754] (-) TimerEvent: {}
+[69.750093] (-) TimerEvent: {}
+[69.850376] (-) TimerEvent: {}
+[69.950724] (-) TimerEvent: {}
+[70.051025] (-) TimerEvent: {}
+[70.151304] (-) TimerEvent: {}
+[70.251566] (-) TimerEvent: {}
+[70.351849] (-) TimerEvent: {}
+[70.452163] (-) TimerEvent: {}
+[70.552483] (-) TimerEvent: {}
+[70.652783] (-) TimerEvent: {}
+[70.753063] (-) TimerEvent: {}
+[70.853376] (-) TimerEvent: {}
+[70.953747] (-) TimerEvent: {}
+[71.054058] (-) TimerEvent: {}
+[71.154371] (-) TimerEvent: {}
+[71.254697] (-) TimerEvent: {}
+[71.355001] (-) TimerEvent: {}
+[71.455322] (-) TimerEvent: {}
+[71.555603] (-) TimerEvent: {}
+[71.655927] (-) TimerEvent: {}
+[71.756309] (-) TimerEvent: {}
+[71.856646] (-) TimerEvent: {}
+[71.956944] (-) TimerEvent: {}
+[72.057255] (-) TimerEvent: {}
+[72.157560] (-) TimerEvent: {}
+[72.257872] (-) TimerEvent: {}
+[72.358181] (-) TimerEvent: {}
+[72.458502] (-) TimerEvent: {}
+[72.558792] (-) TimerEvent: {}
+[72.606512] (moveit_servo) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libmoveit_servo_lib.so\x1b[0m\n'}
+[72.658930] (-) TimerEvent: {}
+[72.759317] (-) TimerEvent: {}
+[72.859639] (-) TimerEvent: {}
+[72.959966] (-) TimerEvent: {}
+[72.987523] (moveit_servo) StdoutLine: {'line': b'[ 63%] Built target moveit_servo_lib\n'}
+[73.008686] (moveit_servo) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/pose_tracking.dir/src/pose_tracking.cpp.o\x1b[0m\n'}
+[73.008905] (moveit_servo) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/servo_calcs_unit_tests.dir/test/servo_calcs_unit_tests.cpp.o\x1b[0m\n'}
+[73.009003] (moveit_servo) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/servo_node.dir/src/servo_node.cpp.o\x1b[0m\n'}
+[73.060082] (-) TimerEvent: {}
+[73.160431] (-) TimerEvent: {}
+[73.260834] (-) TimerEvent: {}
+[73.361181] (-) TimerEvent: {}
+[73.461548] (-) TimerEvent: {}
+[73.561911] (-) TimerEvent: {}
+[73.662299] (-) TimerEvent: {}
+[73.762576] (-) TimerEvent: {}
+[73.862879] (-) TimerEvent: {}
+[73.963212] (-) TimerEvent: {}
+[74.063512] (-) TimerEvent: {}
+[74.163780] (-) TimerEvent: {}
+[74.264113] (-) TimerEvent: {}
+[74.364405] (-) TimerEvent: {}
+[74.464742] (-) TimerEvent: {}
+[74.565080] (-) TimerEvent: {}
+[74.665611] (-) TimerEvent: {}
+[74.766028] (-) TimerEvent: {}
+[74.866360] (-) TimerEvent: {}
+[74.966690] (-) TimerEvent: {}
+[75.067041] (-) TimerEvent: {}
+[75.167373] (-) TimerEvent: {}
+[75.267694] (-) TimerEvent: {}
+[75.368077] (-) TimerEvent: {}
+[75.468511] (-) TimerEvent: {}
+[75.568865] (-) TimerEvent: {}
+[75.669191] (-) TimerEvent: {}
+[75.769509] (-) TimerEvent: {}
+[75.869866] (-) TimerEvent: {}
+[75.970209] (-) TimerEvent: {}
+[76.070548] (-) TimerEvent: {}
+[76.170891] (-) TimerEvent: {}
+[76.271179] (-) TimerEvent: {}
+[76.371467] (-) TimerEvent: {}
+[76.471776] (-) TimerEvent: {}
+[76.572039] (-) TimerEvent: {}
+[76.672332] (-) TimerEvent: {}
+[76.772712] (-) TimerEvent: {}
+[76.873199] (-) TimerEvent: {}
+[76.973619] (-) TimerEvent: {}
+[77.073921] (-) TimerEvent: {}
+[77.174185] (-) TimerEvent: {}
+[77.274466] (-) TimerEvent: {}
+[77.374772] (-) TimerEvent: {}
+[77.475068] (-) TimerEvent: {}
+[77.575360] (-) TimerEvent: {}
+[77.675648] (-) TimerEvent: {}
+[77.775930] (-) TimerEvent: {}
+[77.876213] (-) TimerEvent: {}
+[77.976504] (-) TimerEvent: {}
+[78.076829] (-) TimerEvent: {}
+[78.177126] (-) TimerEvent: {}
+[78.277481] (-) TimerEvent: {}
+[78.377820] (-) TimerEvent: {}
+[78.478161] (-) TimerEvent: {}
+[78.578417] (-) TimerEvent: {}
+[78.678684] (-) TimerEvent: {}
+[78.778985] (-) TimerEvent: {}
+[78.879277] (-) TimerEvent: {}
+[78.979577] (-) TimerEvent: {}
+[79.079922] (-) TimerEvent: {}
+[79.180226] (-) TimerEvent: {}
+[79.280514] (-) TimerEvent: {}
+[79.380798] (-) TimerEvent: {}
+[79.481068] (-) TimerEvent: {}
+[79.581347] (-) TimerEvent: {}
+[79.681623] (-) TimerEvent: {}
+[79.781913] (-) TimerEvent: {}
+[79.882271] (-) TimerEvent: {}
+[79.982606] (-) TimerEvent: {}
+[80.082898] (-) TimerEvent: {}
+[80.183192] (-) TimerEvent: {}
+[80.283468] (-) TimerEvent: {}
+[80.383763] (-) TimerEvent: {}
+[80.484037] (-) TimerEvent: {}
+[80.584369] (-) TimerEvent: {}
+[80.684805] (-) TimerEvent: {}
+[80.785156] (-) TimerEvent: {}
+[80.885519] (-) TimerEvent: {}
+[80.985883] (-) TimerEvent: {}
+[81.086220] (-) TimerEvent: {}
+[81.186541] (-) TimerEvent: {}
+[81.286907] (-) TimerEvent: {}
+[81.387263] (-) TimerEvent: {}
+[81.487638] (-) TimerEvent: {}
+[81.587990] (-) TimerEvent: {}
+[81.688337] (-) TimerEvent: {}
+[81.788663] (-) TimerEvent: {}
+[81.889004] (-) TimerEvent: {}
+[81.989360] (-) TimerEvent: {}
+[82.089797] (-) TimerEvent: {}
+[82.190261] (-) TimerEvent: {}
+[82.290620] (-) TimerEvent: {}
+[82.391019] (-) TimerEvent: {}
+[82.491350] (-) TimerEvent: {}
+[82.591677] (-) TimerEvent: {}
+[82.692014] (-) TimerEvent: {}
+[82.792310] (-) TimerEvent: {}
+[82.892653] (-) TimerEvent: {}
+[82.992910] (-) TimerEvent: {}
+[83.093263] (-) TimerEvent: {}
+[83.193615] (-) TimerEvent: {}
+[83.294051] (-) TimerEvent: {}
+[83.394406] (-) TimerEvent: {}
+[83.494700] (-) TimerEvent: {}
+[83.594996] (-) TimerEvent: {}
+[83.695269] (-) TimerEvent: {}
+[83.795569] (-) TimerEvent: {}
+[83.895814] (-) TimerEvent: {}
+[83.996168] (-) TimerEvent: {}
+[84.096496] (-) TimerEvent: {}
+[84.196817] (-) TimerEvent: {}
+[84.297368] (-) TimerEvent: {}
+[84.397806] (-) TimerEvent: {}
+[84.498138] (-) TimerEvent: {}
+[84.598437] (-) TimerEvent: {}
+[84.698769] (-) TimerEvent: {}
+[84.799103] (-) TimerEvent: {}
+[84.899465] (-) TimerEvent: {}
+[84.999878] (-) TimerEvent: {}
+[85.100286] (-) TimerEvent: {}
+[85.200666] (-) TimerEvent: {}
+[85.301024] (-) TimerEvent: {}
+[85.401372] (-) TimerEvent: {}
+[85.501713] (-) TimerEvent: {}
+[85.602080] (-) TimerEvent: {}
+[85.648113] (moveit_servo) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libservo_node.so\x1b[0m\n'}
+[85.702198] (-) TimerEvent: {}
+[85.802592] (-) TimerEvent: {}
+[85.902953] (-) TimerEvent: {}
+[85.920977] (moveit_servo) StdoutLine: {'line': b'[ 75%] Built target servo_node\n'}
+[85.943685] (moveit_servo) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/servo_node_main.dir/src/servo_node_main.cpp.o\x1b[0m\n'}
+[86.003073] (-) TimerEvent: {}
+[86.103401] (-) TimerEvent: {}
+[86.203719] (-) TimerEvent: {}
+[86.304066] (-) TimerEvent: {}
+[86.404437] (-) TimerEvent: {}
+[86.504838] (-) TimerEvent: {}
+[86.605292] (-) TimerEvent: {}
+[86.705657] (-) TimerEvent: {}
+[86.805953] (-) TimerEvent: {}
+[86.906270] (-) TimerEvent: {}
+[87.006576] (-) TimerEvent: {}
+[87.106866] (-) TimerEvent: {}
+[87.207224] (-) TimerEvent: {}
+[87.307536] (-) TimerEvent: {}
+[87.407819] (-) TimerEvent: {}
+[87.508117] (-) TimerEvent: {}
+[87.608402] (-) TimerEvent: {}
+[87.708660] (-) TimerEvent: {}
+[87.808980] (-) TimerEvent: {}
+[87.909312] (-) TimerEvent: {}
+[88.009706] (-) TimerEvent: {}
+[88.110053] (-) TimerEvent: {}
+[88.210375] (-) TimerEvent: {}
+[88.310741] (-) TimerEvent: {}
+[88.411046] (-) TimerEvent: {}
+[88.511357] (-) TimerEvent: {}
+[88.611694] (-) TimerEvent: {}
+[88.712074] (-) TimerEvent: {}
+[88.812371] (-) TimerEvent: {}
+[88.912690] (-) TimerEvent: {}
+[89.013001] (-) TimerEvent: {}
+[89.113326] (-) TimerEvent: {}
+[89.213660] (-) TimerEvent: {}
+[89.313973] (-) TimerEvent: {}
+[89.414322] (-) TimerEvent: {}
+[89.514702] (-) TimerEvent: {}
+[89.615082] (-) TimerEvent: {}
+[89.715416] (-) TimerEvent: {}
+[89.815764] (-) TimerEvent: {}
+[89.916113] (-) TimerEvent: {}
+[90.016453] (-) TimerEvent: {}
+[90.116817] (-) TimerEvent: {}
+[90.217310] (-) TimerEvent: {}
+[90.317801] (-) TimerEvent: {}
+[90.418129] (-) TimerEvent: {}
+[90.518480] (-) TimerEvent: {}
+[90.618806] (-) TimerEvent: {}
+[90.719136] (-) TimerEvent: {}
+[90.819454] (-) TimerEvent: {}
+[90.919813] (-) TimerEvent: {}
+[91.020129] (-) TimerEvent: {}
+[91.120398] (-) TimerEvent: {}
+[91.220688] (-) TimerEvent: {}
+[91.321022] (-) TimerEvent: {}
+[91.421341] (-) TimerEvent: {}
+[91.521699] (-) TimerEvent: {}
+[91.621968] (-) TimerEvent: {}
+[91.722362] (-) TimerEvent: {}
+[91.822653] (-) TimerEvent: {}
+[91.922922] (-) TimerEvent: {}
+[92.023184] (-) TimerEvent: {}
+[92.123454] (-) TimerEvent: {}
+[92.223739] (-) TimerEvent: {}
+[92.324015] (-) TimerEvent: {}
+[92.424368] (-) TimerEvent: {}
+[92.524655] (-) TimerEvent: {}
+[92.624951] (-) TimerEvent: {}
+[92.725218] (-) TimerEvent: {}
+[92.825479] (-) TimerEvent: {}
+[92.925766] (-) TimerEvent: {}
+[93.026032] (-) TimerEvent: {}
+[93.126319] (-) TimerEvent: {}
+[93.226619] (-) TimerEvent: {}
+[93.326946] (-) TimerEvent: {}
+[93.427222] (-) TimerEvent: {}
+[93.527539] (-) TimerEvent: {}
+[93.627798] (-) TimerEvent: {}
+[93.728106] (-) TimerEvent: {}
+[93.828416] (-) TimerEvent: {}
+[93.928898] (-) TimerEvent: {}
+[94.029313] (-) TimerEvent: {}
+[94.129603] (-) TimerEvent: {}
+[94.230038] (-) TimerEvent: {}
+[94.330373] (-) TimerEvent: {}
+[94.430737] (-) TimerEvent: {}
+[94.484907] (moveit_servo) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libpose_tracking.so\x1b[0m\n'}
+[94.530841] (-) TimerEvent: {}
+[94.631228] (-) TimerEvent: {}
+[94.731656] (-) TimerEvent: {}
+[94.815255] (moveit_servo) StdoutLine: {'line': b'[ 81%] Built target pose_tracking\n'}
+[94.831773] (-) TimerEvent: {}
+[94.835616] (moveit_servo) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/test_servo_pose_tracking.dir/test/pose_tracking_test.cpp.o\x1b[0m\n'}
+[94.835901] (moveit_servo) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/servo_pose_tracking_demo.dir/src/cpp_interface_demo/pose_tracking_demo.cpp.o\x1b[0m\n'}
+[94.931882] (-) TimerEvent: {}
+[95.032209] (-) TimerEvent: {}
+[95.132525] (-) TimerEvent: {}
+[95.232867] (-) TimerEvent: {}
+[95.333221] (-) TimerEvent: {}
+[95.433906] (-) TimerEvent: {}
+[95.534301] (-) TimerEvent: {}
+[95.634614] (-) TimerEvent: {}
+[95.734968] (-) TimerEvent: {}
+[95.835301] (-) TimerEvent: {}
+[95.935607] (-) TimerEvent: {}
+[96.035971] (-) TimerEvent: {}
+[96.136295] (-) TimerEvent: {}
+[96.236646] (-) TimerEvent: {}
+[96.336994] (-) TimerEvent: {}
+[96.437323] (-) TimerEvent: {}
+[96.537660] (-) TimerEvent: {}
+[96.638015] (-) TimerEvent: {}
+[96.738376] (-) TimerEvent: {}
+[96.838723] (-) TimerEvent: {}
+[96.939115] (-) TimerEvent: {}
+[97.039521] (-) TimerEvent: {}
+[97.139914] (-) TimerEvent: {}
+[97.240443] (-) TimerEvent: {}
+[97.329936] (moveit_servo) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable servo_node_main\x1b[0m\n'}
+[97.340560] (-) TimerEvent: {}
+[97.440912] (-) TimerEvent: {}
+[97.541572] (-) TimerEvent: {}
+[97.642331] (-) TimerEvent: {}
+[97.726908] (moveit_servo) StdoutLine: {'line': b'[ 90%] Built target servo_node_main\n'}
+[97.742420] (-) TimerEvent: {}
+[97.842789] (-) TimerEvent: {}
+[97.943106] (-) TimerEvent: {}
+[98.043430] (-) TimerEvent: {}
+[98.143769] (-) TimerEvent: {}
+[98.147876] (moveit_servo) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable servo_calcs_unit_tests\x1b[0m\n'}
+[98.243863] (-) TimerEvent: {}
+[98.344215] (-) TimerEvent: {}
+[98.444565] (-) TimerEvent: {}
+[98.544823] (-) TimerEvent: {}
+[98.558283] (moveit_servo) StdoutLine: {'line': b'[ 93%] Built target servo_calcs_unit_tests\n'}
+[98.644924] (-) TimerEvent: {}
+[98.745222] (-) TimerEvent: {}
+[98.845531] (-) TimerEvent: {}
+[98.945810] (-) TimerEvent: {}
+[99.046067] (-) TimerEvent: {}
+[99.146354] (-) TimerEvent: {}
+[99.246623] (-) TimerEvent: {}
+[99.346965] (-) TimerEvent: {}
+[99.447275] (-) TimerEvent: {}
+[99.547596] (-) TimerEvent: {}
+[99.647929] (-) TimerEvent: {}
+[99.748247] (-) TimerEvent: {}
+[99.848622] (-) TimerEvent: {}
+[99.949031] (-) TimerEvent: {}
+[100.049397] (-) TimerEvent: {}
+[100.149711] (-) TimerEvent: {}
+[100.250031] (-) TimerEvent: {}
+[100.350304] (-) TimerEvent: {}
+[100.450624] (-) TimerEvent: {}
+[100.550914] (-) TimerEvent: {}
+[100.651202] (-) TimerEvent: {}
+[100.751487] (-) TimerEvent: {}
+[100.851775] (-) TimerEvent: {}
+[100.952038] (-) TimerEvent: {}
+[101.052334] (-) TimerEvent: {}
+[101.152621] (-) TimerEvent: {}
+[101.252924] (-) TimerEvent: {}
+[101.353319] (-) TimerEvent: {}
+[101.453628] (-) TimerEvent: {}
+[101.553887] (-) TimerEvent: {}
+[101.654163] (-) TimerEvent: {}
+[101.754446] (-) TimerEvent: {}
+[101.854726] (-) TimerEvent: {}
+[101.955056] (-) TimerEvent: {}
+[102.055345] (-) TimerEvent: {}
+[102.155636] (-) TimerEvent: {}
+[102.255944] (-) TimerEvent: {}
+[102.356228] (-) TimerEvent: {}
+[102.456516] (-) TimerEvent: {}
+[102.556826] (-) TimerEvent: {}
+[102.657107] (-) TimerEvent: {}
+[102.757406] (-) TimerEvent: {}
+[102.857763] (-) TimerEvent: {}
+[102.958099] (-) TimerEvent: {}
+[103.058390] (-) TimerEvent: {}
+[103.158661] (-) TimerEvent: {}
+[103.258926] (-) TimerEvent: {}
+[103.359240] (-) TimerEvent: {}
+[103.459508] (-) TimerEvent: {}
+[103.559808] (-) TimerEvent: {}
+[103.660109] (-) TimerEvent: {}
+[103.760393] (-) TimerEvent: {}
+[103.860701] (-) TimerEvent: {}
+[103.960974] (-) TimerEvent: {}
+[104.061231] (-) TimerEvent: {}
+[104.161569] (-) TimerEvent: {}
+[104.262005] (-) TimerEvent: {}
+[104.362407] (-) TimerEvent: {}
+[104.462749] (-) TimerEvent: {}
+[104.563012] (-) TimerEvent: {}
+[104.663285] (-) TimerEvent: {}
+[104.763571] (-) TimerEvent: {}
+[104.863830] (-) TimerEvent: {}
+[104.964117] (-) TimerEvent: {}
+[105.064398] (-) TimerEvent: {}
+[105.164756] (-) TimerEvent: {}
+[105.265020] (-) TimerEvent: {}
+[105.365264] (-) TimerEvent: {}
+[105.465561] (-) TimerEvent: {}
+[105.565816] (-) TimerEvent: {}
+[105.666062] (-) TimerEvent: {}
+[105.766321] (-) TimerEvent: {}
+[105.866639] (-) TimerEvent: {}
+[105.966915] (-) TimerEvent: {}
+[106.067205] (-) TimerEvent: {}
+[106.167485] (-) TimerEvent: {}
+[106.267817] (-) TimerEvent: {}
+[106.368164] (-) TimerEvent: {}
+[106.468531] (-) TimerEvent: {}
+[106.568909] (-) TimerEvent: {}
+[106.669255] (-) TimerEvent: {}
+[106.769543] (-) TimerEvent: {}
+[106.869824] (-) TimerEvent: {}
+[106.970075] (-) TimerEvent: {}
+[107.070328] (-) TimerEvent: {}
+[107.170604] (-) TimerEvent: {}
+[107.270885] (-) TimerEvent: {}
+[107.371210] (-) TimerEvent: {}
+[107.471485] (-) TimerEvent: {}
+[107.571809] (-) TimerEvent: {}
+[107.672089] (-) TimerEvent: {}
+[107.772370] (-) TimerEvent: {}
+[107.872658] (-) TimerEvent: {}
+[107.973026] (-) TimerEvent: {}
+[108.073512] (-) TimerEvent: {}
+[108.173861] (-) TimerEvent: {}
+[108.274168] (-) TimerEvent: {}
+[108.374479] (-) TimerEvent: {}
+[108.474784] (-) TimerEvent: {}
+[108.575072] (-) TimerEvent: {}
+[108.675374] (-) TimerEvent: {}
+[108.775660] (-) TimerEvent: {}
+[108.876024] (-) TimerEvent: {}
+[108.976350] (-) TimerEvent: {}
+[109.076664] (-) TimerEvent: {}
+[109.176920] (-) TimerEvent: {}
+[109.277226] (-) TimerEvent: {}
+[109.377510] (-) TimerEvent: {}
+[109.477837] (-) TimerEvent: {}
+[109.578205] (-) TimerEvent: {}
+[109.678507] (-) TimerEvent: {}
+[109.778803] (-) TimerEvent: {}
+[109.879119] (-) TimerEvent: {}
+[109.979371] (-) TimerEvent: {}
+[110.079700] (-) TimerEvent: {}
+[110.180104] (-) TimerEvent: {}
+[110.280618] (-) TimerEvent: {}
+[110.380936] (-) TimerEvent: {}
+[110.481313] (-) TimerEvent: {}
+[110.581635] (-) TimerEvent: {}
+[110.681965] (-) TimerEvent: {}
+[110.782295] (-) TimerEvent: {}
+[110.882637] (-) TimerEvent: {}
+[110.982963] (-) TimerEvent: {}
+[111.083292] (-) TimerEvent: {}
+[111.183602] (-) TimerEvent: {}
+[111.283906] (-) TimerEvent: {}
+[111.384211] (-) TimerEvent: {}
+[111.484530] (-) TimerEvent: {}
+[111.584814] (-) TimerEvent: {}
+[111.685074] (-) TimerEvent: {}
+[111.785469] (-) TimerEvent: {}
+[111.885809] (-) TimerEvent: {}
+[111.986116] (-) TimerEvent: {}
+[112.086389] (-) TimerEvent: {}
+[112.186736] (-) TimerEvent: {}
+[112.287043] (-) TimerEvent: {}
+[112.387369] (-) TimerEvent: {}
+[112.487741] (-) TimerEvent: {}
+[112.588064] (-) TimerEvent: {}
+[112.688368] (-) TimerEvent: {}
+[112.788673] (-) TimerEvent: {}
+[112.888963] (-) TimerEvent: {}
+[112.989294] (-) TimerEvent: {}
+[113.089610] (-) TimerEvent: {}
+[113.134475] (moveit_servo) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable servo_pose_tracking_demo\x1b[0m\n'}
+[113.189866] (-) TimerEvent: {}
+[113.290417] (-) TimerEvent: {}
+[113.390771] (-) TimerEvent: {}
+[113.491091] (-) TimerEvent: {}
+[113.552696] (moveit_servo) StdoutLine: {'line': b'[ 96%] Built target servo_pose_tracking_demo\n'}
+[113.591188] (-) TimerEvent: {}
+[113.691481] (-) TimerEvent: {}
+[113.791781] (-) TimerEvent: {}
+[113.892040] (-) TimerEvent: {}
+[113.992410] (-) TimerEvent: {}
+[114.092765] (-) TimerEvent: {}
+[114.193125] (-) TimerEvent: {}
+[114.293407] (-) TimerEvent: {}
+[114.393777] (-) TimerEvent: {}
+[114.494070] (-) TimerEvent: {}
+[114.594370] (-) TimerEvent: {}
+[114.694710] (-) TimerEvent: {}
+[114.794986] (-) TimerEvent: {}
+[114.895320] (-) TimerEvent: {}
+[114.995631] (-) TimerEvent: {}
+[115.095932] (-) TimerEvent: {}
+[115.196267] (-) TimerEvent: {}
+[115.296576] (-) TimerEvent: {}
+[115.396882] (-) TimerEvent: {}
+[115.497199] (-) TimerEvent: {}
+[115.597518] (-) TimerEvent: {}
+[115.697832] (-) TimerEvent: {}
+[115.798115] (-) TimerEvent: {}
+[115.874179] (moveit_servo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_servo_pose_tracking\x1b[0m\n'}
+[115.898245] (-) TimerEvent: {}
+[115.998513] (-) TimerEvent: {}
+[116.098844] (-) TimerEvent: {}
+[116.199172] (-) TimerEvent: {}
+[116.299443] (-) TimerEvent: {}
+[116.304749] (moveit_servo) StdoutLine: {'line': b'[100%] Built target test_servo_pose_tracking\n'}
+[116.313685] (moveit_servo) CommandEnded: {'returncode': 0}
+[116.314365] (moveit_servo) JobProgress: {'identifier': 'moveit_servo', 'progress': 'install'}
+[116.314726] (moveit_servo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/johnbuntu/ar4_ros_driver/build/moveit_servo'], 'cwd': '/home/johnbuntu/ar4_ros_driver/build/moveit_servo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'johnbuntu'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/johnbuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('HOMEBREW_PREFIX', '/home/linuxbrew/.linuxbrew'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install'), ('INFOPATH', '/home/linuxbrew/.linuxbrew/share/info:'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'johnbuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'johnbuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/opt/ros/humble/bin:/home/johnbuntu/.local/bin:/home/johnbuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/johnbuntu:@/tmp/.ICE-unix/987,unix/johnbuntu:/tmp/.ICE-unix/987'), ('HOMEBREW_CELLAR', '/home/linuxbrew/.linuxbrew/Cellar'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e7323d6_f5aa_4b33_9f4f_43d852170bb3'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.LSID72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/johnbuntu/ar4_ros_driver/build/moveit_servo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HOMEBREW_REPOSITORY', '/home/linuxbrew/.linuxbrew/Homebrew'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/opt/ros/humble')]), 'shell': False}
+[116.321033] (moveit_servo) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[116.321203] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib.so.2.5.9\n'}
+[116.323162] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib.so.2.5.9" to ""\n'}
+[116.323272] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib.so\n'}
+[116.323333] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so.2.5.9\n'}
+[116.323481] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so.2.5.9" to ""\n'}
+[116.323563] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so\n'}
+[116.323613] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libpose_tracking.so\n'}
+[116.324409] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libpose_tracking.so" to ""\n'}
+[116.324537] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libservo_node.so\n'}
+[116.324810] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libservo_node.so" to ""\n'}
+[116.324902] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libservo_controller_input.so\n'}
+[116.326696] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libservo_controller_input.so" to ""\n'}
+[116.326919] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/servo_node_main\n'}
+[116.327045] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/servo_node_main" to ""\n'}
+[116.327212] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/servo_pose_tracking_demo\n'}
+[116.327903] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/servo_pose_tracking_demo" to ""\n'}
+[116.328020] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/fake_command_publisher\n'}
+[116.328379] (moveit_servo) StdoutLine: {'line': b'-- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/fake_command_publisher" to ""\n'}
+[116.328495] (moveit_servo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include\n'}
+[116.328554] (moveit_servo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo\n'}
+[116.328606] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/pose_tracking.h\n'}
+[116.328680] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_server.h\n'}
+[116.328857] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_parameters.h\n'}
+[116.328955] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/make_shared_from_pool.h\n'}
+[116.329065] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/enforce_limits.hpp\n'}
+[116.329126] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_node.h\n'}
+[116.329210] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo.h\n'}
+[116.329284] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/status_codes.h\n'}
+[116.329429] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_calcs.h\n'}
+[116.329612] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/utilities.h\n'}
+[116.329921] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/parameter_descriptor_builder.hpp\n'}
+[116.330129] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/collision_check.h\n'}
+[116.330212] (moveit_servo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/launch\n'}
+[116.330291] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/launch/pose_tracking_example.launch.py\n'}
+[116.330368] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/launch/servo_example.launch.py\n'}
+[116.330447] (moveit_servo) StdoutLine: {'line': b'-- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config\n'}
+[116.330524] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/demo_rviz_pose_tracking.rviz\n'}
+[116.330603] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/panda_simulated_config_pose_tracking.yaml\n'}
+[116.330722] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/panda_simulated_config.yaml\n'}
+[116.330879] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/pose_tracking_settings.yaml\n'}
+[116.330983] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/demo_rviz_config.rviz\n'}
+[116.331067] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/library_path.sh\n'}
+[116.331258] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/library_path.dsv\n'}
+[116.331360] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/package_run_dependencies/moveit_servo\n'}
+[116.331440] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/parent_prefix_path/moveit_servo\n'}
+[116.331516] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/ament_prefix_path.sh\n'}
+[116.331594] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/ament_prefix_path.dsv\n'}
+[116.331707] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/path.sh\n'}
+[116.331838] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/path.dsv\n'}
+[116.331918] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.bash\n'}
+[116.331993] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.sh\n'}
+[116.332100] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.zsh\n'}
+[116.332173] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.dsv\n'}
+[116.332246] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/package.dsv\n'}
+[116.332318] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/packages/moveit_servo\n'}
+[116.332391] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/rclcpp_components/moveit_servo\n'}
+[116.332464] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/export_moveit_servoExport.cmake\n'}
+[116.332571] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/export_moveit_servoExport-release.cmake\n'}
+[116.332647] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[116.332717] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[116.332832] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/moveit_servoConfig.cmake\n'}
+[116.332908] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/moveit_servoConfig-version.cmake\n'}
+[116.332991] (moveit_servo) StdoutLine: {'line': b'-- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/package.xml\n'}
+[116.334133] (moveit_servo) CommandEnded: {'returncode': 0}
+[116.346979] (moveit_servo) JobEnded: {'identifier': 'moveit_servo', 'rc': 0}
+[116.347581] (-) EventReactorShutdown: {}
