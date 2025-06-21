@@ -105,9 +105,9 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "files.exclude": {
-    "build": true,
-    "install": true,
-    "log": true
+    "build": false,
+    "install": false,
+    "log": false
   },
   "cSpell.words": [
     "RCLCPP"

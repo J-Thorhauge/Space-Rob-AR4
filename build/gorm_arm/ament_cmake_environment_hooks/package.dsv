@@ -1,0 +1,4 @@
+source;share/gorm_arm/local_setup.bash
+source;share/gorm_arm/local_setup.dsv
+source;share/gorm_arm/local_setup.sh
+source;share/gorm_arm/local_setup.zsh
