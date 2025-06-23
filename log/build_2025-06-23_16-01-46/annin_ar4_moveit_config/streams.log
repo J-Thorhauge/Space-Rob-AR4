@@ -1,0 +1,38 @@
+[0.020s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config -- -j8 -l8
+[0.066s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config -- -j8 -l8
+[0.068s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config
+[0.076s] -- Install configuration: ""
+[0.076s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config
+[0.076s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/ompl_planning.yaml
+[0.076s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/joint_limits.yaml
+[0.077s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/controllers.yaml
+[0.077s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/pilz_planning.yaml
+[0.077s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/config/kinematics.yaml
+[0.077s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/launch
+[0.077s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/launch/demo.launch.py
+[0.077s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/launch/moveit.launch.py
+[0.077s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/rviz
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/rviz/moveit.rviz
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/rviz/moveit_with_camera.rviz
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf/ar_macro.srdf.xacro
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf/ar.srdf.xacro
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/srdf/ar_gripper_macro.srdf.xacro
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/urdf
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/urdf/fake_ar.urdf.xacro
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/ament_index/resource_index/package_run_dependencies/annin_ar4_moveit_config
+[0.078s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/ament_index/resource_index/parent_prefix_path/annin_ar4_moveit_config
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/ament_prefix_path.sh
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/ament_prefix_path.dsv
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/path.sh
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/environment/path.dsv
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.bash
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.sh
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.zsh
+[0.079s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/local_setup.dsv
+[0.079s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.dsv
+[0.080s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/ament_index/resource_index/packages/annin_ar4_moveit_config
+[0.080s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/cmake/annin_ar4_moveit_configConfig.cmake
+[0.080s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/cmake/annin_ar4_moveit_configConfig-version.cmake
+[0.082s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.xml
+[0.090s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/annin_ar4_moveit_config

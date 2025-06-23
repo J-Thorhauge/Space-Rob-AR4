@@ -61,6 +61,15 @@ const std::string JOINT_TOPIC = "/servo_node/delta_joint_cmds";
 const std::string EEF_FRAME_ID = "ee_link";
 const std::string BASE_FRAME_ID = "base_link";
 
+enum Frame
+{
+  BASE = 0,
+  TOOL = 1,
+  TOP = 2,
+  BOT = 3
+};
+enum Frame frame = TOP;
+
 // Enums for button names -> axis/button array index
 // For XBOX 1 controller
 enum Axis
@@ -111,36 +120,89 @@ bool convertJoyToCmd(const std::vector<float> &axes, const std::vector<int> &but
 {
   // Give joint jogging priority because it is only buttons
   // If any joint jog command is requested, we are only publishing joint commands
-  if (buttons[BUT_7] || buttons[BUT_8] || buttons[BUT_9] || buttons[BUT_10] || buttons[TRIGGER] || buttons[BUT_2])
-  {
-    // Map the D_PAD to the proximal joints
-    joint->joint_names.push_back("joint_1");
-    joint->velocities.push_back(buttons[BUT_7] - buttons[BUT_8]);
-    joint->joint_names.push_back("joint_2");
-    joint->velocities.push_back(buttons[BUT_9] - buttons[BUT_10]);
 
-    // // Map the diamond to the distal joints
-    // joint->joint_names.push_back("panda_joint7");
-    // joint->velocities.push_back(buttons[B] - buttons[X]);
-    // joint->joint_names.push_back("panda_joint6");
-    // joint->velocities.push_back(buttons[Y] - buttons[A]);
-    return false;
+  if (frame == BASE || frame == TOOL)
+  {
+    if (buttons[BUT_7] || buttons[BUT_8] || buttons[BUT_9] || buttons[BUT_10] || buttons[TRIGGER] || buttons[BUT_2])
+    {
+      // Map the D_PAD to the proximal joints
+      joint->joint_names.push_back("joint_1");
+      joint->velocities.push_back(buttons[BUT_7] - buttons[BUT_8]);
+      joint->joint_names.push_back("joint_2");
+      joint->velocities.push_back(buttons[BUT_9] - buttons[BUT_10]);
+
+      // // Map the diamond to the distal joints
+      // joint->joint_names.push_back("panda_joint7");
+      // joint->velocities.push_back(buttons[B] - buttons[X]);
+      // joint->joint_names.push_back("panda_joint6");
+      // joint->velocities.push_back(buttons[Y] - buttons[A]);
+      return false;
+    }
+  }
+  else if (frame == TOP)
+  {
+    if (buttons[BUT_7] || buttons[BUT_8] || buttons[BUT_9] || buttons[BUT_10] || buttons[BUT_11] || buttons[BUT_12])
+    {
+      joint->joint_names.push_back("joint_4");
+      joint->velocities.push_back(buttons[BUT_7] - buttons[BUT_8]);
+      joint->joint_names.push_back("joint_5");
+      joint->velocities.push_back(buttons[BUT_9] - buttons[BUT_10]);
+      joint->joint_names.push_back("joint_6");
+      joint->velocities.push_back(buttons[BUT_11] - buttons[BUT_12]);
+      return false;
+    }
+  }
+  else if (frame == BOT)
+  {
+    if (buttons[BUT_7] || buttons[BUT_8] || buttons[BUT_9] || buttons[BUT_10] || buttons[BUT_11] || buttons[BUT_12])
+    {
+      joint->joint_names.push_back("joint_1");
+      joint->velocities.push_back(buttons[BUT_7] - buttons[BUT_8]);
+      joint->joint_names.push_back("joint_2");
+      joint->velocities.push_back(buttons[BUT_9] - buttons[BUT_10]);
+      joint->joint_names.push_back("joint_3");
+      joint->velocities.push_back(buttons[BUT_11] - buttons[BUT_12]);
+      return false;
+    }
   }
 
-  // The bread and butter: map buttons to twist commands
-  twist->twist.angular.y = axes[D_PAD_Y];
-  twist->twist.linear.y = axes[STICK_LR];
+  if (frame == BASE)
+  {
+    twist->twist.linear.x = axes[STICK_LR];
 
-  // double lin_x_right = -0.5 * (axes[RIGHT_TRIGGER] - AXIS_DEFAULTS.at(RIGHT_TRIGGER));
-  // double lin_x_left = 0.5 * (axes[LEFT_TRIGGER] - AXIS_DEFAULTS.at(LEFT_TRIGGER));
-  twist->twist.linear.x = axes[STICK_BF]; // lin_x_right + lin_x_left;
+    twist->twist.linear.y = -1 * (axes[STICK_BF]);
 
-  twist->twist.angular.z = axes[STICK_TWIST];
-  twist->twist.angular.x = axes[D_PAD_X];
+    double z_positive = buttons[BUT_3];
+    double z_negative = -1 * (buttons[BUT_4]);
+    twist->twist.linear.z = z_positive + z_negative;
 
-  double z_positive = buttons[BUT_3];
-  double z_negative = -1 * (buttons[BUT_4]);
-  twist->twist.linear.z = z_positive + z_negative;
+    twist->twist.angular.x = axes[D_PAD_Y];
+    twist->twist.angular.y = axes[D_PAD_X];
+    twist->twist.angular.z = axes[STICK_TWIST];
+  }
+  else if (frame == TOOL)
+  {
+    twist->twist.linear.x = -1 * (axes[STICK_LR]);
+
+    double y_positive = buttons[BUT_4];
+    double y_negative = -1 * (buttons[BUT_3]);
+    twist->twist.linear.y = y_positive + y_negative;
+
+    twist->twist.linear.z = axes[STICK_BF];
+
+    twist->twist.angular.x = -1 * (axes[D_PAD_Y]);
+    twist->twist.angular.y = -1 * (axes[STICK_TWIST]);
+    twist->twist.angular.z = -1 * (axes[D_PAD_X]);
+  }
+  // else if (frame == TOP)
+  // {
+
+  // }
+  // else if (frame == TOP)
+  // {
+
+  // }
+
   return true;
 }
 
@@ -150,10 +212,16 @@ bool convertJoyToCmd(const std::vector<float> &axes, const std::vector<int> &but
  */
 void updateCmdFrame(std::string &frame_name, const std::vector<int> &buttons)
 {
-  if (buttons[BUT_11] && frame_name == EEF_FRAME_ID)
+  if (buttons[BUT_5] && frame_name == EEF_FRAME_ID)
+  {
     frame_name = BASE_FRAME_ID;
-  else if (buttons[BUT_12] && frame_name == BASE_FRAME_ID)
+    frame = BASE;
+  }
+  else if (buttons[BUT_6] && frame_name == BASE_FRAME_ID)
+  {
     frame_name = EEF_FRAME_ID;
+    frame = TOOL;
+  }
   // int this_does = 0; // This does nothing
 }
 

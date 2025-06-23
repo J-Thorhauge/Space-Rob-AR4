@@ -1,0 +1,7 @@
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K In function ‘[01m[Kbool convertJoyToCmd(const std::vector<float, std::allocator<float> >&, const std::vector<int, std::allocator<int> >&, std::unique_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> >, std::default_delete<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&, std::unique_ptr<control_msgs::msg::JointJog_<std::allocator<void> >, std::default_delete<control_msgs::msg::JointJog_<std::allocator<void> > > >&)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:138:12:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  138 |   if ([01;35m[KMode = 0[m[K)
+      |       [01;35m[K~~~~~^~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:152:17:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  152 |   else if ([01;35m[KMode = 1[m[K)
+      |            [01;35m[K~~~~~^~~[m[K

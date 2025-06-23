@@ -1,0 +1,37 @@
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K In function ‘[01m[Kbool convertJoyToCmd(const std::vector<float, std::allocator<float> >&, const std::vector<int, std::allocator<int> >&, std::unique_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> >, std::default_delete<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&, std::unique_ptr<control_msgs::msg::JointJog_<std::allocator<void> >, std::default_delete<control_msgs::msg::JointJog_<std::allocator<void> > > >&)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:152:8:[m[K [01;31m[Kerror: [m[Kjump to case label
+  152 |   case [01;31m[KTOOL[m[K:
+      |        [01;31m[K^~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:145:12:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble z_negative[m[K’
+  145 |     double [01;36m[Kz_negative[m[K = -buttons[BUT_4];
+      |            [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:144:12:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble z_positive[m[K’
+  144 |     double [01;36m[Kz_positive[m[K = buttons[BUT_3];
+      |            [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:157:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble z_positive[m[K’
+  157 |     double [01;31m[Kz_positive[m[K = buttons[BUT_3];
+      |            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:144:12:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble z_positive[m[K’ previously declared here
+  144 |     double [01;36m[Kz_positive[m[K = buttons[BUT_3];
+      |            [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:158:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble z_negative[m[K’
+  158 |     double [01;31m[Kz_negative[m[K = -1 * (buttons[BUT_4]);
+      |            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:145:12:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble z_negative[m[K’ previously declared here
+  145 |     double [01;36m[Kz_negative[m[K = -buttons[BUT_4];
+      |            [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:165:3:[m[K [01;31m[Kerror: [m[Kjump to case label
+  165 |   [01;31m[Kdefault[m[K:
+      |   [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:145:12:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble z_negative[m[K’
+  145 |     double [01;36m[Kz_negative[m[K = -buttons[BUT_4];
+      |            [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:144:12:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble z_positive[m[K’
+  144 |     double [01;36m[Kz_positive[m[K = buttons[BUT_3];
+      |            [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:137:10:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KTOOL[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+  137 |   switch [01;35m[K([m[Kframe)
+      |          [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/servo_controller_input.dir/build.make:76: CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:283: CMakeFiles/servo_controller_input.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

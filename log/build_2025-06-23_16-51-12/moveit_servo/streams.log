@@ -1,0 +1,85 @@
+[0.015s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/moveit_servo -- -j8 -l8
+[0.067s] [35m[1mConsolidate compiler generated dependencies of target servo_controller_input[0m
+[0.074s] [  6%] Built target gtest_main
+[0.081s] [ 12%] Built target gtest
+[0.081s] [ 18%] Built target fake_command_publisher
+[0.087s] [ 21%] [32mBuilding CXX object CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o[0m
+[0.094s] [ 30%] Built target moveit_servo_lib_parameters
+[0.145s] [ 36%] Built target test_servo_collision
+[0.146s] [ 42%] Built target test_servo_integration
+[0.153s] [ 60%] Built target moveit_servo_lib
+[0.209s] [ 66%] Built target servo_calcs_unit_tests
+[0.209s] [ 72%] Built target pose_tracking
+[0.213s] [ 78%] Built target servo_node
+[0.260s] [ 84%] Built target servo_node_main
+[0.263s] [ 90%] Built target servo_pose_tracking_demo
+[0.263s] [ 96%] Built target test_servo_pose_tracking
+[1.704s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K In function ‘[01m[Kbool convertJoyToCmd(const std::vector<float, std::allocator<float> >&, const std::vector<int, std::allocator<int> >&, std::unique_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> >, std::default_delete<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&, std::unique_ptr<control_msgs::msg::JointJog_<std::allocator<void> >, std::default_delete<control_msgs::msg::JointJog_<std::allocator<void> > > >&)[m[K’:
+[1.704s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:138:12:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[1.704s]   138 |   if ([01;35m[KMode = 0[m[K)
+[1.704s]       |       [01;35m[K~~~~~^~~[m[K
+[1.709s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:152:17:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[1.709s]   152 |   else if ([01;35m[KMode = 1[m[K)
+[1.709s]       |            [01;35m[K~~~~~^~~[m[K
+[10.009s] [100%] [32m[1mLinking CXX shared library libservo_controller_input.so[0m
+[10.493s] [100%] Built target servo_controller_input
+[10.502s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/moveit_servo -- -j8 -l8
+[10.503s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/moveit_servo
+[10.509s] -- Install configuration: "Release"
+[10.509s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib.so.2.5.9
+[10.510s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib.so
+[10.510s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so.2.5.9
+[10.510s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so
+[10.510s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libpose_tracking.so
+[10.510s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libservo_node.so
+[10.510s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libservo_controller_input.so
+[10.511s] -- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/libservo_controller_input.so" to ""
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/servo_node_main
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/servo_pose_tracking_demo
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/lib/moveit_servo/fake_command_publisher
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/pose_tracking.h
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_server.h
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_parameters.h
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/make_shared_from_pool.h
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/enforce_limits.hpp
+[10.512s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_node.h
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo.h
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/status_codes.h
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/servo_calcs.h
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/utilities.h
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/parameter_descriptor_builder.hpp
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/include/moveit_servo/collision_check.h
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/launch
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/launch/pose_tracking_example.launch.py
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/launch/servo_example.launch.py
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/demo_rviz_pose_tracking.rviz
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/panda_simulated_config_pose_tracking.yaml
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/panda_simulated_config.yaml
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/pose_tracking_settings.yaml
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/config/demo_rviz_config.rviz
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/library_path.sh
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/library_path.dsv
+[10.513s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/package_run_dependencies/moveit_servo
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/parent_prefix_path/moveit_servo
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/ament_prefix_path.sh
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/ament_prefix_path.dsv
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/path.sh
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/environment/path.dsv
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.bash
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.sh
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.zsh
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/local_setup.dsv
+[10.514s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/package.dsv
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/packages/moveit_servo
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/ament_index/resource_index/rclcpp_components/moveit_servo
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/export_moveit_servoExport.cmake
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/export_moveit_servoExport-release.cmake
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/ament_cmake_export_targets-extras.cmake
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/moveit_servoConfig.cmake
+[10.514s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/cmake/moveit_servoConfig-version.cmake
+[10.515s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/moveit_servo/share/moveit_servo/package.xml
+[10.516s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/moveit_servo

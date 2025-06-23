@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target servo_controller_input[0m
+[  6%] Built target gtest
+[ 12%] Built target gtest_main
+[ 18%] Built target fake_command_publisher
+[ 21%] [32mBuilding CXX object CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o[0m
+[ 30%] Built target moveit_servo_lib_parameters
+[ 36%] Built target test_servo_collision
+[ 42%] Built target test_servo_integration
+[ 60%] Built target moveit_servo_lib
+[ 66%] Built target servo_node
+[ 72%] Built target servo_calcs_unit_tests
+[ 78%] Built target pose_tracking
+[ 84%] Built target servo_node_main
+[ 90%] Built target servo_pose_tracking_demo
+[ 96%] Built target test_servo_pose_tracking
