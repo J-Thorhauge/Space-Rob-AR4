@@ -11,7 +11,6 @@
     <joint name="joint_4" />
     <joint name="joint_5" />
     <joint name="joint_6" />
-    <joint name="ee_joint" />
   </group>
   <group_state name="home" group="gorm_arm">
     <joint name="joint_1" value="0" />
@@ -38,4 +37,6 @@
   <disable_collisions link1="link_3" link2="link_6" reason="Never" />
   <disable_collisions link1="link_4" link2="link_5" reason="Adjacent" />
   <disable_collisions link1="link_5" link2="link_6" reason="Adjacent" />
+  <disable_collisions link1="link_6" link2="ee_link" reason="Adjacent" />
+  <disable_collisions link1="link_5" link2="ee_link" reason="Adjacent" />
 </robot>

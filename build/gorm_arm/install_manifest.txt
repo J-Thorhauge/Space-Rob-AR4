@@ -1,3 +1,6 @@
+/home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/ros2_controllers.yaml
+/home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/gorm_arm_simulated_config.yaml
+/home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/kinematics.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/demo.launch.py
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/moveit.launch.py
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/rviz/rviz_config.rviz
