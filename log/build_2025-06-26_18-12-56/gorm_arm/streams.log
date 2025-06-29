@@ -1,0 +1,36 @@
+[0.021s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8
+[0.086s] [ 20%] [32mBuilding CXX object CMakeFiles/gorm_arm.dir/src/gorm_arm_hardware_interface.cpp.o[0m
+[0.086s] [ 40%] [32mBuilding CXX object CMakeFiles/gorm_arm.dir/src/gorm_arm_gripper_hw_interface.cpp.o[0m
+[0.088s] [ 60%] [32mBuilding CXX object CMakeFiles/gorm_arm.dir/src/teensy_driver.cpp.o[0m
+[0.093s] [ 80%] [32mBuilding CXX object CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.o[0m
+[0.106s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gorm_arm_gripper_hw_interface.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kgorm_arm_driver/gorm_arm_gripper_hw_interface.hpp: No such file or directory
+[0.106s]     1 | #include [01;31m[K<gorm_arm_driver/gorm_arm_gripper_hw_interface.hpp>[m[K
+[0.106s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.106s] compilation terminated.
+[0.106s] gmake[2]: *** [CMakeFiles/gorm_arm.dir/build.make:90: CMakeFiles/gorm_arm.dir/src/gorm_arm_gripper_hw_interface.cpp.o] Error 1
+[0.106s] gmake[2]: *** Waiting for unfinished jobs....
+[0.106s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kannin_ar4_driver/arduino_nano_driver.hpp: No such file or directory
+[0.106s]     1 | #include [01;31m[K"annin_ar4_driver/arduino_nano_driver.hpp"[m[K
+[0.107s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.107s] compilation terminated.
+[0.113s] gmake[2]: *** [CMakeFiles/gorm_arm.dir/build.make:118: CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.o] Error 1
+[0.569s] In file included from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gorm_arm_hardware_interface.cpp:1[m[K:
+[0.569s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/gorm_arm_hardware_interface.hpp:9:10:[m[K [01;31m[Kfatal error: [m[Kgorm_arm/teensy_driver.hpp: No such file or directory
+[0.569s]     9 | #include [01;31m[K"gorm_arm/teensy_driver.hpp"[m[K
+[0.569s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.569s] compilation terminated.
+[0.570s] gmake[2]: *** [CMakeFiles/gorm_arm.dir/build.make:76: CMakeFiles/gorm_arm.dir/src/gorm_arm_hardware_interface.cpp.o] Error 1
+[2.967s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/teensy_driver.cpp:12:8:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool gorm_arm_driver::TeensyDriver::init(std::string, int, int, bool)[m[K’
+[2.967s]    12 |   bool [01;31m[KTeensyDriver[m[K::init(std::string port, int baudrate,
+[2.967s]       |        [01;31m[K^~~~~~~~~~~~[m[K
+[2.967s] In file included from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/teensy_driver.cpp:1[m[K:
+[2.967s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/teensy_driver.hpp:19:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool gorm_arm_driver::TeensyDriver::init(std::string, std::string, int, int, bool)[m[K’
+[2.967s]    19 |     bool [01;36m[Kinit[m[K(std::string ar_model, std::string port, int baudrate,
+[2.967s]       |          [01;36m[K^~~~[m[K
+[2.967s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/teensy_driver.hpp:16:9:[m[K [01;36m[Knote: [m[K‘[01m[Kclass gorm_arm_driver::TeensyDriver[m[K’ defined here
+[2.968s]    16 |   class [01;36m[KTeensyDriver[m[K
+[2.968s]       |         [01;36m[K^~~~~~~~~~~~[m[K
+[3.818s] gmake[2]: *** [CMakeFiles/gorm_arm.dir/build.make:104: CMakeFiles/gorm_arm.dir/src/teensy_driver.cpp.o] Error 1
+[3.818s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gorm_arm.dir/all] Error 2
+[3.818s] gmake: *** [Makefile:146: all] Error 2
+[3.820s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm' returned '2': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8

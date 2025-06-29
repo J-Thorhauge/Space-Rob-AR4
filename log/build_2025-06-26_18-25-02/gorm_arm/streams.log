@@ -1,0 +1,76 @@
+[0.021s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8
+[0.085s] [35m[1mConsolidate compiler generated dependencies of target gorm_arm[0m
+[0.135s] [ 20%] [32mBuilding CXX object CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.o[0m
+[4.081s] [ 40%] [32m[1mLinking CXX shared library libgorm_arm.so[0m
+[4.380s] [100%] Built target gorm_arm
+[4.389s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm' returned '0': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8
+[4.390s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/gorm_arm
+[4.398s] -- Install configuration: ""
+[4.398s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/hardware_interface_plugin.xml
+[4.398s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/lib/libgorm_arm.so
+[4.399s] -- Set runtime path of "/home/johnbuntu/ar4_ros_driver/install/gorm_arm/lib/libgorm_arm.so" to ""
+[4.399s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/include/gorm_arm
+[4.400s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/include/gorm_arm/gorm_arm_driver
+[4.400s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/include/gorm_arm/gorm_arm_driver/gorm_arm_hardware_interface.hpp
+[4.400s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/include/gorm_arm/gorm_arm_driver/arduino_nano_driver.hpp
+[4.400s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/include/gorm_arm/gorm_arm_driver/gorm_arm_gripper_hw_interface.hpp
+[4.400s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/include/gorm_arm/gorm_arm_driver/teensy_driver.hpp
+[4.400s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config
+[4.400s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/ros2_controllers.yaml
+[4.400s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/driver.yaml
+[4.400s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/joint_offsets.yaml
+[4.400s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controllers.yaml
+[4.401s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/robot_parameters.yaml
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controller_update_rate.yaml
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/gorm_arm_simulated_config.yaml
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/kinematics.yaml
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/demo.launch.py
+[4.401s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/driver.launch.py
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/moveit.launch.py
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/urdf
+[4.401s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/urdf/gorm_arm.urdf
+[4.401s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/urdf/fake_gorm_arm.urdf
+[4.402s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/environment/library_path.sh
+[4.402s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/environment/library_path.dsv
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/ros2_controllers.yaml
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/driver.yaml
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/joint_offsets.yaml
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controllers.yaml
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/robot_parameters.yaml
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controller_update_rate.yaml
+[4.402s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/gorm_arm_simulated_config.yaml
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/kinematics.yaml
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/demo.launch.py
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/driver.launch.py
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/launch/moveit.launch.py
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/rviz
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/rviz/rviz_config.rviz
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/srdf
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/srdf/gorm_arm.srdf
+[4.403s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/urdf
+[4.404s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/urdf/gorm_arm.urdf
+[4.404s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/urdf/fake_gorm_arm.urdf
+[4.404s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/ament_index/resource_index/package_run_dependencies/gorm_arm
+[4.404s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/ament_index/resource_index/parent_prefix_path/gorm_arm
+[4.404s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/environment/ament_prefix_path.sh
+[4.404s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/environment/ament_prefix_path.dsv
+[4.405s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/environment/path.sh
+[4.405s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/environment/path.dsv
+[4.405s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/local_setup.bash
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/local_setup.sh
+[4.406s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/local_setup.zsh
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/local_setup.dsv
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/package.dsv
+[4.406s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/ament_index/resource_index/packages/gorm_arm
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/gorm_arm
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/cmake/export_gorm_armExport.cmake
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/cmake/export_gorm_armExport-noconfig.cmake
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/cmake/ament_cmake_export_targets-extras.cmake
+[4.406s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.407s] -- Installing: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/cmake/gorm_armConfig.cmake
+[4.407s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/cmake/gorm_armConfig-version.cmake
+[4.407s] -- Up-to-date: /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/package.xml
+[4.407s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm' returned '0': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/gorm_arm

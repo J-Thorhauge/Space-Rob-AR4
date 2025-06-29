@@ -197,6 +197,152 @@ gorm_arm_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm_uninstall.dir/build.make CMakeFiles/gorm_arm_uninstall.dir/build
 .PHONY : gorm_arm_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named gorm_arm
+
+# Build rule for target.
+gorm_arm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gorm_arm
+.PHONY : gorm_arm
+
+# fast build rule for target.
+gorm_arm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/build
+.PHONY : gorm_arm/fast
+
+#=============================================================================
+# Target rules for targets named run_arduino_nano
+
+# Build rule for target.
+run_arduino_nano: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_arduino_nano
+.PHONY : run_arduino_nano
+
+# fast build rule for target.
+run_arduino_nano/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/build
+.PHONY : run_arduino_nano/fast
+
+src/arduino_nano_driver.o: src/arduino_nano_driver.cpp.o
+.PHONY : src/arduino_nano_driver.o
+
+# target to build an object file
+src/arduino_nano_driver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.o
+.PHONY : src/arduino_nano_driver.cpp.o
+
+src/arduino_nano_driver.i: src/arduino_nano_driver.cpp.i
+.PHONY : src/arduino_nano_driver.i
+
+# target to preprocess a source file
+src/arduino_nano_driver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.i
+.PHONY : src/arduino_nano_driver.cpp.i
+
+src/arduino_nano_driver.s: src/arduino_nano_driver.cpp.s
+.PHONY : src/arduino_nano_driver.s
+
+# target to generate assembly for a file
+src/arduino_nano_driver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.s
+.PHONY : src/arduino_nano_driver.cpp.s
+
+src/gorm_arm_gripper_hw_interface.o: src/gorm_arm_gripper_hw_interface.cpp.o
+.PHONY : src/gorm_arm_gripper_hw_interface.o
+
+# target to build an object file
+src/gorm_arm_gripper_hw_interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/gorm_arm_gripper_hw_interface.cpp.o
+.PHONY : src/gorm_arm_gripper_hw_interface.cpp.o
+
+src/gorm_arm_gripper_hw_interface.i: src/gorm_arm_gripper_hw_interface.cpp.i
+.PHONY : src/gorm_arm_gripper_hw_interface.i
+
+# target to preprocess a source file
+src/gorm_arm_gripper_hw_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/gorm_arm_gripper_hw_interface.cpp.i
+.PHONY : src/gorm_arm_gripper_hw_interface.cpp.i
+
+src/gorm_arm_gripper_hw_interface.s: src/gorm_arm_gripper_hw_interface.cpp.s
+.PHONY : src/gorm_arm_gripper_hw_interface.s
+
+# target to generate assembly for a file
+src/gorm_arm_gripper_hw_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/gorm_arm_gripper_hw_interface.cpp.s
+.PHONY : src/gorm_arm_gripper_hw_interface.cpp.s
+
+src/gorm_arm_hardware_interface.o: src/gorm_arm_hardware_interface.cpp.o
+.PHONY : src/gorm_arm_hardware_interface.o
+
+# target to build an object file
+src/gorm_arm_hardware_interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/gorm_arm_hardware_interface.cpp.o
+.PHONY : src/gorm_arm_hardware_interface.cpp.o
+
+src/gorm_arm_hardware_interface.i: src/gorm_arm_hardware_interface.cpp.i
+.PHONY : src/gorm_arm_hardware_interface.i
+
+# target to preprocess a source file
+src/gorm_arm_hardware_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/gorm_arm_hardware_interface.cpp.i
+.PHONY : src/gorm_arm_hardware_interface.cpp.i
+
+src/gorm_arm_hardware_interface.s: src/gorm_arm_hardware_interface.cpp.s
+.PHONY : src/gorm_arm_hardware_interface.s
+
+# target to generate assembly for a file
+src/gorm_arm_hardware_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/gorm_arm_hardware_interface.cpp.s
+.PHONY : src/gorm_arm_hardware_interface.cpp.s
+
+src/run_arduino_nano.o: src/run_arduino_nano.cpp.o
+.PHONY : src/run_arduino_nano.o
+
+# target to build an object file
+src/run_arduino_nano.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/src/run_arduino_nano.cpp.o
+.PHONY : src/run_arduino_nano.cpp.o
+
+src/run_arduino_nano.i: src/run_arduino_nano.cpp.i
+.PHONY : src/run_arduino_nano.i
+
+# target to preprocess a source file
+src/run_arduino_nano.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/src/run_arduino_nano.cpp.i
+.PHONY : src/run_arduino_nano.cpp.i
+
+src/run_arduino_nano.s: src/run_arduino_nano.cpp.s
+.PHONY : src/run_arduino_nano.s
+
+# target to generate assembly for a file
+src/run_arduino_nano.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/src/run_arduino_nano.cpp.s
+.PHONY : src/run_arduino_nano.cpp.s
+
+src/teensy_driver.o: src/teensy_driver.cpp.o
+.PHONY : src/teensy_driver.o
+
+# target to build an object file
+src/teensy_driver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/teensy_driver.cpp.o
+.PHONY : src/teensy_driver.cpp.o
+
+src/teensy_driver.i: src/teensy_driver.cpp.i
+.PHONY : src/teensy_driver.i
+
+# target to preprocess a source file
+src/teensy_driver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/teensy_driver.cpp.i
+.PHONY : src/teensy_driver.cpp.i
+
+src/teensy_driver.s: src/teensy_driver.cpp.s
+.PHONY : src/teensy_driver.s
+
+# target to generate assembly for a file
+src/teensy_driver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/teensy_driver.cpp.s
+.PHONY : src/teensy_driver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +358,23 @@ help:
 	@echo "... test"
 	@echo "... gorm_arm_uninstall"
 	@echo "... uninstall"
+	@echo "... gorm_arm"
+	@echo "... run_arduino_nano"
+	@echo "... src/arduino_nano_driver.o"
+	@echo "... src/arduino_nano_driver.i"
+	@echo "... src/arduino_nano_driver.s"
+	@echo "... src/gorm_arm_gripper_hw_interface.o"
+	@echo "... src/gorm_arm_gripper_hw_interface.i"
+	@echo "... src/gorm_arm_gripper_hw_interface.s"
+	@echo "... src/gorm_arm_hardware_interface.o"
+	@echo "... src/gorm_arm_hardware_interface.i"
+	@echo "... src/gorm_arm_hardware_interface.s"
+	@echo "... src/run_arduino_nano.o"
+	@echo "... src/run_arduino_nano.i"
+	@echo "... src/run_arduino_nano.s"
+	@echo "... src/teensy_driver.o"
+	@echo "... src/teensy_driver.i"
+	@echo "... src/teensy_driver.s"
 .PHONY : help
 
 

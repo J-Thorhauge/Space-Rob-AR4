@@ -1,0 +1,242 @@
+[35m[1mConsolidate compiler generated dependencies of target gorm_arm[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.o[0m
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:8:8:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ has not been declared
+    8 |   bool [01;31m[KArduinoNanoDriver[m[K::init(std::string port, int baudrate)
+      |        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kbool annin_ar4_driver::init(std::string, int)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:11:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kversion_[m[K’ was not declared in this scope
+   11 |     [01;31m[Kversion_[m[K = FW_VERSION;
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:15:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_port_[m[K’ was not declared in this scope
+   15 |     [01;31m[Kserial_port_[m[K.open(port, ec);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/arduino_nano_driver.hpp:4[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1[m[K:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:19:19:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+   19 |       RCLCPP_WARN([01;31m[Klogger_[m[K, "Failed to connect to serial port %s", port.c_str());
+      |                   [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:19:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   19 |       [01;31m[KRCLCPP_WARN[m[K(logger_, "Failed to connect to serial port %s", port.c_str());
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:19:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   19 |       [01;31m[KRCLCPP_WARN[m[K(logger_, "Failed to connect to serial port %s", port.c_str());
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:19:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   19 |       [01;31m[KRCLCPP_WARN[m[K(logger_, "Failed to connect to serial port %s", port.c_str());
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:28:19:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+   28 |       RCLCPP_INFO([01;31m[Klogger_[m[K, "Successfully connected to serial port %s",
+      |                   [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:28:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   28 |       [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully connected to serial port %s",
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:28:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   28 |       [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully connected to serial port %s",
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:28:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   28 |       [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully connected to serial port %s",
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:32:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+   32 |     RCLCPP_INFO([01;31m[Klogger_[m[K, "Waiting for response from Arduino Nano on port %s",
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:32:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   32 |     [01;31m[KRCLCPP_INFO[m[K(logger_, "Waiting for response from Arduino Nano on port %s",
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:32:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   32 |     [01;31m[KRCLCPP_INFO[m[K(logger_, "Waiting for response from Arduino Nano on port %s",
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:32:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   32 |     [01;31m[KRCLCPP_INFO[m[K(logger_, "Waiting for response from Arduino Nano on port %s",
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:36:25:[m[K [01;31m[Kerror: [m[K‘[01m[KsendCommand[m[K’ was not declared in this scope
+   36 |     std::string reply = [01;31m[KsendCommand[m[K(msg);
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:37:10:[m[K [01;31m[Kerror: [m[K‘[01m[KcheckInit[m[K’ was not declared in this scope
+   37 |     if (![01;31m[KcheckInit[m[K(reply))
+      |          [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/arduino_nano_driver.hpp:4[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1[m[K:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:41:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+   41 |     RCLCPP_INFO([01;31m[Klogger_[m[K, "Successfully initialised driver on port %s",
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:41:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   41 |     [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully initialised driver on port %s",
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:41:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   41 |     [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully initialised driver on port %s",
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:41:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   41 |     [01;31m[KRCLCPP_INFO[m[K(logger_, "Successfully initialised driver on port %s",
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K At global scope:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:46:3:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ does not name a type
+   46 |   [01;31m[KArduinoNanoDriver[m[K::ArduinoNanoDriver() : serial_port_(io_service_) {}
+      |   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:48:15:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ has not been declared
+   48 |   std::string [01;31m[KArduinoNanoDriver[m[K::sendCommand(std::string outMsg)
+      |               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kstd::string annin_ar4_driver::sendCommand(std::string)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:51:10:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransmit[m[K’ was not declared in this scope; did you mean ‘[01m[KerrTransmit[m[K’?
+   51 |     if (![01;31m[Ktransmit[m[K(outMsg, errTransmit))
+      |          [01;31m[K^~~~~~~~[m[K
+      |          [32m[KerrTransmit[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/arduino_nano_driver.hpp:4[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1[m[K:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:53:20:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+   53 |       RCLCPP_ERROR([01;31m[Klogger_[m[K, "Failed to transmit message: %s",
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:53:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   53 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to transmit message: %s",
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:53:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   53 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to transmit message: %s",
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:53:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   53 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to transmit message: %s",
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:59:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceive[m[K’ was not declared in this scope
+   59 |     [01;31m[Kreceive[m[K(inMsg);
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K At global scope:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:63:8:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ has not been declared
+   63 |   bool [01;31m[KArduinoNanoDriver[m[K::transmit(std::string msg, std::string &err)
+      |        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kbool annin_ar4_driver::transmit(std::string, std::string&)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:68:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_port_[m[K’ was not declared in this scope
+   68 |     boost::asio::write([01;31m[Kserial_port_[m[K, sendBuffer, ec);
+      |                        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K At global scope:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:81:8:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ has not been declared
+   81 |   void [01;31m[KArduinoNanoDriver[m[K::receive(std::string &inMsg)
+      |        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kvoid annin_ar4_driver::receive(std::string&)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:88:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_port_[m[K’ was not declared in this scope
+   88 |       boost::asio::read([01;31m[Kserial_port_[m[K, boost::asio::buffer(&c, 1));
+      |                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K At global scope:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:103:8:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ has not been declared
+  103 |   bool [01;31m[KArduinoNanoDriver[m[K::checkInit(std::string msg)
+      |        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kbool annin_ar4_driver::checkInit(std::string)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:105:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kversion_[m[K’ was not declared in this scope
+  105 |     if (msg == [01;31m[Kversion_[m[K)
+      |                [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/arduino_nano_driver.hpp:4[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1[m[K:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:111:20:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+  111 |       RCLCPP_ERROR([01;31m[Klogger_[m[K, "Firmware version mismatch %s vs. %s", msg.c_str(),
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:111:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  111 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Firmware version mismatch %s vs. %s", msg.c_str(),
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:111:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  111 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Firmware version mismatch %s vs. %s", msg.c_str(),
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:111:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  111 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Firmware version mismatch %s vs. %s", msg.c_str(),
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K At global scope:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:117:8:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ has not been declared
+  117 |   bool [01;31m[KArduinoNanoDriver[m[K::getPosition(int &position)
+      |        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/arduino_nano_driver.hpp:4[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1[m[K:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kbool annin_ar4_driver::getPosition(int&)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:122:20:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+  122 |       RCLCPP_ERROR([01;31m[Klogger_[m[K, "Failed to get position");
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:122:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to get position");
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:122:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to get position");
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:122:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to get position");
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K At global scope:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:129:8:[m[K [01;31m[Kerror: [m[K‘[01m[KArduinoNanoDriver[m[K’ has not been declared
+  129 |   bool [01;31m[KArduinoNanoDriver[m[K::writePosition(double position)
+      |        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/include/gorm_arm_driver/arduino_nano_driver.hpp:4[m[K,
+                 from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1[m[K:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kbool annin_ar4_driver::writePosition(double)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:135:20:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+  135 |       RCLCPP_ERROR([01;31m[Klogger_[m[K, "Failed to write position %f, got reply: %s",
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:135:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  135 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to write position %f, got reply: %s",
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:135:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  135 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to write position %f, got reply: %s",
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:135:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  135 |       [01;31m[KRCLCPP_ERROR[m[K(logger_, "Failed to write position %f, got reply: %s",
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:[m[K In function ‘[01m[Kbool annin_ar4_driver::checkInit(std::string)[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:115:3:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  115 |   [01;35m[K}[m[K
+      |   [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/gorm_arm.dir/build.make:118: CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gorm_arm.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,6 +1,9 @@
 source;share/gorm_arm/hook/cmake_prefix_path.ps1
 source;share/gorm_arm/hook/cmake_prefix_path.dsv
 source;share/gorm_arm/hook/cmake_prefix_path.sh
+source;share/gorm_arm/hook/ld_library_path_lib.ps1
+source;share/gorm_arm/hook/ld_library_path_lib.dsv
+source;share/gorm_arm/hook/ld_library_path_lib.sh
 source;share/gorm_arm/local_setup.bash
 source;share/gorm_arm/local_setup.dsv
 source;share/gorm_arm/local_setup.ps1

@@ -1,0 +1,15 @@
+[0.012s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/moveit_servo -- -j8 -l8
+[0.110s] [  6%] Built target fake_command_publisher
+[0.114s] [ 18%] Built target gtest
+[0.114s] [ 18%] Built target servo_controller_input
+[0.114s] [ 24%] Built target gtest_main
+[0.128s] [ 33%] Built target moveit_servo_lib_parameters
+[0.172s] [ 39%] Built target test_servo_collision
+[0.174s] [ 45%] Built target test_servo_integration
+[0.182s] [ 63%] Built target moveit_servo_lib
+[0.248s] [ 69%] Built target pose_tracking
+[0.248s] [ 75%] Built target servo_node
+[0.250s] [ 81%] Built target servo_calcs_unit_tests
+[0.288s] [ 87%] Built target servo_pose_tracking_demo
+[0.293s] [ 93%] Built target test_servo_pose_tracking
+[0.295s] [100%] Built target servo_node_main

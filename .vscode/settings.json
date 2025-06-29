@@ -86,7 +86,22 @@
     "texture": "cpp",
     "vertexarraystate": "cpp",
     "buffered_value": "cpp",
-    "fast_back_stack": "cpp"
+    "fast_back_stack": "cpp",
+    "charconv": "cpp",
+    "csetjmp": "cpp",
+    "barrier": "cpp",
+    "cuchar": "cpp",
+    "netfwd": "cpp",
+    "hash_map": "cpp",
+    "hash_set": "cpp",
+    "rope": "cpp",
+    "slist": "cpp",
+    "latch": "cpp",
+    "ranges": "cpp",
+    "scoped_allocator": "cpp",
+    "span": "cpp",
+    "syncstream": "cpp",
+    "valarray": "cpp"
   },
   "ros.distro": "jazzy",
   "C_Cpp.default.includePath": [
