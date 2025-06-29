@@ -14,6 +14,7 @@
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controllers.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/robot_parameters.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controller_update_rate.yaml
+/home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/gorm_arm_real_config.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/pilz_planning.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/gorm_arm_simulated_config.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/kinematics.yaml
@@ -34,6 +35,7 @@
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controllers.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/robot_parameters.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/controller_update_rate.yaml
+/home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/gorm_arm_real_config.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/pilz_planning.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/gorm_arm_simulated_config.yaml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/config/kinematics.yaml

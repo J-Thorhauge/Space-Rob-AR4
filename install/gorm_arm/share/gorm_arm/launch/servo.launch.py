@@ -4,6 +4,7 @@ import yaml
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch_ros.parameter_descriptions import ParameterFile
 from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.descriptions import ComposableNode
 from launch_ros.actions import ComposableNodeContainer
@@ -13,6 +14,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import (
     Command,
+    PathJoinSubstitution,
 )
 
 def load_yaml(package_name, file_path):
@@ -49,17 +51,77 @@ def generate_launch_description():
     }
 
     # Get parameters for the Servo node
-    servo_yaml = load_yaml("gorm_arm", "config/gorm_arm_simulated_config.yaml")
+    servo_yaml = load_yaml("gorm_arm", "config/gorm_arm_real_config.yaml")
     servo_params = {"moveit_servo": servo_yaml}
 
-    # Get ros2 controller
-    controllers_folder = os.path.join(get_package_share_directory("gorm_arm"), "config")
-    ros2_controllers_path = os.path.join(controllers_folder, "ros2_controllers.yaml")
-    # ros2_controllers_path = os.path.join(
-    #     get_package_share_directory("gorm_arm"),
-    #     "config",
-    #     "ros2_controllers.yaml",
-    # )
+    joint_limits = ParameterFile(
+        PathJoinSubstitution([
+            FindPackageShare("gorm_arm"),
+            "config/joint_limits.yaml"
+        ]),
+        allow_substs=True,
+    )
+
+    # Planning Configuration
+    ompl_planning_yaml = load_yaml("gorm_arm",
+                                   "config/ompl_planning.yaml")
+    pilz_planning_yaml = load_yaml("gorm_arm",
+                                   "config/pilz_planning.yaml")
+    planning_pipeline_config = {
+        "default_planning_pipeline": "pilz",
+        "planning_pipelines": ["ompl", "pilz"],
+        "ompl": ompl_planning_yaml,
+        "pilz": pilz_planning_yaml,
+    }
+
+    moveit_controller_manager = {
+        "moveit_controller_manager":
+        "moveit_simple_controller_manager/MoveItSimpleControllerManager",
+    }
+
+    moveit_controllers = ParameterFile(
+        PathJoinSubstitution([
+            FindPackageShare("gorm_arm"),
+            "config/controllers_moveit.yaml"
+        ]),
+        allow_substs=True,
+    )
+
+    trajectory_execution = {
+        "moveit_manage_controllers": False,
+        "trajectory_execution.allowed_execution_duration_scaling": 1.2,
+        "trajectory_execution.allowed_goal_duration_margin": 0.5,
+        "trajectory_execution.allowed_start_tolerance": 0.01,
+    }
+
+    planning_scene_monitor_parameters = {
+        "publish_planning_scene": True,
+        "publish_geometry_updates": True,
+        "publish_state_updates": True,
+        "publish_transforms_updates": True,
+        # Added due to https://github.com/moveit/moveit2_tutorials/issues/528
+        "publish_robot_description_semantic": True,
+    }
+
+    move_group_node = Node(
+        package="moveit_ros_move_group",
+        executable="move_group",
+        output="screen",
+        parameters=[
+            robot_description,
+            semantic_content,
+            robot_kinematics,
+            joint_limits,
+            planning_pipeline_config,
+            trajectory_execution,
+            moveit_controller_manager,
+            moveit_controllers,
+            planning_scene_monitor_parameters,
+            {
+                "use_sim_time": False
+            },
+        ],
+    )
 
     # RViz
     rviz_folder = os.path.join(
@@ -74,36 +136,7 @@ def generate_launch_description():
         parameters=[
             robot_description,
             semantic_content,
-        ],
-    )
-
-    ros2_control_node = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[
-            robot_description, 
-            ros2_controllers_path
-        ],
-        output="screen",
-    )
-
-    joint_state_broadcaster_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=[
-            "joint_state_broadcaster",
-            "-c",
-            "/controller_manager",
-        ],
-    )
-
-    gorm_arm_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=[
-            "gorm_arm_controller", 
-            "-c", 
-            "/controller_manager",
+            robot_kinematics,
         ],
     )
 
@@ -114,18 +147,18 @@ def generate_launch_description():
         package="rclcpp_components",
         executable="component_container_mt",
         composable_node_descriptions=[
-            ComposableNode(
-                package="robot_state_publisher",
-                plugin="robot_state_publisher::RobotStatePublisher",
-                name="robot_state_publisher",
-                parameters=[robot_description],
-            ),
-            ComposableNode(
-                package="tf2_ros",
-                plugin="tf2_ros::StaticTransformBroadcasterNode",
-                name="static_tf2_broadcaster",
-                parameters=[{"child_frame_id": "/base_link", "frame_id": "/world"}],
-            ),
+            # ComposableNode(
+            #     package="robot_state_publisher",
+            #     plugin="robot_state_publisher::RobotStatePublisher",
+            #     name="robot_state_publisher",
+            #     parameters=[robot_description],
+            # ),
+            # ComposableNode(
+            #     package="tf2_ros",
+            #     plugin="tf2_ros::StaticTransformBroadcasterNode",
+            #     name="static_tf2_broadcaster",
+            #     parameters=[{"child_frame_id": "/base_link", "frame_id": "/world"}],
+            # ),
             ComposableNode(
                 package="moveit_servo",
                 plugin="moveit_servo::JoyToServoPub",
@@ -154,9 +187,10 @@ def generate_launch_description():
 
     return LaunchDescription([
         rviz_node,
-        ros2_control_node,
-        joint_state_broadcaster_spawner,
-        gorm_arm_controller_spawner,
+        # ros2_control_node,
+        # joint_state_broadcaster_spawner,
+        # gorm_arm_controller_spawner,
+        move_group_node,
         servo_node,
         container
     ])

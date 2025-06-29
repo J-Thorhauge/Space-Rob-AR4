@@ -33,12 +33,16 @@ def generate_launch_description():
         "controller_update_rate.yaml",
     ])
 
+    controllers_folder = os.path.join(get_package_share_directory("gorm_arm"), "config")
+    ros2_controllers_path = os.path.join(controllers_folder, "ros2_controllers.yaml")
+
     controller_manager_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
         parameters=[
             update_rate_config_file,
             joint_controllers_cfg,
+            # ros2_controllers_path
         ],
         remappings=[('~/robot_description', 'robot_description')],
         output="screen",

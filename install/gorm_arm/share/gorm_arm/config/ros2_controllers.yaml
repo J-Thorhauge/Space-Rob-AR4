@@ -3,7 +3,7 @@ controller_manager:
   ros__parameters:
     update_rate: 100  # Hz
 
-    gorm_arm_controller:
+    joint_trajectory_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
     # panda_hand_controller:
@@ -12,8 +12,11 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
+    # joint_trajectory_controller:
+    #   type: 
 
-gorm_arm_controller:
+
+joint_trajectory_controller:
   ros__parameters:
     command_interfaces:
       - position
