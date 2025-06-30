@@ -12,12 +12,20 @@
     <joint name="joint_5" />
     <joint name="joint_6" />
   </group>
-  <group_state name="home" group="gorm_arm">
+  <group_state name="true_home" group="gorm_arm">
     <joint name="joint_1" value="0" />
     <joint name="joint_2" value="0" />
     <joint name="joint_3" value="0" />
     <joint name="joint_4" value="0" />
     <joint name="joint_5" value="0" />
+    <joint name="joint_6" value="0" />
+  </group_state>
+  <group_state name="home" group="gorm_arm">
+    <joint name="joint_1" value="0.5934" />
+    <joint name="joint_2" value="0" />
+    <joint name="joint_3" value="0" />
+    <joint name="joint_4" value="0" />
+    <joint name="joint_5" value="0.2618" />
     <joint name="joint_6" value="0" />
   </group_state>
   <group_state name="upright" group="gorm_arm">
@@ -28,6 +36,59 @@
     <joint name="joint_5" value="0" />
     <joint name="joint_6" value="0" />
   </group_state>
+
+  <group_state name="J1_90" group="gorm_arm">
+    <joint name="joint_1" value="1.5708" />
+    <joint name="joint_2" value="0" />
+    <joint name="joint_3" value="0" />
+    <joint name="joint_4" value="0" />
+    <joint name="joint_5" value="0" />
+    <joint name="joint_6" value="0" />
+  </group_state>
+  <group_state name="J2_45" group="gorm_arm">
+    <joint name="joint_1" value="0" />
+    <joint name="joint_2" value="0.7854" />
+    <joint name="joint_3" value="0" />
+    <joint name="joint_4" value="0" />
+    <joint name="joint_5" value="0" />
+    <joint name="joint_6" value="0" />
+  </group_state>
+  <group_state name="J3_-90" group="gorm_arm">
+    <joint name="joint_1" value="0" />
+    <joint name="joint_2" value="0" />
+    <joint name="joint_3" value="-1.5708" />
+    <joint name="joint_4" value="0" />
+    <joint name="joint_5" value="0" />
+    <joint name="joint_6" value="0" />
+  </group_state>
+  <group_state name="J4_90" group="gorm_arm">
+    <joint name="joint_1" value="0" />
+    <joint name="joint_2" value="0" />
+    <joint name="joint_3" value="0" />
+    <joint name="joint_4" value="1.5708" />
+    <joint name="joint_5" value="0" />
+    <joint name="joint_6" value="0" />
+  </group_state>
+  <group_state name="J5_90" group="gorm_arm">
+    <joint name="joint_1" value="0" />
+    <joint name="joint_2" value="0" />
+    <joint name="joint_3" value="0" />
+    <joint name="joint_4" value="0" />
+    <joint name="joint_5" value="1.5708" />
+    <joint name="joint_6" value="0" />
+  </group_state>
+  <group_state name="J6_90" group="gorm_arm">
+    <joint name="joint_1" value="0" />
+    <joint name="joint_2" value="0" />
+    <joint name="joint_3" value="0" />
+    <joint name="joint_4" value="0" />
+    <joint name="joint_5" value="0" />
+    <joint name="joint_6" value="1.5708" />
+  </group_state>
+
+
+
+
   <disable_collisions link1="base_link" link2="link_1"/>
   <disable_collisions link1="base_link" link2="link_2"/>
   <disable_collisions link1="base_link" link2="link_3"/>

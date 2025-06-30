@@ -1,4 +1,117 @@
-# AR4 ROS Driver
+# Gorm Arm ROS Driver
+
+ROS 2 driver of the manipulator arm for GORMnnin Robotics.
+Tested with ROS 2 Humble on Ubuntu 22.04.
+
+**Features:**
+
+- MoveIt control
+- Joystick control
+
+## Overview
+
+#### Launch files in *gorm_arm* :
+- **demo.launch.py**
+  - Joystick demo on a simulated manipulator in Rviz, to practice or show off the joystick control.
+- **driver.launch.py**
+  - ROS interfaces for the arm, built on the ros2_control framework.
+  - Manages joint offsets, limits and conversion between joint and actuator messages.
+  - Handles communication with the microcontroller.
+- **moveit.launch.py**
+  - MoveIt module for motion planning.
+  - Controlling the arm through Rviz by moving the tool frame.
+- **servo.launch.py**
+  - Servoing control for the manipulator.
+  - Robot visualizing through Rviz.
+
+
+## Installation
+
+- Install [ROS 2 Humble](https://docs.ros.org/en/humble/Installation.html) for Ubuntu 22.04
+- Clone this repository:
+  ```bash
+  git clone https://github.com/J-Thorhauge/Space-Rob-AR4.git
+  ```
+- Install workspace dependencies:
+  ```bash
+  rosdep install --from-paths . --ignore-src -r -y
+  ```
+- Build the workspace:
+  ```bash
+  colcon build
+  ```
+- Source the workspace:
+  ```bash
+  source install/setup.bash
+  ```
+- Enable serial port access if you haven't already done so:
+  ```bash
+  sudo addgroup $USER dialout
+  ```
+  You will need to log out and back in for changes to take effect.
+
+### Firmware Flashing
+
+The Teensy sketch provided in [gorm_arm_firmware](./gorm_arm_firmware/)
+should be installed on the Teensy 4.1 on the manipulator. 
+
+<!-- ### [Optional] Running in Docker Container
+
+A docker container and run script has been provided that can be used to run the
+robot and any GUI programs. It requires [rocker](https://github.com/osrf/rocker) to be installed. Then you can start the docker container with:
+
+```bash
+docker build -t ar4_ros_driver .
+
+# Adjust the volume mounting and devices based on your project and hardware
+rocker --ssh --x11 \
+  --devices /dev/ttyUSB0 /ttyACM0 \
+  --volume $(pwd):/ar4_ws/src/ar4_ros_driver -- \
+  ar4_ros_driver bash
+``` -->
+
+## Usage
+
+### Simulated arm
+
+A simulated arm with joystick control.
+To launch, run:
+
+```bash
+ros2 launch gorm_arm demo.launch.py
+```
+
+### Real world arm
+To control the arm you have to launch two modules in sepperate terminals:
+
+#### 1. Arm hardware driver - `driver.launch.py`
+
+   - The hardware driver must always be run, in order to control the arm.
+   - For controlling the real-world arm, you will need to run the `annin_ar4_driver` module:
+
+```bash
+ros2 launch gorm_arm driver.launch.py
+```
+
+#### 2. Controller module - either `moveit.launch.py` or `servo.launch.py`
+
+   - `moveit.launch.py` launches Rviz with a simple MoveIt controller, to allow manual control by moving the tool frame.
+   - Simple control is launched with:
+
+```bash
+ros2 launch gorm_arm moveit.launch.py
+```
+
+   - `servo.launch.py` launches Rviz with a MoveIt Servo controller, to allow manual control through a connected joystick.
+   - Servo control is launched with:
+
+```bash
+ros2 launch gorm_arm servo.launch.py
+```
+---
+
+
+<!-- # AR4 ROS Driver
 
 ROS 2 driver of the AR4 robot arm from [Annin Robotics](https://www.anninrobotics.com).
 Tested with ROS 2 Jazzy on Ubuntu 24.04. Also has branch for Humble
@@ -203,4 +316,4 @@ Select and modify the YAML file corresponding to your AR model to fine-tune the 
 
 By default this repo uses velocity-based joint trajectory control. It allows the arm to move a lot faster and the arm movement is also a lot smoother. If for any
 reason you'd like to use the simpler classic position-only control mode, you can
-set `velocity_control_enabled: false` in [driver.yaml](./annin_ar4_driver/config/driver.yaml). Note that you'll need to reduce velocity and acceleration scaling in order for larger motions to succeed.
+set `velocity_control_enabled: false` in [driver.yaml](./annin_ar4_driver/config/driver.yaml). Note that you'll need to reduce velocity and acceleration scaling in order for larger motions to succeed. -->
