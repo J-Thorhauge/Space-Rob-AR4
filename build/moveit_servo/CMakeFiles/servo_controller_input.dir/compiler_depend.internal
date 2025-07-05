@@ -353,6 +353,12 @@ CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp
  /opt/ros/humble/include/octomap_msgs/octomap_msgs/msg/detail/octomap__traits.hpp
  /opt/ros/humble/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__type_support.hpp
  /opt/ros/humble/include/moveit_msgs/moveit_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__struct.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__type_support.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
  /opt/ros/humble/include/rclcpp/rclcpp/client.hpp
  /usr/include/c++/11/atomic
  /usr/include/c++/11/future

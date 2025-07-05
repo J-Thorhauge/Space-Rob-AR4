@@ -43,6 +43,7 @@
 #include <control_msgs/msg/joint_jog.hpp>
 #include <std_srvs/srv/trigger.hpp>
 #include <moveit_msgs/msg/planning_scene.hpp>
+#include <std_msgs/msg/int32.hpp>
 #include <rclcpp/client.hpp>
 #include <rclcpp/experimental/buffers/intra_process_buffer.hpp>
 #include <rclcpp/node.hpp>
@@ -53,11 +54,13 @@
 #include <rclcpp/time.hpp>
 #include <rclcpp/utilities.hpp>
 #include <thread>
+#include <chrono>
 
 // We'll just set up parameters here
 const std::string JOY_TOPIC = "/joy";
 const std::string TWIST_TOPIC = "/servo_node/delta_twist_cmds";
 const std::string JOINT_TOPIC = "/servo_node/delta_joint_cmds";
+const std::string GRIPPER_TOPIC = "/servo_node/gripper_pos";
 const std::string EEF_FRAME_ID = "ee_link";
 const std::string BASE_FRAME_ID = "base_link";
 
@@ -100,10 +103,25 @@ enum Button
   BUT_8 = 7
 };
 
+bool gripper_change = false;
+int prev_gripper_pos = 0;
+
 // Some axes have offsets (e.g. the default trigger position is 1.0 not 0)
 // This will map the default values for the axes
 std::map<Axis, double> AXIS_DEFAULTS; // = { { LEFT_TRIGGER, 1.0 }, { RIGHT_TRIGGER, 1.0 } };
 std::map<Button, double> BUTTON_DEFAULTS;
+
+double deadzone(double axis_value)
+{
+  if (axis_value < -0.1 || axis_value > 0.1)
+  {
+    return axis_value;
+  }
+  else
+  {
+    return 0;
+  }
+}
 
 // To change controls or setup a new controller, all you should to do is change the above enums and the follow 2
 // functions
@@ -116,7 +134,8 @@ std::map<Button, double> BUTTON_DEFAULTS;
  */
 bool convertJoyToCmd(const std::vector<float> &axes, const std::vector<int> &buttons,
                      std::unique_ptr<geometry_msgs::msg::TwistStamped> &twist,
-                     std::unique_ptr<control_msgs::msg::JointJog> &joint)
+                     std::unique_ptr<control_msgs::msg::JointJog> &joint,
+                     std::unique_ptr<std_msgs::msg::Int32> &gripper)
 {
   // Give joint jogging priority because it is only buttons
   // If any joint jog command is requested, we are only publishing joint commands
@@ -168,31 +187,37 @@ bool convertJoyToCmd(const std::vector<float> &axes, const std::vector<int> &but
 
   if (frame == BASE)
   {
-    twist->twist.linear.x = axes[STICK_LR];
+    twist->twist.linear.x = deadzone(axes[STICK_LR]);
 
-    twist->twist.linear.y = -1 * (axes[STICK_BF]);
+    twist->twist.linear.y = -1 * (deadzone(axes[STICK_BF]));
 
     double z_positive = buttons[BUT_3];
     double z_negative = -1 * (buttons[BUT_4]);
     twist->twist.linear.z = z_positive + z_negative;
 
-    twist->twist.angular.x = axes[D_PAD_Y];
-    twist->twist.angular.y = axes[D_PAD_X];
-    twist->twist.angular.z = axes[STICK_TWIST];
+    twist->twist.angular.x = deadzone(axes[D_PAD_Y]);
+    twist->twist.angular.y = deadzone(axes[D_PAD_X]);
+    twist->twist.angular.z = deadzone(axes[STICK_TWIST]);
+
+    double gripper_angle = (axes[THROTTLE] * 30) + 30;
+    gripper->data = static_cast<int>(gripper_angle);
   }
   else if (frame == TOOL)
   {
-    twist->twist.linear.x = -1 * (axes[STICK_LR]);
+    twist->twist.linear.x = -1 * (deadzone(axes[STICK_LR]));
 
     double y_positive = buttons[BUT_4];
     double y_negative = -1 * (buttons[BUT_3]);
     twist->twist.linear.y = y_positive + y_negative;
 
-    twist->twist.linear.z = axes[STICK_BF];
+    twist->twist.linear.z = deadzone(axes[STICK_BF]);
 
-    twist->twist.angular.x = -1 * (axes[D_PAD_Y]);
-    twist->twist.angular.y = -1 * (axes[STICK_TWIST]);
-    twist->twist.angular.z = -1 * (axes[D_PAD_X]);
+    twist->twist.angular.x = -1 * (deadzone(axes[D_PAD_Y]));
+    twist->twist.angular.y = -1 * (deadzone(axes[STICK_TWIST]));
+    twist->twist.angular.z = -1 * (deadzone(axes[D_PAD_X]));
+
+    double gripper_angle = (axes[THROTTLE] * 30) + 30;
+    gripper->data = static_cast<int>(gripper_angle);
   }
   // else if (frame == TOP)
   // {
@@ -205,6 +230,11 @@ bool convertJoyToCmd(const std::vector<float> &axes, const std::vector<int> &but
 
   return true;
 }
+
+// void get_gripper_cmd(std::unique_ptr<std_msgs::msg::Int32> gripper){
+//   float gripper_angle = (axes[THROTTLE]*30)+30;
+//   gripper->int32.data = static_cast<int>(gripper_angle);
+// }
 
 /** \brief // This should update the frame_to_publish_ as needed for changing command frame via controller
  * @param frame_name Set the command frame to this
@@ -243,6 +273,7 @@ namespace moveit_servo
       joint_pub_ = this->create_publisher<control_msgs::msg::JointJog>(JOINT_TOPIC, rclcpp::SystemDefaultsQoS());
       collision_pub_ =
           this->create_publisher<moveit_msgs::msg::PlanningScene>("/planning_scene", rclcpp::SystemDefaultsQoS());
+      gripper_pub_ = this->create_publisher<std_msgs::msg::Int32>(GRIPPER_TOPIC, rclcpp::SystemDefaultsQoS());
 
       // Create a service client to start the ServoNode
       servo_start_client_ = this->create_client<std_srvs::srv::Trigger>("/servo_node/start_servo");
@@ -302,17 +333,20 @@ namespace moveit_servo
       // Create the messages we might publish
       auto twist_msg = std::make_unique<geometry_msgs::msg::TwistStamped>();
       auto joint_msg = std::make_unique<control_msgs::msg::JointJog>();
+      auto gripper_msg = std::make_unique<std_msgs::msg::Int32>();
 
       // This call updates the frame for twist commands
       updateCmdFrame(frame_to_publish_, msg->buttons);
 
       // Convert the joystick message to Twist or JointJog and publish
-      if (convertJoyToCmd(msg->axes, msg->buttons, twist_msg, joint_msg))
+      if (convertJoyToCmd(msg->axes, msg->buttons, twist_msg, joint_msg, gripper_msg))
       {
         // publish the TwistStamped
         twist_msg->header.frame_id = frame_to_publish_;
         twist_msg->header.stamp = this->now();
         twist_pub_->publish(std::move(twist_msg));
+
+        gripper_pub_->publish(std::move(gripper_msg));
       }
       else
       {
@@ -328,6 +362,7 @@ namespace moveit_servo
     rclcpp::Publisher<geometry_msgs::msg::TwistStamped>::SharedPtr twist_pub_;
     rclcpp::Publisher<control_msgs::msg::JointJog>::SharedPtr joint_pub_;
     rclcpp::Publisher<moveit_msgs::msg::PlanningScene>::SharedPtr collision_pub_;
+    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr gripper_pub_;
     rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr servo_start_client_;
 
     std::string frame_to_publish_;

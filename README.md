@@ -82,7 +82,7 @@ ros2 launch gorm_arm demo.launch.py
 ```
 
 ### Real world arm
-To control the arm you have to launch two modules in sepperate terminals:
+To control the arm you have to launch three modules in sepperate terminals:
 
 #### 1. Arm hardware driver - `driver.launch.py`
 
@@ -108,6 +108,16 @@ ros2 launch gorm_arm moveit.launch.py
 ```bash
 ros2 launch gorm_arm servo.launch.py
 ```
+
+#### 3. Gripper module - `gripper_serial_adjusted.py`
+
+   - Serial controll gripper script, best used for manual, specific control of the gripper.
+   - To run the gripper serial interface find the port which the gripper is connected to an run:
+
+```bash
+python3 gorm_arm/Python_scripts/gripper_serial_adjusted.py --usb_port /dev/ttyACM1
+```
+
 ---
 
 
