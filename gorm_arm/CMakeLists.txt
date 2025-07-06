@@ -52,6 +52,19 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+add_executable(gripper_interface_node src/gripper_interface_node.cpp)
+
+target_link_libraries(
+  gripper_interface_node
+  gorm_arm
+)
+
+install(TARGETS
+  gripper_interface_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
 # Export hardware plugins
 pluginlib_export_plugin_description_file(hardware_interface hardware_interface_plugin.xml)
 

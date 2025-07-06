@@ -1,0 +1,29 @@
+[0.021s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8
+[0.115s] [ 55%] Built target gorm_arm
+[0.137s] [35m[1mConsolidate compiler generated dependencies of target gripper_interface_node[0m
+[0.158s] [ 77%] [32mBuilding CXX object CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o[0m
+[0.158s] [ 88%] Built target run_arduino_nano
+[2.312s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:[m[K In member function ‘[01m[Kvoid GripperInterfaceNode::gripper_pos_callback(std_msgs::msg::Int32_<std::allocator<void> >::SharedPtr) const[m[K’:
+[2.312s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:31:10:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[KGripperInterfaceNode::pos_[m[K’ in read-only object
+[2.312s]    31 |     [01;31m[Kpos_ = msg->data[m[K;
+[2.312s]       |     [01;31m[K~~~~~^~~~~~~~~~~[m[K
+[2.317s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.317s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.317s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.317s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.317s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.318s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.318s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.318s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.318s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.318s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.318s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.318s]                  from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:5[m[K:
+[2.318s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:[m[K In member function ‘[01m[Kvoid GripperInterfaceNode::timer_callback()[m[K’:
+[2.318s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:37:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos[m[K’ was not declared in this scope; did you mean ‘[01m[Kpos_[m[K’?
+[2.318s]    37 |     RCLCPP_INFO(this->get_logger(), std::to_string([01;31m[Kpos[m[K).c_str());
+[2.318s]       |                                                    [01;31m[K^~~[m[K
+[4.353s] gmake[2]: *** [CMakeFiles/gripper_interface_node.dir/build.make:76: CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o] Error 1
+[4.353s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/gripper_interface_node.dir/all] Error 2
+[4.354s] gmake: *** [Makefile:146: all] Error 2
+[4.355s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm' returned '2': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8

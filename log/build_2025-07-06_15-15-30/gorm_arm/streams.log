@@ -1,0 +1,10 @@
+[0.022s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8
+[0.090s] [35m[1mConsolidate compiler generated dependencies of target gorm_arm[0m
+[0.159s] [ 71%] Built target gorm_arm
+[0.176s] [35m[1mConsolidate compiler generated dependencies of target run_arduino_nano[0m
+[0.179s] gmake[2]: *** No rule to make target 'CMakeFiles/gripper_interface_node.dir/build'.  Stop.
+[0.179s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/gripper_interface_node.dir/all] Error 2
+[0.179s] gmake[1]: *** Waiting for unfinished jobs....
+[0.226s] [100%] Built target run_arduino_nano
+[0.230s] gmake: *** [Makefile:146: all] Error 2
+[0.251s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm' returned '2': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8

@@ -1,0 +1,41 @@
+[0.032s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8
+[0.231s] [ 55%] Built target gorm_arm
+[0.263s] [35m[1mConsolidate compiler generated dependencies of target gripper_interface_node[0m
+[0.303s] [ 66%] [32mBuilding CXX object CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o[0m
+[0.313s] [ 88%] Built target run_arduino_nano
+[3.075s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.075s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.075s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.075s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.076s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.076s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.076s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.076s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.076s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.076s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.076s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.076s]                  from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:3[m[K:
+[3.077s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:[m[K In member function ‘[01m[Kvoid GripperInterfaceNode::gripper_pos_callback(std_msgs::msg::Int32_<std::allocator<void> >::SharedPtr) const[m[K’:
+[3.077s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:22:51:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+[3.077s]    22 |     RCLCPP_INFO(this->get_logger(), [01;31m[Kstd::to_string(msg->data)[m[K);
+[3.077s]       |                                     [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[3.077s]       |                                                   [01;31m[K|[m[K
+[3.077s]       |                                                   [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+[3.077s] In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+[3.077s]                  from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+[3.077s]                  from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+[3.078s]                  from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+[3.078s]                  from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+[3.078s]                  from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+[3.078s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+[3.078s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.078s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.078s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.078s]                  from [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:3[m[K:
+[3.079s] [01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+[3.079s]   479 |   [01;36m[Kconst char * format[m[K,
+[3.079s]       |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+[5.541s] gmake[2]: *** [CMakeFiles/gripper_interface_node.dir/build.make:76: CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o] Error 1
+[5.541s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/gripper_interface_node.dir/all] Error 2
+[5.541s] gmake: *** [Makefile:146: all] Error 2
+[5.544s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm' returned '2': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8

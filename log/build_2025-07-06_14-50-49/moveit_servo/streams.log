@@ -1,0 +1,110 @@
+[0.016s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/moveit_servo -- -j8 -l8
+[0.072s] [35m[1mConsolidate compiler generated dependencies of target servo_controller_input[0m
+[0.100s] [  6%] Built target gtest_main
+[0.100s] [ 12%] Built target gtest
+[0.101s] [ 18%] Built target fake_command_publisher
+[0.101s] [ 21%] [32mBuilding CXX object CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o[0m
+[0.114s] [ 30%] Built target moveit_servo_lib_parameters
+[0.172s] [ 36%] Built target test_servo_collision
+[0.177s] [ 42%] Built target test_servo_integration
+[0.187s] [ 60%] Built target moveit_servo_lib
+[0.257s] [ 66%] Built target servo_calcs_unit_tests
+[0.257s] [ 72%] Built target servo_node
+[0.261s] [ 78%] Built target pose_tracking
+[0.327s] [ 84%] Built target servo_pose_tracking_demo
+[0.329s] [ 90%] Built target servo_node_main
+[0.329s] [ 96%] Built target test_servo_pose_tracking
+[2.145s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:138:53:[m[K [01;31m[Kerror: [m[K‘[01m[KInt16[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[2.145s]   138 |                      std::unique_ptr<std_msgs::msg::[01;31m[KInt16[m[K> &gripper)
+[2.145s]       |                                                     [01;31m[K^~~~~[m[K
+[2.145s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:138:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.145s]   138 |                      std::unique_ptr<std_msgs::msg::Int16[01;31m[K>[m[K &gripper)
+[2.145s]       |                                                          [01;31m[K^[m[K
+[2.146s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:138:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[2.162s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K In function ‘[01m[Kbool convertJoyToCmd(const std::vector<float, std::allocator<float> >&, const std::vector<int, std::allocator<int> >&, std::unique_ptr<geometry_msgs::msg::TwistStamped_<std::allocator<void> >, std::default_delete<geometry_msgs::msg::TwistStamped_<std::allocator<void> > > >&, std::unique_ptr<control_msgs::msg::JointJog_<std::allocator<void> >, std::default_delete<control_msgs::msg::JointJog_<std::allocator<void> > > >&, int&)[m[K’:
+[2.162s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:203:12:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[2.162s]   203 |     gripper[01;31m[K->[m[Kdata = static_cast<int>(gripper_angle);
+[2.162s]       |            [01;31m[K^~[m[K
+[2.163s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:220:12:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[2.163s]   220 |     gripper[01;31m[K->[m[Kdata = static_cast<int>(gripper_angle);
+[2.163s]       |            [01;31m[K^~[m[K
+[2.230s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K At global scope:
+[2.230s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:365:38:[m[K [01;31m[Kerror: [m[K‘[01m[KInt16[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[2.230s]   365 |     rclcpp::Publisher<std_msgs::msg::[01;31m[KInt16[m[K>::SharedPtr gripper_pub_;
+[2.230s]       |                                      [01;31m[K^~~~~[m[K
+[2.230s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:365:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.230s]   365 |     rclcpp::Publisher<std_msgs::msg::Int16[01;31m[K>[m[K::SharedPtr gripper_pub_;
+[2.230s]       |                                           [01;31m[K^[m[K
+[2.231s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:365:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.231s]   365 |     rclcpp::Publisher<std_msgs::msg::Int16>::[01;31m[KSharedPtr[m[K gripper_pub_;
+[2.231s]       |                                              [01;31m[K^~~~~~~~~[m[K
+[2.231s]       |                                                       [32m[K;[m[K
+[2.233s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:365:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_pub_[m[K’ does not name a type
+[2.233s]   365 |     rclcpp::Publisher<std_msgs::msg::Int16>::SharedPtr [01;31m[Kgripper_pub_[m[K;
+[2.233s]       |                                                        [01;31m[K^~~~~~~~~~~~[m[K
+[2.300s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K In constructor ‘[01m[Kmoveit_servo::JoyToServoPub::JoyToServoPub(const rclcpp::NodeOptions&)[m[K’:
+[2.300s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:276:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_pub_[m[K’ was not declared in this scope
+[2.300s]   276 |       [01;31m[Kgripper_pub_[m[K = this->create_publisher<std_msgs::msg::Int16>(GRIPPER_TOPIC, rclcpp::SystemDefaultsQoS());
+[2.300s]       |       [01;31m[K^~~~~~~~~~~~[m[K
+[2.300s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:276:60:[m[K [01;31m[Kerror: [m[K‘[01m[KInt16[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[2.300s]   276 |       gripper_pub_ = this->create_publisher<std_msgs::msg::[01;31m[KInt16[m[K>(GRIPPER_TOPIC, rclcpp::SystemDefaultsQoS());
+[2.300s]       |                                                            [01;31m[K^~~~~[m[K
+[2.300s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:276:66:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmoveit_servo::JoyToServoPub::create_publisher<<expression error> >(const string&, rclcpp::SystemDefaultsQoS)[m[K’
+[2.300s]   276 |       gripper_pub_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Int16>(GRIPPER_TOPIC, rclcpp::SystemDefaultsQoS())[m[K;
+[2.301s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.301s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+[2.301s]                  from [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:49[m[K:
+[2.301s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[2.301s]    73 | [01;36m[KNode[m[K::create_publisher(
+[2.301s]       | [01;36m[K^~~~[m[K
+[2.301s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.301s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:276:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.301s]   276 |       gripper_pub_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Int16>(GRIPPER_TOPIC, rclcpp::SystemDefaultsQoS())[m[K;
+[2.301s]       |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.452s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K In member function ‘[01m[Kvoid moveit_servo::JoyToServoPub::joyCB(const ConstSharedPtr&)[m[K’:
+[2.452s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:336:58:[m[K [01;31m[Kerror: [m[K‘[01m[KInt16[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[2.452s]   336 |       auto gripper_msg = std::make_unique<std_msgs::msg::[01;31m[KInt16[m[K>();
+[2.452s]       |                                                          [01;31m[K^~~~~[m[K
+[2.452s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:336:64:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_unique<<expression error> >()[m[K’
+[2.452s]   336 |       auto gripper_msg = [01;31m[Kstd::make_unique<std_msgs::msg::Int16>()[m[K;
+[2.452s]       |                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[2.453s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.453s]                  from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joy__struct.hpp:10[m[K,
+[2.453s]                  from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joy.hpp:7[m[K,
+[2.453s]                  from [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:41[m[K:
+[2.453s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)[m[K’
+[2.453s]   961 |     [01;36m[Kmake_unique[m[K(_Args&&... __args)
+[2.453s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.453s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.454s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:336:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.454s]   336 |       auto gripper_msg = [01;31m[Kstd::make_unique<std_msgs::msg::Int16>()[m[K;
+[2.454s]       |                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[2.454s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.454s]                  from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joy__struct.hpp:10[m[K,
+[2.454s]                  from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joy.hpp:7[m[K,
+[2.454s]                  from [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:41[m[K:
+[2.454s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)[m[K’
+[2.454s]   967 |     [01;36m[Kmake_unique[m[K(size_t __num)
+[2.454s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.455s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.455s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:336:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.455s]   336 |       auto gripper_msg = [01;31m[Kstd::make_unique<std_msgs::msg::Int16>()[m[K;
+[2.455s]       |                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[2.455s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.455s]                  from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joy__struct.hpp:10[m[K,
+[2.455s]                  from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joy.hpp:7[m[K,
+[2.455s]                  from [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:41[m[K:
+[2.455s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)[m[K’ (deleted)
+[2.455s]   973 |     [01;36m[Kmake_unique[m[K(_Args&&...) = delete;
+[2.456s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.456s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.456s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:336:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.456s]   336 |       auto gripper_msg = [01;31m[Kstd::make_unique<std_msgs::msg::Int16>()[m[K;
+[2.456s]       |                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[2.464s] [01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:349:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper_pub_[m[K’ was not declared in this scope
+[2.464s]   349 |         [01;31m[Kgripper_pub_[m[K->publish(std::move(gripper_msg));
+[2.465s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[5.424s] gmake[2]: *** [CMakeFiles/servo_controller_input.dir/build.make:76: CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o] Error 1
+[5.424s] gmake[1]: *** [CMakeFiles/Makefile2:283: CMakeFiles/servo_controller_input.dir/all] Error 2
+[5.425s] gmake: *** [Makefile:146: all] Error 2
+[5.427s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/moveit_servo -- -j8 -l8

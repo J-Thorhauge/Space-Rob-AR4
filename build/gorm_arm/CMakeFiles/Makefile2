@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/johnbuntu/ar4_ros_driver/build/gorm_arm
 # The main recursive "all" target.
 all: CMakeFiles/gorm_arm.dir/all
 all: CMakeFiles/run_arduino_nano.dir/all
+all: CMakeFiles/gripper_interface_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/gorm_arm_uninstall.dir/clean
 clean: CMakeFiles/gorm_arm.dir/clean
 clean: CMakeFiles/run_arduino_nano.dir/clean
+clean: CMakeFiles/gripper_interface_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -163,7 +165,7 @@ CMakeFiles/gorm_arm.dir/clean:
 CMakeFiles/run_arduino_nano.dir/all: CMakeFiles/gorm_arm.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnbuntu/ar4_ros_driver/build/gorm_arm/CMakeFiles --progress-num=6,7 "Built target run_arduino_nano"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnbuntu/ar4_ros_driver/build/gorm_arm/CMakeFiles --progress-num=8,9 "Built target run_arduino_nano"
 .PHONY : CMakeFiles/run_arduino_nano.dir/all
 
 # Build rule for subdir invocation for target.
@@ -181,6 +183,32 @@ run_arduino_nano: CMakeFiles/run_arduino_nano.dir/rule
 CMakeFiles/run_arduino_nano.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/clean
 .PHONY : CMakeFiles/run_arduino_nano.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gripper_interface_node.dir
+
+# All Build rule for target.
+CMakeFiles/gripper_interface_node.dir/all: CMakeFiles/gorm_arm.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper_interface_node.dir/build.make CMakeFiles/gripper_interface_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper_interface_node.dir/build.make CMakeFiles/gripper_interface_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnbuntu/ar4_ros_driver/build/gorm_arm/CMakeFiles --progress-num=6,7 "Built target gripper_interface_node"
+.PHONY : CMakeFiles/gripper_interface_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gripper_interface_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnbuntu/ar4_ros_driver/build/gorm_arm/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gripper_interface_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnbuntu/ar4_ros_driver/build/gorm_arm/CMakeFiles 0
+.PHONY : CMakeFiles/gripper_interface_node.dir/rule
+
+# Convenience name for target.
+gripper_interface_node: CMakeFiles/gripper_interface_node.dir/rule
+.PHONY : gripper_interface_node
+
+# clean rule for target.
+CMakeFiles/gripper_interface_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper_interface_node.dir/build.make CMakeFiles/gripper_interface_node.dir/clean
+.PHONY : CMakeFiles/gripper_interface_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

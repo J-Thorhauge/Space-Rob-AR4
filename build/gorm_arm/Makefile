@@ -223,6 +223,19 @@ run_arduino_nano/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_arduino_nano.dir/build.make CMakeFiles/run_arduino_nano.dir/build
 .PHONY : run_arduino_nano/fast
 
+#=============================================================================
+# Target rules for targets named gripper_interface_node
+
+# Build rule for target.
+gripper_interface_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gripper_interface_node
+.PHONY : gripper_interface_node
+
+# fast build rule for target.
+gripper_interface_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper_interface_node.dir/build.make CMakeFiles/gripper_interface_node.dir/build
+.PHONY : gripper_interface_node/fast
+
 src/arduino_nano_driver.o: src/arduino_nano_driver.cpp.o
 .PHONY : src/arduino_nano_driver.o
 
@@ -295,6 +308,30 @@ src/gorm_arm_hardware_interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gorm_arm.dir/build.make CMakeFiles/gorm_arm.dir/src/gorm_arm_hardware_interface.cpp.s
 .PHONY : src/gorm_arm_hardware_interface.cpp.s
 
+src/gripper_interface_node.o: src/gripper_interface_node.cpp.o
+.PHONY : src/gripper_interface_node.o
+
+# target to build an object file
+src/gripper_interface_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper_interface_node.dir/build.make CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o
+.PHONY : src/gripper_interface_node.cpp.o
+
+src/gripper_interface_node.i: src/gripper_interface_node.cpp.i
+.PHONY : src/gripper_interface_node.i
+
+# target to preprocess a source file
+src/gripper_interface_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper_interface_node.dir/build.make CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.i
+.PHONY : src/gripper_interface_node.cpp.i
+
+src/gripper_interface_node.s: src/gripper_interface_node.cpp.s
+.PHONY : src/gripper_interface_node.s
+
+# target to generate assembly for a file
+src/gripper_interface_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper_interface_node.dir/build.make CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.s
+.PHONY : src/gripper_interface_node.cpp.s
+
 src/run_arduino_nano.o: src/run_arduino_nano.cpp.o
 .PHONY : src/run_arduino_nano.o
 
@@ -359,6 +396,7 @@ help:
 	@echo "... gorm_arm_uninstall"
 	@echo "... uninstall"
 	@echo "... gorm_arm"
+	@echo "... gripper_interface_node"
 	@echo "... run_arduino_nano"
 	@echo "... src/arduino_nano_driver.o"
 	@echo "... src/arduino_nano_driver.i"
@@ -369,6 +407,9 @@ help:
 	@echo "... src/gorm_arm_hardware_interface.o"
 	@echo "... src/gorm_arm_hardware_interface.i"
 	@echo "... src/gorm_arm_hardware_interface.s"
+	@echo "... src/gripper_interface_node.o"
+	@echo "... src/gripper_interface_node.i"
+	@echo "... src/gripper_interface_node.s"
 	@echo "... src/run_arduino_nano.o"
 	@echo "... src/run_arduino_nano.i"
 	@echo "... src/run_arduino_nano.s"

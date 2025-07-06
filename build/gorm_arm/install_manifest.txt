@@ -1,4 +1,5 @@
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/lib/gorm_arm/run_arduino_nano
+/home/johnbuntu/ar4_ros_driver/install/gorm_arm/lib/gorm_arm/gripper_interface_node
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/share/gorm_arm/hardware_interface_plugin.xml
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/lib/libgorm_arm.so
 /home/johnbuntu/ar4_ros_driver/install/gorm_arm/include/gorm_arm/gorm_arm_driver/gorm_arm_hardware_interface.hpp

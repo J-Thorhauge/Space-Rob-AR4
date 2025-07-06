@@ -1,0 +1,11 @@
+[ 55%] Built target gorm_arm
+[35m[1mConsolidate compiler generated dependencies of target gripper_interface_node[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o[0m
+[ 88%] Built target run_arduino_nano
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:[m[K In member function ‘[01m[Kvoid GripperInterfaceNode::gripper_pos_callback(std_msgs::msg::Int32_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:31:21:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kc_int[m[K’ in ‘[01m[K((const std::__shared_ptr_access<std_msgs::msg::Int32_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<std_msgs::msg::Int32_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->std_msgs::msg::Int32_<std::allocator<void> >::data[m[K’, which is of non-class type ‘[01m[Kstd_msgs::msg::Int32_<std::allocator<void> >::_data_type[m[K’ {aka ‘[01m[Kint[m[K’}
+   31 |     pos = msg->data.[01;31m[Kc_int[m[K();
+      |                     [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/gripper_interface_node.dir/build.make:76: CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/gripper_interface_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

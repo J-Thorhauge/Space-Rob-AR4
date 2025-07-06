@@ -1,0 +1,17 @@
+[0.019s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8
+[0.112s] [ 55%] Built target gorm_arm
+[0.130s] [35m[1mConsolidate compiler generated dependencies of target gripper_interface_node[0m
+[0.153s] [ 77%] Built target run_arduino_nano
+[0.154s] [ 88%] [32mBuilding CXX object CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o[0m
+[2.348s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:[m[K In constructor ‘[01m[KGripperInterfaceNode::GripperInterfaceNode()[m[K’:
+[2.348s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:22:9:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+[2.348s]    22 |         [01;31m[K200ms[m[K, std::bind(&GripperInterfaceNode::timer_callback, this));
+[2.348s]       |         [01;31m[K^~~~~[m[K
+[2.353s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:[m[K In member function ‘[01m[Kvoid GripperInterfaceNode::gripper_pos_callback(std_msgs::msg::Int32_<std::allocator<void> >::SharedPtr) const[m[K’:
+[2.353s] [01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/gripper_interface_node.cpp:29:9:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[KGripperInterfaceNode::pos[m[K’ in read-only object
+[2.353s]    29 |     [01;31m[Kpos = msg->data[m[K;
+[2.353s]       |     [01;31m[K~~~~^~~~~~~~~~~[m[K
+[4.385s] gmake[2]: *** [CMakeFiles/gripper_interface_node.dir/build.make:76: CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o] Error 1
+[4.385s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/gripper_interface_node.dir/all] Error 2
+[4.385s] gmake: *** [Makefile:146: all] Error 2
+[4.387s] Invoked command in '/home/johnbuntu/ar4_ros_driver/build/gorm_arm' returned '2': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/gorm_arm -- -j8 -l8

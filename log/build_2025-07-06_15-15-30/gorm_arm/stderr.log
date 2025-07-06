@@ -1,0 +1,4 @@
+gmake[2]: *** No rule to make target 'CMakeFiles/gripper_interface_node.dir/build'.  Stop.
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/gripper_interface_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

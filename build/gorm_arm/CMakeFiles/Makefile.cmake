@@ -916,4 +916,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/gorm_arm_uninstall.dir/DependInfo.cmake"
   "CMakeFiles/gorm_arm.dir/DependInfo.cmake"
   "CMakeFiles/run_arduino_nano.dir/DependInfo.cmake"
+  "CMakeFiles/gripper_interface_node.dir/DependInfo.cmake"
   )
