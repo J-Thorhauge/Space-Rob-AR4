@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-e2631dc412000428a381.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "gorm_arm",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "gorm_arm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gorm_arm-9caff777af4b8d81d81a.json",
+					"name" : "gorm_arm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gorm_arm_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gorm_arm_uninstall-48ca82082c6e8513ed3a.json",
+					"name" : "gorm_arm_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gripper_interface_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gripper_interface_node-3138bf1f2e7fb4b7e814.json",
+					"name" : "gripper_interface_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_arduino_nano::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_arduino_nano-5861c81dd5cf980afba5.json",
+					"name" : "run_arduino_nano",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-130039b156fd23fca10d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/johnbuntu/ar4_ros_driver/build/gorm_arm",
+		"source" : "/home/johnbuntu/ar4_ros_driver/gorm_arm"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

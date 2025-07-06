@@ -109,9 +109,16 @@ ros2 launch gorm_arm moveit.launch.py
 ros2 launch gorm_arm servo.launch.py
 ```
 
-#### 3. Gripper module - `gripper_serial_adjusted.py`
+#### 3. Gripper module - `gripper_interface_node` or `gripper_serial_adjusted.py`
 
-   - Serial controll gripper script, best used for manual, specific control of the gripper.
+   - Enables the gripper interface node, which translates ros topic messages to serial commands for the gripper.
+   - Allows control of the gripper via the throttle lever on the joystick
+
+```bash
+ros2 run gorm_arm gripper_interface_node
+```
+
+   - Alternatively, the serial controller gripper script can be used for manual, specific control of the gripper.
    - To run the gripper serial interface find the port which the gripper is connected to an run:
 
 ```bash
@@ -120,6 +127,34 @@ python3 gorm_arm/Python_scripts/gripper_serial_adjusted.py --usb_port /dev/ttyAC
 
 ---
 
+### TLDR;
+Run the following in three terminals
+```bash
+cd ~/ar_ros_driver
+source install/setup.bash
+ros2 launch gorm_arm driver.launch.py
+```
+Wait for the robot to complete the homing procedure...
+```bash
+cd ~/ar_ros_driver
+source install/setup.bash
+ros2 launch gorm_arm serial.launch.py
+```
+The joystick control is now enabled. (Alternatively, replace the last command with `moveit.launch.py` for moveit drag-and-drop control.)
+```bash
+cd ~/ar_ros_driver
+source install/setup.bash
+ros2 run gorm_arm gripper_interface_node
+```
+The gripper controller is now enabled.
+
+---
+### Disclaimer
+When running servo control, the motors of the manipulator become very hot over the course of a few minutes. For this reason, try to keep sessions below two or three minutes, before shutting down the servo node, to let the motors cool.
+
+Usb ports are set up for my own computer, so you may have to fiddle with the correct usb connections for a while. Start with getting the teensy to connect, then the joystick (this should auto connect), then the seeeduino.
+
+Please direct any criticisms to Carsten at [chpn21@student.aau.dk]()
 
 <!-- # AR4 ROS Driver
 

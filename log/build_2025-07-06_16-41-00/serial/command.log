@@ -1,0 +1,4 @@
+Invoking command in '/home/johnbuntu/ar4_ros_driver/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/serial -- -j8 -l8
+Invoked command in '/home/johnbuntu/ar4_ros_driver/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/serial -- -j8 -l8
+Invoking command in '/home/johnbuntu/ar4_ros_driver/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/serial
+Invoked command in '/home/johnbuntu/ar4_ros_driver/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/johnbuntu/ar4_ros_driver/build/serial

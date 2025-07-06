@@ -313,6 +313,7 @@ run_arduino_nano: /opt/ros/humble/lib/librosidl_runtime_c.so
 run_arduino_nano: /opt/ros/humble/lib/librcpputils.so
 run_arduino_nano: /opt/ros/humble/lib/librcutils.so
 run_arduino_nano: /opt/ros/humble/lib/librcutils.so
+run_arduino_nano: /usr/local/lib/libserial.so
 run_arduino_nano: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 run_arduino_nano: CMakeFiles/run_arduino_nano.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnbuntu/ar4_ros_driver/build/gorm_arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable run_arduino_nano"

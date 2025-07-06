@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_dependencies/cmake/ament_cmake_export_dependencies-extras.cmake.in
 
-set(_exported_dependencies "controller_manager;hardware_interface;pluginlib;rclcpp;rclcpp_lifecycle;Boost;controller_manager;hardware_interface;pluginlib;rclcpp;rclcpp_lifecycle")
+set(_exported_dependencies "controller_manager;hardware_interface;pluginlib;rclcpp;rclcpp_lifecycle;serial;Boost;controller_manager;hardware_interface;pluginlib;rclcpp;rclcpp_lifecycle;serial")
 
 find_package(ament_cmake_libraries QUIET REQUIRED)
 

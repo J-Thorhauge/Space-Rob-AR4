@@ -266,6 +266,7 @@ libgorm_arm.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_cpp.so
 libgorm_arm.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_py.so
 libgorm_arm.so: /opt/ros/humble/lib/librcpputils.so
 libgorm_arm.so: /opt/ros/humble/lib/librcutils.so
+libgorm_arm.so: /usr/local/lib/libserial.so
 libgorm_arm.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 libgorm_arm.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
 libgorm_arm.so: /opt/ros/humble/lib/libcontroller_manager_msgs__rosidl_generator_c.so

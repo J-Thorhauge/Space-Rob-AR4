@@ -11,6 +11,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   pluginlib
   rclcpp
   rclcpp_lifecycle
+  serial
 )
 
 unset( CATKIN_INSTALL_INTO_PREFIX_ROOT )
@@ -56,6 +57,7 @@ add_executable(gripper_interface_node src/gripper_interface_node.cpp)
 
 target_link_libraries(
   gripper_interface_node
+  serial
   gorm_arm
 )
 

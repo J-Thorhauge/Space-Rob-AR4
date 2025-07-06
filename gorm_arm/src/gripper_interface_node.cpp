@@ -19,7 +19,7 @@ public:
   {
     try
     {
-      serial_port_.setPort("/dev/ttyACM0");
+      serial_port_.setPort("/dev/ttyACM1");
       serial_port_.setBaudrate(9600);
       serial::Timeout to = serial::Timeout::simpleTimeout(1000);
       serial_port_.setTimeout(to);
@@ -57,7 +57,7 @@ private:
     {
       try
       {
-        std::string data = std::to_string(pos_) + "\n";
+        std::string data = std::to_string(pos_ + 37) + "\n";
         serial_port_.write(data);
       }
       catch (const std::exception &e)

@@ -5,7 +5,7 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='A test program.')
-    parser.add_argument("-p", "--usb_port", help="USB port.", default="'/dev/ttyACM0'")
+    parser.add_argument("-p", "--usb_port", help="USB port.", default="'/dev/ttyACM1'")
     args = parser.parse_args()
     max = 60
     min = -5

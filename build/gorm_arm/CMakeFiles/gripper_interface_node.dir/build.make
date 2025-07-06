@@ -313,6 +313,7 @@ gripper_interface_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 gripper_interface_node: /opt/ros/humble/lib/librcpputils.so
 gripper_interface_node: /opt/ros/humble/lib/librcutils.so
 gripper_interface_node: /opt/ros/humble/lib/librcutils.so
+gripper_interface_node: /usr/local/lib/libserial.so
 gripper_interface_node: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 gripper_interface_node: CMakeFiles/gripper_interface_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnbuntu/ar4_ros_driver/build/gorm_arm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable gripper_interface_node"
