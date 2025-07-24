@@ -168,6 +168,9 @@ bool convertJoyToCmd(const std::vector<float> &axes, const std::vector<int> &but
       joint->velocities.push_back(buttons[BUT_9] - buttons[BUT_10]);
       joint->joint_names.push_back("joint_6");
       joint->velocities.push_back(buttons[BUT_11] - buttons[BUT_12]);
+
+      double gripper_angle = (axes[THROTTLE] * 30) + 30;
+      gripper->data = static_cast<int>(gripper_angle);
       return false;
     }
   }
@@ -181,6 +184,9 @@ bool convertJoyToCmd(const std::vector<float> &axes, const std::vector<int> &but
       joint->velocities.push_back(buttons[BUT_9] - buttons[BUT_10]);
       joint->joint_names.push_back("joint_3");
       joint->velocities.push_back(buttons[BUT_11] - buttons[BUT_12]);
+
+      double gripper_angle = (axes[THROTTLE] * 30) + 30;
+      gripper->data = static_cast<int>(gripper_angle);
       return false;
     }
   }
@@ -251,6 +257,16 @@ void updateCmdFrame(std::string &frame_name, const std::vector<int> &buttons)
   {
     frame_name = EEF_FRAME_ID;
     frame = TOOL;
+  }
+  else if (buttons[BUT_11])
+  {
+    frame_name = BASE_FRAME_ID;
+    frame = BOT;
+  }
+  else if (buttons[BUT_12])
+  {
+    frame_name = BASE_FRAME_ID;
+    frame = TOP;
   }
   // int this_does = 0; // This does nothing
 }
@@ -345,8 +361,6 @@ namespace moveit_servo
         twist_msg->header.frame_id = frame_to_publish_;
         twist_msg->header.stamp = this->now();
         twist_pub_->publish(std::move(twist_msg));
-
-        gripper_pub_->publish(std::move(gripper_msg));
       }
       else
       {
@@ -355,6 +369,9 @@ namespace moveit_servo
         joint_msg->header.frame_id = "link_3";
         joint_pub_->publish(std::move(joint_msg));
       }
+      // double gripper_angle = (axes[THROTTLE] * 30) + 30;
+      // gripper_msg = static_cast<int>(gripper_angle);
+      gripper_pub_->publish(std::move(gripper_msg));
     }
 
   private:

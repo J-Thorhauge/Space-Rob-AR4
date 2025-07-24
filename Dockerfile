@@ -1,10 +1,15 @@
-FROM ros:jazzy
+FROM ros:humble
 
-WORKDIR /ar4_ws
-RUN mkdir -p /ar4_ws/src && \
-  cd src && \
-  git clone https://github.com/ycheng517/ar4_ros_driver.git
+RUN git clone https://github.com/J-Thorhauge/Space-Rob-AR4.git
+
+RUN cd Space-Rob-AR4/
 
 RUN apt update
 RUN rosdep update
 RUN rosdep install --from-paths src --ignore-src -r -y
+
+RUN colcon build
+RUN source install/setup.bash
+
+
+
