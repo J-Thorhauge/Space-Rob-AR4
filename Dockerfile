@@ -1,12 +1,14 @@
 FROM ros:humble
 
-RUN git clone https://github.com/J-Thorhauge/Space-Rob-AR4.git
+RUN apt-get update && apt-get install -y nano && rm -rf /var/lib/apt/lists/*
+
+RUN git clone Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
 
 RUN cd Space-Rob-AR4/
 
 RUN apt update
 RUN rosdep update
-RUN rosdep install --from-paths src --ignore-src -r -y
+RUN rosdep install --from-paths . --ignore-src -r -y
 
 RUN colcon build
 RUN source install/setup.bash
