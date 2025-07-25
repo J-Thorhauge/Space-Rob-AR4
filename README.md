@@ -24,8 +24,23 @@ Tested with ROS 2 Humble on Ubuntu 22.04.
   - Servoing control for the manipulator.
   - Robot visualizing through Rviz.
 
+## Docker installation
+- Clone this repository:
+  ```bash
+  git clone -b Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
+  ```
+- Build the image:
+  ```bash
+  cd Space-Rob-AR4/
+  docker build -t Gorm-Arm .
+  ```
+- Run the container:
+  ```bash
+  docker run -it --user ros Gorm-Arm:latest 
+  ```
+You will find that it does not actually work (for now), but it sure looks nice.
 
-## Installation
+## Manual Installation (Don't do this one)
 
 - Install [ROS 2 Humble](https://docs.ros.org/en/humble/Installation.html) for Ubuntu 22.04
 - Clone this repository:
