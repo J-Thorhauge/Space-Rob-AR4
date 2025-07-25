@@ -1,4 +1,0 @@
-[ 55%] Built target gorm_arm
-[ 66%] [32mBuilding CXX object CMakeFiles/gripper_interface_node.dir/src/gripper_interface_node.cpp.o[0m
-[ 88%] Built target run_arduino_nano
-[100%] [32m[1mLinking CXX executable gripper_interface_node[0m

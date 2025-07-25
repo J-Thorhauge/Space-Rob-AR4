@@ -1,8 +1,0 @@
-[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:[m[K In member function ‘[01m[Kvoid moveit_servo::JoyToServoPub::joyCB(const ConstSharedPtr&)[m[K’:
-[01m[K/home/johnbuntu/ar4_ros_driver/moveit_servo/src/teleop_demo/joystick_servo_example.cpp:335:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kprint[m[K’ was not declared in this scope; did you mean ‘[01m[Krint[m[K’?
-  335 |         [01;31m[Kprint[m[K(gripper_msg);
-      |         [01;31m[K^~~~~[m[K
-      |         [32m[Krint[m[K
-gmake[2]: *** [CMakeFiles/servo_controller_input.dir/build.make:76: CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:283: CMakeFiles/servo_controller_input.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

@@ -1,2 +1,0 @@
-Invoking command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/moveit_servo -- -j8 -l8
-Invoked command in '/home/johnbuntu/ar4_ros_driver/build/moveit_servo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/moveit_servo -- -j8 -l8
