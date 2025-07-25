@@ -2,7 +2,7 @@ FROM ros:humble
 
 RUN apt-get update && apt-get install -y nano && rm -rf /var/lib/apt/lists/*
 
-RUN git clone Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
+RUN git clone -b Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
 
 RUN cd Space-Rob-AR4/
 
