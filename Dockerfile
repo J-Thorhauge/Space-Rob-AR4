@@ -20,6 +20,8 @@ RUN apt-get update \
   && chmod 0440 /etc/sudoers.d/$USERNAME \
   && rm -rf /var/lib/apt/lists/*
 
+RUN usermod -aG dialout ${USERNAME}
+
 # USER ros
 
 RUN git clone -b Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git

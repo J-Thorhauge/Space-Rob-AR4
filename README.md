@@ -32,13 +32,12 @@ Tested with ROS 2 Humble on Ubuntu 22.04.
 - Build the image:
   ```bash
   cd Space-Rob-AR4/
-  docker build -t Gorm-Arm .
+  docker build -t gorm_test .
   ```
 - Run the container:
   ```bash
-  docker run -it --user ros Gorm-Arm:latest 
+  docker run -it --user ros -v /dev:/dev --privileged gorm_test:latest
   ```
-You will find that it does not actually work (for now), but it sure looks nice.
 
 ## Manual Installation (Don't do this one)
 
