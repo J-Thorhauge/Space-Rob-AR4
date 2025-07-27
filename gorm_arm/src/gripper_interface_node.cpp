@@ -48,7 +48,7 @@ public:
 private:
   void topic_callback(const std_msgs::msg::Int32::SharedPtr msg)
   {
-    pos_ = msg->data;
+    pos_ = (msg->data + 37);
   }
 
   rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr subscription_;
