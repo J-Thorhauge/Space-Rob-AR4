@@ -11,7 +11,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   pluginlib
   rclcpp
   rclcpp_lifecycle
-  
+  std_msgs
 )
 
 unset( CATKIN_INSTALL_INTO_PREFIX_ROOT )
@@ -41,6 +41,7 @@ ament_target_dependencies(gorm_arm
   Boost
 )
 
+# Add Arduino nano
 add_executable(run_arduino_nano src/run_arduino_nano.cpp)
 
 target_link_libraries(
@@ -53,18 +54,19 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# add_executable(gripper_interface_node src/gripper_interface_node.cpp)
+# Add gripper interface node
+add_executable(gripper_interface_node src/gripper_interface_node.cpp)
 
-# target_link_libraries(
-#   gripper_interface_node
-#   serial
-#   gorm_arm
-# )
+target_link_libraries(
+  gripper_interface_node
+  serial
+  gorm_arm
+)
 
-# install(TARGETS
-#   gripper_interface_node
-#   DESTINATION lib/${PROJECT_NAME}
-# )
+install(TARGETS
+  gripper_interface_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 
 # Export hardware plugins
@@ -84,11 +86,6 @@ install(DIRECTORY include/
 install(DIRECTORY config launch urdf
   DESTINATION share/${PROJECT_NAME}
 )
-
-# install(PROGRAMS
-#   scripts/reset_estop.sh
-#   DESTINATION lib/${PROJECT_NAME}
-# )
 
 ament_export_targets(export_gorm_arm HAS_LIBRARY_TARGET)
 ament_export_dependencies(${THIS_PACKAGE_INCLUDE_DEPENDS} Boost)

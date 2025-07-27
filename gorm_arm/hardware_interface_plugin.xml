@@ -6,7 +6,7 @@
 		  ROS2 Control System Driver for the gorm arm.
     </description>
   </class>
-  <!-- <class name="gorm_arm_driver/GormArmServoGripperHWInterface"
+<!--   <class name="gorm_arm_driver/GormArmServoGripperHWInterface"
          type="gorm_arm_driver::GormArmServoGripperHWInterface"
          base_class_type="hardware_interface::SystemInterface">
     <description>

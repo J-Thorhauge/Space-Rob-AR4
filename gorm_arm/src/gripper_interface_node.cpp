@@ -1,48 +1,52 @@
-/* #include <chrono>
-#include <memory>
+#include <rclcpp/rclcpp.hpp>
+#include <std_msgs/msg/int32.hpp>
+#include <libserial/SerialStream.h>
 
-#include <iostream>
-#include <fstream>
-#include <string>
+#include <chrono>
 
-#include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/int32.hpp"
-
-#include <serial/serial.h>
-
-using namespace std::chrono_literals;
+using namespace LibSerial;
 
 class GripperInterfaceNode : public rclcpp::Node
 {
 public:
-  GripperInterfaceNode() : Node("gripper_interface_node"), pos_(0)
+  GripperInterfaceNode() : Node("gripper_interface_node")
   {
+    // Initialize serial port
     try
     {
-      serial_port_.setPort("/dev/ttyACM1");
-      serial_port_.setBaudrate(9600);
-      serial::Timeout to = serial::Timeout::simpleTimeout(1000);
-      serial_port_.setTimeout(to);
-      serial_port_.open();
+      serial_port_.Open("/dev/ttyACM1");
+      serial_port_.SetBaudRate(BaudRate::BAUD_9600);
+      serial_port_.SetCharacterSize(CharacterSize::CHAR_SIZE_8);
+      serial_port_.SetFlowControl(FlowControl::FLOW_CONTROL_NONE);
+      serial_port_.SetParity(Parity::PARITY_NONE);
+      serial_port_.SetStopBits(StopBits::STOP_BITS_1);
     }
-    catch (const std::exception &e)
+    catch (const OpenFailed &)
     {
-      RCLCPP_ERROR(this->get_logger(), "Failed to open serial port: %s", e.what());
-      throw;
+      RCLCPP_ERROR(this->get_logger(), "Failed to open serial port.");
+      rclcpp::shutdown();
+      return;
     }
 
     subscription_ = this->create_subscription<std_msgs::msg::Int32>(
-        "/servo_node/gripper_pos",
-        10,
-        std::bind(&GripperInterfaceNode::gripper_pos_callback, this, std::placeholders::_1));
+        "/servo_node/gripper_pos", 10,
+        std::bind(&GripperInterfaceNode::topic_callback, this, std::placeholders::_1));
     timer_ = this->create_wall_timer(
-        200ms, std::bind(&GripperInterfaceNode::timer_callback, this));
+        std::chrono::milliseconds(200), std::bind(&GripperInterfaceNode::timer_callback, this));
   }
 
   int pos_;
 
+  ~GripperInterfaceNode()
+  {
+    if (serial_port_.IsOpen())
+    {
+      serial_port_.Close();
+    }
+  }
+
 private:
-  void gripper_pos_callback(const std_msgs::msg::Int32::SharedPtr msg)
+  void topic_callback(const std_msgs::msg::Int32::SharedPtr msg)
   {
     pos_ = msg->data;
   }
@@ -51,27 +55,19 @@ private:
 
   void timer_callback()
   {
-    RCLCPP_INFO(this->get_logger(), "Gripper pos: '%d'", pos_);
-
-    if (serial_port_.isOpen())
-    {
-      try
-      {
-        std::string data = std::to_string(pos_ + 37) + "\n";
-        serial_port_.write(data);
-      }
-      catch (const std::exception &e)
-      {
-        RCLCPP_ERROR(this->get_logger(), "Failed to write to serial port: %s", e.what());
-      }
-    }
-    else
+    if (!serial_port_.IsOpen())
     {
       RCLCPP_WARN(this->get_logger(), "Serial port is not open.");
+      return;
     }
+
+    std::string message = std::to_string(pos_) + "\n";
+    serial_port_ << message;
+    serial_port_.flush();
+    RCLCPP_INFO(this->get_logger(), "Sent to Arduino: '%s'", message.c_str());
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  serial::Serial serial_port_;
+  SerialStream serial_port_;
 };
 
 int main(int argc, char *argv[])
@@ -84,52 +80,3 @@ int main(int argc, char *argv[])
   rclcpp::shutdown();
   return 0;
 }
-
-// #include <chrono>
-// #include <functional>
-// #include <memory>
-
-// #include "rclcpp/rclcpp.hpp"
-// #include "std_msgs/msg/int32.hpp"
-// using std::placeholders::_1;
-
-// using namespace std::chrono_literals;
-
-// class GripperInterfaceNode : public rclcpp::Node
-// {
-// public:
-//   GripperInterfaceNode()
-//       : Node("gripper_interface_node"), pos_(0)
-//   {
-//     subscription_ = this->create_subscription<std_msgs::msg::Int32>(
-//         "/servo_node/gripper_pos",
-//         10,
-//         std::bind(&GripperInterfaceNode::gripper_pos_callback, this, _1));
-//     timer_ = this->create_wall_timer(
-//         200ms, std::bind(&GripperInterfaceNode::timer_callback, this));
-//   }
-
-//   int pos_;
-
-// private:
-//   void gripper_pos_callback(const std_msgs::msg::Int32::SharedPtr msg) const
-//   {
-//     // RCLCPP_INFO(this->get_logger(), std::to_string(msg->data).c_str());
-//     pos_ = msg->data;
-//   }
-//   rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr subscription_;
-
-//   void timer_callback()
-//   {
-//     RCLCPP_INFO(this->get_logger(), std::to_string(pos_).c_str());
-//   }
-//   rclcpp::TimerBase::SharedPtr timer_;
-// };
-
-// int main(int argc, char *argv[])
-// {
-//   rclcpp::init(argc, argv);
-//   rclcpp::spin(std::make_shared<GripperInterfaceNode>());
-//   rclcpp::shutdown();
-//   return 0;
-// } */
