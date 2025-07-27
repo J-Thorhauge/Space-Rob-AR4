@@ -36,7 +36,7 @@ Tested with ROS 2 Humble on Ubuntu 22.04.
   ```
 - Run the container:
   ```bash
-  docker run -it --user ros -v /dev:/dev --privileged gorm_test:latest
+  docker run -it --user ros --network=host --ipc=host -v /dev:/dev --privileged gorm_test:latest
   ```
 
 ## Manual Installation (Don't do this one)
