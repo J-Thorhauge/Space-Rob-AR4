@@ -15,11 +15,12 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
-   
+    run_gripper = LaunchConfiguration("run_gripper")
     urdf_folder = os.path.join(get_package_share_directory("gorm_arm"), "urdf")
     urdf = os.path.join(urdf_folder, "gorm_arm.urdf")
     robot_description_values = ParameterValue(Command(['xacro ', urdf]), value_type=str)
     robot_description = {'robot_description': robot_description_values}
+    
 
     joint_controllers_cfg = PathJoinSubstitution([
         FindPackageShare("gorm_arm"), 
@@ -60,18 +61,18 @@ def generate_launch_description():
         ],
     )
 
-    # gripper_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=[
-    #         "gripper_controller",
-    #         "-c",
-    #         "/controller_manager",
-    #         "--controller-manager-timeout",
-    #         "60",
-    #     ],
-    #     condition=IfCondition(include_gripper),
-    # )
+    gripper_controller = Node(
+        package="gorm_arm",
+        executable="gripper_interface_node",
+        # arguments=[
+        #     "gripper_controller",
+        #     "-c",
+        #     "/controller_manager",
+        #     "--controller-manager-timeout",
+        #     "60",
+        # ],
+        condition=IfCondition(run_gripper),
+    )
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -108,8 +109,8 @@ def generate_launch_description():
         ))
     ld.add_action(
         DeclareLaunchArgument(
-            "include_gripper",
-            default_value="False",
+            "run_gripper",
+            default_value="True",
             description="Run the servo gripper",
             choices=["True", "False"],
         ))
@@ -121,7 +122,7 @@ def generate_launch_description():
     #     ))
     ld.add_action(controller_manager_node)
     ld.add_action(spawn_joint_controller)
-    # ld.add_action(gripper_controller_spawner)
+    ld.add_action(gripper_controller)
     ld.add_action(robot_state_publisher_node)
     ld.add_action(joint_state_broadcaster)
     return ld
