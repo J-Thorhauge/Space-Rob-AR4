@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <thread>
 
-#define FW_VERSION "2.0.0"
+#define FW_VERSION "2.1.0"
 
 namespace gorm_arm_driver
 {
