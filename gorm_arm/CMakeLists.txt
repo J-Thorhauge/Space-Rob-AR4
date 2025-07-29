@@ -12,9 +12,9 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   rclcpp
   rclcpp_lifecycle
   std_msgs
-  sensor_msgs
-  cv_bridge
-  OpenCV
+  # sensor_msgs
+  # cv_bridge
+  # OpenCV
 )
 
 unset( CATKIN_INSTALL_INTO_PREFIX_ROOT )
@@ -76,8 +76,8 @@ add_executable(camera_interface_node src/camera_interface_node.cpp)
 
 target_link_libraries(
   camera_interface_node
-  sensor_msgs
-  cv_bridge
+  # sensor_msgs
+  # cv_bridge
   OpenCV
   gorm_arm
 )

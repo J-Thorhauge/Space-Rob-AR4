@@ -42,10 +42,24 @@ USER root
 RUN apt-get update \
   && apt-get install -y \
   libserial-dev \
-  sensor_msgs \
-  cv_bridge \
-  OpenCV \
+  libopencv-dev \
   && rm -rf /var/lib/apt/lists/*
+
+#   ros-jazzy-cv-bridge \
+# ros-jazzy-sensor-msgs \
+# ros-jazzy-image-transport \
+
+# RUN apt-get update \
+#   && apt-get install -y sensor_msgs \
+#   && rm -rf /var/lib/apt/lists/*
+
+# RUN apt-get update \
+#   && apt-get install -y cv_bridge \
+#   && rm -rf /var/lib/apt/lists/*
+
+# RUN apt-get update \
+#   && apt-get install -y opencv2\
+#   && rm -rf /var/lib/apt/lists/*
 
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build && source install/setup.bash"
 # RUN colcon build

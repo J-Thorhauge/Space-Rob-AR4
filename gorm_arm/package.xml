@@ -11,10 +11,10 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   
-  <depend>rclcpp</depend>
+  <!-- <depend>rclcpp</depend>
   <depend>sensor_msgs</depend>
   <depend>cv_bridge</depend>
-  <depend>OpenCV</depend>
+  <depend>OpenCV</depend> -->
 
   <!-- <exec_depend>annin_ar4_description</exec_depend> -->
   <exec_depend>gripper_controllers</exec_depend>
