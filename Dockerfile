@@ -24,7 +24,7 @@ RUN usermod -aG dialout ${USERNAME}
 
 # USER ros
 
-RUN git clone -b Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
+RUN git clone -b Docker-camera https://github.com/J-Thorhauge/Space-Rob-AR4.git
 
 RUN cd Space-Rob-AR4/
 
@@ -40,7 +40,11 @@ RUN rosdep install --from-paths . --ignore-src -r -y
 USER root
 
 RUN apt-get update \
-  && apt-get install -y libserial-dev \
+  && apt-get install -y \
+  libserial-dev \
+  sensor_msgs \
+  cv_bridge \
+  OpenCV \
   && rm -rf /var/lib/apt/lists/*
 
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build && source install/setup.bash"

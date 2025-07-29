@@ -12,6 +12,9 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   rclcpp
   rclcpp_lifecycle
   std_msgs
+  sensor_msgs
+  cv_bridge
+  OpenCV
 )
 
 unset( CATKIN_INSTALL_INTO_PREFIX_ROOT )
@@ -68,6 +71,21 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Add camera interface node
+add_executable(camera_interface_node src/camera_interface_node.cpp)
+
+target_link_libraries(
+  camera_interface_node
+  sensor_msgs
+  cv_bridge
+  OpenCV
+  gorm_arm
+)
+
+install(TARGETS
+  camera_interface_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 # Export hardware plugins
 pluginlib_export_plugin_description_file(hardware_interface hardware_interface_plugin.xml)
