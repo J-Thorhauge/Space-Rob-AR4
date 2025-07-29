@@ -1,0 +1,27 @@
+#pragma once
+
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/image.hpp>
+#include <sensor_msgs/msg/camera_info.hpp>
+#include <cv_bridge/cv_bridge.h>
+#include <image_transport/image_transport.hpp>
+#include <camera_info_manager/camera_info_manager.hpp>
+#include <opencv2/opencv.hpp>
+
+class GripperCamNode : public rclcpp::Node
+{
+public:
+  GripperCamNode();
+
+private:
+  void timer_callback();
+
+  rclcpp::TimerBase::SharedPtr timer_;
+  image_transport::Publisher image_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::CameraInfo>::SharedPtr camera_info_pub_;
+
+  std::shared_ptr<camera_info_manager::CameraInfoManager> camera_info_manager_;
+
+  cv::VideoCapture cap_;
+  cv_bridge::CvImage cv_image_;
+};

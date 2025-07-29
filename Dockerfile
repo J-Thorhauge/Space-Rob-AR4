@@ -40,7 +40,9 @@ RUN rosdep install --from-paths . --ignore-src -r -y
 USER root
 
 RUN apt-get update \
-  && apt-get install -y libserial-dev \
+  && apt-get install -y \
+  libserial-dev \
+  ros-humble-camera-info-manager \
   && rm -rf /var/lib/apt/lists/*
 
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build && source install/setup.bash"

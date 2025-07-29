@@ -22,6 +22,12 @@ foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
   find_package(${Dependency} REQUIRED)
 endforeach()
 
+find_package(OpenCV REQUIRED)
+find_package(image_transport REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(camera_info_manager REQUIRED)
+
+
 add_library(gorm_arm SHARED 
   src/gorm_arm_hardware_interface.cpp
   src/gorm_arm_gripper_hw_interface.cpp
@@ -67,6 +73,25 @@ install(TARGETS
   gripper_interface_node
   DESTINATION lib/${PROJECT_NAME}
 )
+
+# Add camera interface node
+add_executable(camera_interface_node src/camera_interface_node.cpp)
+ament_target_dependencies(camera_interface_node
+  rclcpp
+  sensor_msgs
+  image_transport
+  cv_bridge
+  camera_info_manager
+  OpenCV
+)
+target_link_libraries(
+  camera_interface_node
+  serial
+  gorm_arm
+)
+install(TARGETS camera_interface_node
+  DESTINATION lib/${PROJECT_NAME})
+
 
 
 # Export hardware plugins
