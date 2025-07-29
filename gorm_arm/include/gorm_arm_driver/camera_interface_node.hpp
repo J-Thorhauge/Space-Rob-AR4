@@ -8,10 +8,13 @@
 #include <camera_info_manager/camera_info_manager.hpp>
 #include <opencv2/opencv.hpp>
 
-class GripperCamNode : public rclcpp::Node
+class GripperCamNode : public rclcpp::Node //, public std::enable_shared_from_this<GripperCamNode>
+
 {
 public:
   GripperCamNode();
+
+  void init();
 
 private:
   void timer_callback();

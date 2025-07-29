@@ -3,8 +3,13 @@
 GripperCamNode::GripperCamNode()
     : Node("camera_interface_node")
 {
+  // Nothing goes here
+}
+
+void GripperCamNode::init()
+{
   // Initialize camera
-  cap_.open(0); // Open /dev/video0
+  cap_.open(2); // Open /dev/video0
   if (!cap_.isOpened())
   {
     RCLCPP_ERROR(this->get_logger(), "Failed to open camera.");
@@ -16,7 +21,7 @@ GripperCamNode::GripperCamNode()
   camera_info_manager_ = std::make_shared<camera_info_manager::CameraInfoManager>(
       this, "usb_cam", "package://gorm_arm/config/camera_calib.yaml");
 
-  image_transport::ImageTransport it(this);
+  image_transport::ImageTransport it(rclcpp::Node::shared_from_this());
   image_pub_ = it.advertise("gripper/camera/image_raw", 10);
   camera_info_pub_ = this->create_publisher<sensor_msgs::msg::CameraInfo>("gripper/camera/camera_info", 10);
 
@@ -49,4 +54,16 @@ void GripperCamNode::timer_callback()
   cam_info.header.stamp = stamp;
   cam_info.header.frame_id = "camera_frame";
   camera_info_pub_->publish(cam_info);
+}
+
+int main(int argc, char *argv[])
+{
+  rclcpp::init(argc, argv);
+
+  auto node = std::make_shared<GripperCamNode>();
+  node->init(); // safe: shared_from_this() now works
+
+  rclcpp::spin(node);
+  rclcpp::shutdown();
+  return 0;
 }
