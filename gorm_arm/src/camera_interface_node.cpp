@@ -8,20 +8,23 @@ GripperCamNode::GripperCamNode()
 
 void GripperCamNode::init()
 {
+  bool found_cam = false;
   // Initialize camera
-  for (int i; i < 3; i++)
+  for (int i = 0; i < 3; i++)
   {
     cap_.open(i); // Open /dev/video0
-    if (!cap_.isOpened())
+    if (cap_.isOpened())
     {
-      RCLCPP_ERROR(this->get_logger(), "Failed to open camera.");
-      rclcpp::shutdown();
-      return;
-    }
-    else
-    {
+      found_cam = true;
       break;
     }
+  }
+
+  if (!found_cam)
+  {
+    RCLCPP_ERROR(this->get_logger(), "Failed to open camera.");
+    rclcpp::shutdown();
+    return;
   }
 
   // Load camera calibration
