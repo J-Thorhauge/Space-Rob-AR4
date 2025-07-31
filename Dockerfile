@@ -24,7 +24,7 @@ RUN usermod -aG dialout ${USERNAME}
 
 # USER ros
 
-RUN git clone -b Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
+RUN git clone -b Docker-camera2 https://github.com/J-Thorhauge/Space-Rob-AR4.git
 
 RUN cd Space-Rob-AR4/
 
