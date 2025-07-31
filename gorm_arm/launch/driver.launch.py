@@ -16,6 +16,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     run_gripper = LaunchConfiguration("run_gripper")
+    run_camera = LaunchConfiguration("run_camera")
     urdf_folder = os.path.join(get_package_share_directory("gorm_arm"), "urdf")
     urdf = os.path.join(urdf_folder, "gorm_arm.urdf")
     robot_description_values = ParameterValue(Command(['xacro ', urdf]), value_type=str)
@@ -64,14 +65,13 @@ def generate_launch_description():
     gripper_controller = Node(
         package="gorm_arm",
         executable="gripper_interface_node",
-        # arguments=[
-        #     "gripper_controller",
-        #     "-c",
-        #     "/controller_manager",
-        #     "--controller-manager-timeout",
-        #     "60",
-        # ],
         condition=IfCondition(run_gripper),
+    )
+
+    camera_controller = Node(
+        package="gorm_arm",
+        executable="camera_interface_node",
+        condition=IfCondition(run_camera),
     )
 
     robot_state_publisher_node = Node(
@@ -114,15 +114,18 @@ def generate_launch_description():
             description="Run the servo gripper",
             choices=["True", "False"],
         ))
-    # ld.add_action(
-    #     DeclareLaunchArgument(
-    #         "arduino_serial_port",
-    #         default_value="/dev/ttyUSB0",
-    #         description="Serial port of the Arduino nano for the servo gripper",
-    #     ))
+    ld.add_action(
+        DeclareLaunchArgument(
+            "run_camera",
+            default_value="True",
+            description="Run the gripper camera",
+            choices=["True", "False"],
+        ))
+
     ld.add_action(controller_manager_node)
     ld.add_action(spawn_joint_controller)
     ld.add_action(gripper_controller)
+    ld.add_action(camera_controller)
     ld.add_action(robot_state_publisher_node)
     ld.add_action(joint_state_broadcaster)
     return ld
