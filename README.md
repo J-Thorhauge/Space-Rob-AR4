@@ -27,6 +27,8 @@ Tested with ROS 2 Humble on Ubuntu 22.04.
 
 ## Installation
 
+There will likely be issues, but just try to resolve them as they come.
+
 - Install [ROS 2 Humble](https://docs.ros.org/en/humble/Installation.html) for Ubuntu 22.04
 - Clone this repository:
   ```bash
@@ -70,9 +72,7 @@ rocker --ssh --x11 \
   ar4_ros_driver bash
 ``` -->
 
-## Usage
-
-### Simulated arm
+## Simulated arm
 
 A simulated arm with joystick control.
 To launch, run:
@@ -81,19 +81,35 @@ To launch, run:
 ros2 launch gorm_arm demo.launch.py
 ```
 
-### Real world arm
-To control the arm you have to launch three modules in sepperate terminals:
+## Real world arm
+To control the arm you have to launch two modules in sepperate terminals:
 
-#### 1. Arm hardware driver - `driver.launch.py`
-
-   - The hardware driver must always be run, in order to control the arm.
-   - For controlling the real-world arm, you will need to run the `annin_ar4_driver` module:
-
+### 1. Arm hardware driver - `driver.launch.py`
+The drivers should be launched on the Raspberry pi 5 onboard the rover.  
+Launchin the drivers initiates the homing sequence, so make sure you are ready!
+   - Connect to the rover's wifi, both `SpaceRobotics_Mobile` and `AAUSpaceRobotics_Base` should work.
+   - Connect to the Raspberry pi using:
+```bash
+ssh manipulator@192.168.10.219
+```
+Password: 'man'
+   - Run the docker container using:
+```bash
+cd Space-Rob-AR4/
+docker run -it --user ros --network=host --ipc=host -v /dev:/dev --privileged gorm_test:latest
+```
+   - Launch the drivers with:
 ```bash
 ros2 launch gorm_arm driver.launch.py
 ```
+or if not using the gripper or camera:
+```bash
+ros2 launch gorm_arm driver.launch.py run_gripper:=False run_camera:=False
+```
+   - The hardware driver must always be run, in order to control the arm.
 
-#### 2. Controller module - either `moveit.launch.py` or `servo.launch.py`
+### 2. Controller module - either `moveit.launch.py` or `servo.launch.py`
+The controller is launched on your machine, as one of two options:
 
    - `moveit.launch.py` launches Rviz with a simple MoveIt controller, to allow manual control by moving the tool frame.
    - Simple control is launched with:
@@ -102,14 +118,14 @@ ros2 launch gorm_arm driver.launch.py
 ros2 launch gorm_arm moveit.launch.py
 ```
 
-   - `servo.launch.py` launches Rviz with a MoveIt Servo controller, to allow manual control through a connected joystick.
+   - `servo.launch.py` launches Rviz with a MoveIt Servo controller, to allow manual control through a connected joystick. (Make sure the joystick is connected.)
    - Servo control is launched with:
 
 ```bash
 ros2 launch gorm_arm servo.launch.py
 ```
 
-#### 3. Gripper module - `gripper_interface_node` or `gripper_serial_adjusted.py`
+<!-- ### 3. Gripper module - `gripper_interface_node` or `gripper_serial_adjusted.py`
 
    - Enables the gripper interface node, which translates ros topic messages to serial commands for the gripper.
    - Allows control of the gripper via the throttle lever on the joystick
@@ -123,9 +139,9 @@ ros2 run gorm_arm gripper_interface_node
 
 ```bash
 python3 gorm_arm/Python_scripts/gripper_serial_adjusted.py --usb_port /dev/ttyACM1
-```
+``` -->
 
----
+<!-- ---
 
 ### TLDR;
 Run the following in three terminals
@@ -147,12 +163,12 @@ source install/setup.bash
 ros2 run gorm_arm gripper_interface_node
 ```
 The gripper controller is now enabled.
-
+ -->
 ---
 ### Disclaimer
 When running servo control, the motors of the manipulator become very hot over the course of a few minutes. For this reason, try to keep sessions below two or three minutes, before shutting down the servo node, to let the motors cool.
 
-Usb ports are set up for my own computer, so you may have to fiddle with the correct usb connections for a while. Start with getting the teensy to connect, then the joystick (this should auto connect), then the seeeduino.
+<!-- Usb ports are set up for my own computer, so you may have to fiddle with the correct usb connections for a while. Start with getting the teensy to connect, then the joystick (this should auto connect), then the seeeduino. -->
 
 Please direct any criticisms to Carsten at [chpn21@student.aau.dk]()
 
