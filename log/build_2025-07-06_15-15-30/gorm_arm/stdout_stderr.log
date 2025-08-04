@@ -1,8 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target gorm_arm[0m
-[ 71%] Built target gorm_arm
-[35m[1mConsolidate compiler generated dependencies of target run_arduino_nano[0m
-gmake[2]: *** No rule to make target 'CMakeFiles/gripper_interface_node.dir/build'.  Stop.
-gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/gripper_interface_node.dir/all] Error 2
-gmake[1]: *** Waiting for unfinished jobs....
-[100%] Built target run_arduino_nano
-gmake: *** [Makefile:146: all] Error 2

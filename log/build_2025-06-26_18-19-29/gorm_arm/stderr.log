@@ -1,8 +1,0 @@
-[01m[K/home/johnbuntu/ar4_ros_driver/gorm_arm/src/arduino_nano_driver.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kannin_ar4_driver/arduino_nano_driver.hpp: No such file or directory
-    1 | #include [01;31m[K"annin_ar4_driver/arduino_nano_driver.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/gorm_arm.dir/build.make:118: CMakeFiles/gorm_arm.dir/src/arduino_nano_driver.cpp.o] Error 1
-gmake[2]: *** Waiting for unfinished jobs....
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gorm_arm.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

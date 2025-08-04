@@ -296,57 +296,46 @@ namespace moveit_servo
       servo_start_client_->wait_for_service(std::chrono::seconds(1));
       servo_start_client_->async_send_request(std::make_shared<std_srvs::srv::Trigger::Request>());
 
-      // Load the collision scene asynchronously
-      collision_pub_thread_ = std::thread([this]()
-                                          {
-        rclcpp::sleep_for(std::chrono::seconds(3));
-        // Create collision object, in the way of servoing
-        moveit_msgs::msg::CollisionObject collision_object;
-        collision_object.header.frame_id = "world";
-        collision_object.id = "box";
+      // // Load the collision scene asynchronously
+      // collision_pub_thread_ = std::thread([this]() {
+      //   rclcpp::sleep_for(std::chrono::seconds(3));
+      //   // Create collision object, in the way of servoing
+      //   moveit_msgs::msg::CollisionObject collision_object;
+      //   collision_object.header.frame_id = "panda_link0";
+      //   collision_object.id = "box";
 
-        shape_msgs::msg::SolidPrimitive rover_body;
-        rover_body.type = rover_body.BOX;
-        rover_body.dimensions = { 0.45, 0.65, 0.21 };
+      //   shape_msgs::msg::SolidPrimitive table_1;
+      //   table_1.type = table_1.BOX;
+      //   table_1.dimensions = { 0.4, 0.6, 0.03 };
 
-        geometry_msgs::msg::Pose rover_body_pose;
-        rover_body_pose.position.x = 0.125;
-        rover_body_pose.position.y = 0.49;
-        rover_body_pose.position.z = 0.055;
+      //   geometry_msgs::msg::Pose table_1_pose;
+      //   table_1_pose.position.x = 0.6;
+      //   table_1_pose.position.y = 0.0;
+      //   table_1_pose.position.z = 0.4;
 
-        shape_msgs::msg::SolidPrimitive rover_wheel_l;
-        rover_wheel_l.type = rover_wheel_l.BOX;
-        rover_wheel_l.dimensions = { 0.23, 1.1, 0.47 };
+      //   shape_msgs::msg::SolidPrimitive table_2;
+      //   table_2.type = table_2.BOX;
+      //   table_2.dimensions = { 0.6, 0.4, 0.03 };
 
-        geometry_msgs::msg::Pose rover_wheel_l_pose;
-        rover_wheel_l_pose.position.x = -((0.45/2)-0.125+(0.23/2));
-        rover_wheel_l_pose.position.y = 0.49;
-        rover_wheel_l_pose.position.z = -(0.47/2) + (0.21/2 + 0.055);
+      //   geometry_msgs::msg::Pose table_2_pose;
+      //   table_2_pose.position.x = 0.0;
+      //   table_2_pose.position.y = 0.5;
+      //   table_2_pose.position.z = 0.25;
 
-        shape_msgs::msg::SolidPrimitive rover_wheel_r;
-        rover_wheel_r.type = rover_wheel_r.BOX;
-        rover_wheel_r.dimensions = { 0.23, 1.1, 0.47 };
+      //   collision_object.primitives.push_back(table_1);
+      //   collision_object.primitive_poses.push_back(table_1_pose);
+      //   collision_object.primitives.push_back(table_2);
+      //   collision_object.primitive_poses.push_back(table_2_pose);
+      //   collision_object.operation = collision_object.ADD;
 
-        geometry_msgs::msg::Pose rover_wheel_r_pose;
-        rover_wheel_r_pose.position.x = 0.45/2 + 0.125 + 0.23/2;
-        rover_wheel_r_pose.position.y = 0.49;
-        rover_wheel_r_pose.position.z = -(0.47/2) + (0.21/2 + 0.055);
+      //   moveit_msgs::msg::PlanningSceneWorld psw;
+      //   psw.collision_objects.push_back(collision_object);
 
-        collision_object.primitives.push_back(rover_body);
-        collision_object.primitive_poses.push_back(rover_body_pose);
-        collision_object.primitives.push_back(rover_wheel_l);
-        collision_object.primitive_poses.push_back(rover_wheel_l_pose);
-        collision_object.primitives.push_back(rover_wheel_r);
-        collision_object.primitive_poses.push_back(rover_wheel_r_pose);
-        collision_object.operation = collision_object.ADD;
-
-        moveit_msgs::msg::PlanningSceneWorld psw;
-        psw.collision_objects.push_back(collision_object);
-
-        auto ps = std::make_unique<moveit_msgs::msg::PlanningScene>();
-        ps->world = psw;
-        ps->is_diff = true;
-        collision_pub_->publish(std::move(ps)); });
+      //   auto ps = std::make_unique<moveit_msgs::msg::PlanningScene>();
+      //   ps->world = psw;
+      //   ps->is_diff = true;
+      //   collision_pub_->publish(std::move(ps));
+      // });
     }
 
     ~JoyToServoPub() override

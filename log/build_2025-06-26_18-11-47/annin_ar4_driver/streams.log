@@ -1,3 +1,0 @@
-[0.016s] Invoking command in '/home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver': CMAKE_PREFIX_PATH=/home/johnbuntu/ar4_ros_driver/install/annin_ar4_description:/home/johnbuntu/ar4_ros_driver/install/moveit_servo:/home/johnbuntu/ar4_ros_driver/install/gorm_arm:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_moveit_config:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_gazebo:/home/johnbuntu/ar4_ros_driver/install/annin_ar4_driver:/opt/ros/humble /usr/bin/cmake --build /home/johnbuntu/ar4_ros_driver/build/annin_ar4_driver -- -j8 -l8
-[0.113s] [ 71%] Built target annin_ar4_driver
-[0.153s] [100%] Built target run_arduino_nano

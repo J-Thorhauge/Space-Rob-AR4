@@ -1,5 +1,0 @@
-[31mCMake Error at CMakeLists.txt:44 (pluginlib_export_plugin_description_file):
-  Unknown CMake command "pluginlib_export_plugin_description_file".
-
-[0m
-gmake: *** [Makefile:226: cmake_check_build_system] Error 1
