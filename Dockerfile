@@ -22,6 +22,9 @@ RUN apt-get update \
 
 RUN usermod -aG dialout ${USERNAME}
 
+RUN groupadd -f video && usermod -aG video ros
+
+
 # USER ros
 
 RUN git clone -b Docker-camera2 https://github.com/J-Thorhauge/Space-Rob-AR4.git
@@ -43,6 +46,8 @@ RUN apt-get update \
   && apt-get install -y \
   libserial-dev \
   ros-humble-camera-info-manager \
+  v4l-utils \
+  ffmpeg \
   && rm -rf /var/lib/apt/lists/*
 
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build && source install/setup.bash"
