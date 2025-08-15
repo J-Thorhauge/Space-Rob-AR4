@@ -66,7 +66,7 @@ def generate_launch_description():
     gripper_controller = Node(
         package="gorm_arm",
         executable="gripper_interface_node",
-        arguments=[gripper],
+        arguments=[{'gripper':gripper}],
         condition=IfCondition(run_gripper),
     )
 

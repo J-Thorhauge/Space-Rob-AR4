@@ -23,6 +23,9 @@ public:
       serial_port_.SetStopBits(StopBits::STOP_BITS_1);
 
       std::string gripper_param = this->get_parameter("gripper").as_string();
+
+      RCLCPP_INFO(this->get_logger(), gripper_param.c_str());
+
       if (gripper_param == "none")
       {
         RCLCPP_ERROR(this->get_logger(), "No gripper chosen! (big, small).");
