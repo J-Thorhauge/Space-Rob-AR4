@@ -16,6 +16,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     run_gripper = LaunchConfiguration("run_gripper")
+    gripper = LaunchConfiguration("gripper")
     run_camera = LaunchConfiguration("run_camera")
     urdf_folder = os.path.join(get_package_share_directory("gorm_arm"), "urdf")
     urdf = os.path.join(urdf_folder, "gorm_arm.urdf")
@@ -65,6 +66,7 @@ def generate_launch_description():
     gripper_controller = Node(
         package="gorm_arm",
         executable="gripper_interface_node",
+        arguments=[gripper],
         condition=IfCondition(run_gripper),
     )
 
@@ -113,6 +115,13 @@ def generate_launch_description():
             default_value="True",
             description="Run the servo gripper",
             choices=["True", "False"],
+        ))
+    ld.add_action(
+        DeclareLaunchArgument(
+            "gripper",
+            default_value="none",
+            description="Which gripper to run gripper",
+            choices=["big", "small", "none"],
         ))
     ld.add_action(
         DeclareLaunchArgument(

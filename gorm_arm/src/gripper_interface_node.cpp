@@ -11,6 +11,7 @@ class GripperInterfaceNode : public rclcpp::Node
 public:
   GripperInterfaceNode() : Node("gripper_interface_node")
   {
+    this->declare_parameter("gripper", "none");
     // Initialize serial port
     try
     {
@@ -20,6 +21,16 @@ public:
       serial_port_.SetFlowControl(FlowControl::FLOW_CONTROL_NONE);
       serial_port_.SetParity(Parity::PARITY_NONE);
       serial_port_.SetStopBits(StopBits::STOP_BITS_1);
+
+      std::string gripper_param = this->get_parameter("gripper").as_string();
+      if (gripper_param == "none")
+      {
+        RCLCPP_ERROR(this->get_logger(), "No gripper chosen! (big, small).");
+        rclcpp::shutdown();
+        return;
+      }
+      serial_port_ << gripper_param;
+      serial_port_.flush();
     }
     catch (const OpenFailed &)
     {
@@ -35,7 +46,7 @@ public:
         std::chrono::milliseconds(200), std::bind(&GripperInterfaceNode::timer_callback, this));
   }
 
-  int pos_;
+  int pos_ = 60;
 
   ~GripperInterfaceNode()
   {
