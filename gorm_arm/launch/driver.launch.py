@@ -6,6 +6,7 @@ from launch_ros.parameter_descriptions import ParameterFile
 from launch_ros.parameter_descriptions import ParameterValue
 
 from launch import LaunchDescription
+from launch.actions import LogInfo
 from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
@@ -22,7 +23,7 @@ def generate_launch_description():
     urdf = os.path.join(urdf_folder, "gorm_arm.urdf")
     robot_description_values = ParameterValue(Command(['xacro ', urdf]), value_type=str)
     robot_description = {'robot_description': robot_description_values}
-    
+
 
     joint_controllers_cfg = PathJoinSubstitution([
         FindPackageShare("gorm_arm"), 
@@ -66,7 +67,7 @@ def generate_launch_description():
     gripper_controller = Node(
         package="gorm_arm",
         executable="gripper_interface_node",
-        arguments=[{'gripper':gripper}],
+        arguments=[{'gripper': gripper}],
         condition=IfCondition(run_gripper),
     )
 
@@ -119,7 +120,7 @@ def generate_launch_description():
     ld.add_action(
         DeclareLaunchArgument(
             "gripper",
-            default_value="none",
+            default_value="small",
             description="Which gripper to run gripper",
             choices=["big", "small", "none"],
         ))
@@ -137,4 +138,5 @@ def generate_launch_description():
     ld.add_action(camera_controller)
     ld.add_action(robot_state_publisher_node)
     ld.add_action(joint_state_broadcaster)
+    ld.add_action(LogInfo(msg=['Gripper value: ', gripper]))
     return ld
