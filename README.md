@@ -32,11 +32,15 @@ Tested with ROS 2 Humble on Ubuntu 22.04.
 - Build the image:
   ```bash
   cd Space-Rob-AR4/
-  docker build -t gorm_test .
+  docker build -t gorm_arm .
+  ```
+  If the image builds based on previous cashe, even though you have made changes, run the following to clear the builder cashe:
+  ```bash
+  docker builder prune --all
   ```
 - Run the container:
   ```bash
-  docker run -it --user ros --network=host --ipc=host -v /dev:/dev --privileged gorm_test:latest
+  docker run -it --user ros --network=host --ipc=host -v /dev:/dev --privileged gorm_arm:latest
   ```
 
 ## Manual Installation (Don't do this one)

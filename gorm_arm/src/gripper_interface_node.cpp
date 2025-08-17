@@ -21,19 +21,6 @@ public:
       serial_port_.SetFlowControl(FlowControl::FLOW_CONTROL_NONE);
       serial_port_.SetParity(Parity::PARITY_NONE);
       serial_port_.SetStopBits(StopBits::STOP_BITS_1);
-
-      std::string gripper_param = this->get_parameter("gripper").as_string();
-
-      RCLCPP_INFO(this->get_logger(), gripper_param.c_str());
-
-      if (gripper_param == "none")
-      {
-        RCLCPP_ERROR(this->get_logger(), "No gripper chosen! (big, small).");
-        rclcpp::shutdown();
-        return;
-      }
-      serial_port_ << gripper_param;
-      serial_port_.flush();
     }
     catch (const OpenFailed &)
     {
@@ -50,6 +37,7 @@ public:
   }
 
   int pos_ = 60;
+  bool first_run_ = true;
 
   ~GripperInterfaceNode()
   {
@@ -73,6 +61,22 @@ private:
     {
       RCLCPP_WARN(this->get_logger(), "Serial port is not open.");
       return;
+    }
+
+    if (first_run_)
+    {
+      std::string gripper_param = this->get_parameter("gripper").as_string();
+
+      RCLCPP_INFO(this->get_logger(), gripper_param.c_str());
+
+      if (gripper_param == "none")
+      {
+        RCLCPP_ERROR(this->get_logger(), "No gripper chosen! (big, small).");
+        rclcpp::shutdown();
+        return;
+      }
+      serial_port_ << gripper_param;
+      serial_port_.flush();
     }
 
     std::string message = std::to_string(pos_) + "\n";
