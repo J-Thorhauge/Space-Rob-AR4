@@ -35,6 +35,7 @@ public:
   }
 
   bool first_run_ = true;
+  int run_nr_ = 0;
 
   ~PHInterfaceNode()
   {
@@ -57,30 +58,41 @@ private:
 
     if (first_run_)
     {
-      serial_port_.Write("ph\n");
+      serial_port_.Write("ph");
       first_run_ = false;
     }
 
     std::string ph_data;
-    serial_port_.ReadLine(ph_data, '\n', 180);
-    // data.clear();
-    // while (1)
-    // {
-    //   char c;
-    //   serial_port_.ReadByte(c, 20); // timeout in milliseconds
-    //   if (c == '\n')
-    //   {
-    //     break;
-    //   }
-    //   else
-    //   {
-    //     data += c;
-    //   }
-    // }
-    // std::string
-    auto ph_msg = std::make_unique<std_msgs::msg::Float32>();
-    ph_msg->data = std::stof(ph_data);
-    ph_pub_->publish(std::move(ph_msg));
+    serial_port_.ReadLine(ph_data, '\n', 1000);
+    // RCLCPP_INFO(this->get_logger(), ph_data.c_str());
+
+    if (run_nr_ < 5)
+    {
+      run_nr_++;
+    }
+    else
+    {
+      // data.clear();
+      // while (1)
+      // {
+      //   char c;
+      //   serial_port_.ReadByte(c, 20); // timeout in milliseconds
+      //   if (c == '\n')
+      //   {
+      //     break;
+      //   }
+      //   else
+      //   {
+      //     data += c;
+      //   }
+      // }
+      // std::string
+      auto ph_msg = std::make_unique<std_msgs::msg::Float32>();
+
+      float dataF = std::stof(ph_data);
+      ph_msg->data = dataF;
+      ph_pub_->publish(std::move(ph_msg));
+    }
   }
   rclcpp::TimerBase::SharedPtr timer_;
   SerialPort serial_port_;
