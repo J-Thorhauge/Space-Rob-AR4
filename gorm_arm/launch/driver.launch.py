@@ -18,6 +18,7 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     run_gripper = LaunchConfiguration("run_gripper")
     gripper = LaunchConfiguration("gripper")
+    run_ph = LaunchConfiguration("run_ph")
     run_camera = LaunchConfiguration("run_camera")
     urdf_folder = os.path.join(get_package_share_directory("gorm_arm"), "urdf")
     urdf = os.path.join(urdf_folder, "gorm_arm.urdf")
@@ -71,6 +72,12 @@ def generate_launch_description():
         condition=IfCondition(run_gripper),
     )
 
+    ph_controller = Node(
+        package="gorm_arm",
+        executable="ph_interface_node",
+        condition=IfCondition(run_ph),
+    )
+
     camera_controller = Node(
         package="gorm_arm",
         executable="camera_interface_node",
@@ -120,9 +127,16 @@ def generate_launch_description():
     ld.add_action(
         DeclareLaunchArgument(
             "gripper",
-            default_value="small",
+            default_value="none",
             description="Which gripper to run gripper",
             choices=["big", "small", "none"],
+        ))
+    ld.add_action(
+        DeclareLaunchArgument(
+            "run_ph",
+            default_value="False",
+            description="Run the pH device",
+            choices=["True", "False"],
         ))
     ld.add_action(
         DeclareLaunchArgument(
@@ -135,6 +149,7 @@ def generate_launch_description():
     ld.add_action(controller_manager_node)
     ld.add_action(spawn_joint_controller)
     ld.add_action(gripper_controller)
+    ld.add_action(ph_controller)
     ld.add_action(camera_controller)
     ld.add_action(robot_state_publisher_node)
     ld.add_action(joint_state_broadcaster)

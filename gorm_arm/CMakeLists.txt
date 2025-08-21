@@ -74,6 +74,20 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Add pH device interface node
+add_executable(ph_interface_node src/ph_interface_node.cpp)
+
+target_link_libraries(
+  ph_interface_node
+  serial
+  gorm_arm
+)
+
+install(TARGETS
+  ph_interface_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 # Add camera interface node
 add_executable(camera_interface_node src/camera_interface_node.cpp)
 ament_target_dependencies(camera_interface_node
