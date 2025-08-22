@@ -16,7 +16,7 @@ public:
     try
     {
       serial_port_.Open("/dev/ttyACM0");
-      serial_port_.SetBaudRate(BaudRate::BAUD_9600);
+      serial_port_.SetBaudRate(BaudRate::BAUD_115200);
       serial_port_.SetCharacterSize(CharacterSize::CHAR_SIZE_8);
       serial_port_.SetFlowControl(FlowControl::FLOW_CONTROL_NONE);
       serial_port_.SetParity(Parity::PARITY_NONE);
