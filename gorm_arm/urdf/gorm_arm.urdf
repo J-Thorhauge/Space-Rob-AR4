@@ -225,7 +225,7 @@
     ar_model="gorm_arm"
     plugin_name="gorm_arm_driver/GormArmHardwareInterface"
     plugin="gorm_arm_driver/GormArmHardwareInterface"
-    serial_port="/dev/ttyACM0"
+    serial_port="/dev/ttyACM1"
     calibrate="True"
     robot_parameters_file="$(find gorm_arm)/config/robot_parameters.yaml"
     joint_offset_parameters_file="$(find gorm_arm)/config/joint_offsets.yaml"
@@ -234,7 +234,7 @@
     <hardware>
       <plugin>gorm_arm_driver/GormArmHardwareInterface</plugin>
       <param name="ar_model">gorm_arm</param>
-      <param name="serial_port">/dev/ttyACM0</param>
+      <param name="serial_port">/dev/ttyACM1</param>
       <param name="calibrate">True</param>
       <param name="robot_parameters_file">$(find gorm_arm)/config/robot_parameters.yaml</param>
       <param name="joint_offset_parameters_file">$(find gorm_arm)/config/joint_offsets.yaml</param>

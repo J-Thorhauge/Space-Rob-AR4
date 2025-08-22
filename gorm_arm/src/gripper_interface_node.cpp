@@ -15,7 +15,7 @@ public:
     // Initialize serial port
     try
     {
-      serial_port_.Open("/dev/ttyACM1");
+      serial_port_.Open("/dev/ttyACM0");
       serial_port_.SetBaudRate(BaudRate::BAUD_9600);
       serial_port_.SetCharacterSize(CharacterSize::CHAR_SIZE_8);
       serial_port_.SetFlowControl(FlowControl::FLOW_CONTROL_NONE);
