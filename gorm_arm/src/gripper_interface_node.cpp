@@ -77,12 +77,15 @@ private:
       }
       serial_port_ << gripper_param;
       serial_port_.flush();
+      first_run_ = false;
     }
-
-    std::string message = std::to_string(pos_) + "\n";
-    serial_port_ << message;
-    serial_port_.flush();
-    RCLCPP_INFO(this->get_logger(), "Sent to Arduino: '%s'", message.c_str());
+    else
+    {
+      std::string message = std::to_string(pos_) + "\n";
+      serial_port_ << message;
+      serial_port_.flush();
+    }
+    // RCLCPP_INFO(this->get_logger(), "Sent to Arduino: %s", message.c_str());
   }
   rclcpp::TimerBase::SharedPtr timer_;
   SerialStream serial_port_;

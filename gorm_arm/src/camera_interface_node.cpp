@@ -27,6 +27,9 @@ void GripperCamNode::init()
     return;
   }
 
+  cap_.set(cv::CAP_PROP_AUTO_EXPOSURE, 0.25);
+  cap_.set(cv::CAP_PROP_EXPOSURE, -6);
+
   // Load camera calibration
   camera_info_manager_ = std::make_shared<camera_info_manager::CameraInfoManager>(
       this, "usb_cam", "package://gorm_arm/config/camera_calib.yaml");

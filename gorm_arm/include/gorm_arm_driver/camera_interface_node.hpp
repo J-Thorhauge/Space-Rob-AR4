@@ -14,6 +14,14 @@ class GripperCamNode : public rclcpp::Node //, public std::enable_shared_from_th
 public:
   GripperCamNode();
 
+  ~GripperCamNode()
+  {
+    if (cap_.isOpened())
+    {
+      cap_.release();
+    }
+  }
+
   void init();
 
 private:
