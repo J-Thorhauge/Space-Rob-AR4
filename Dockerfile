@@ -58,6 +58,13 @@ RUN apt-get update \
   libboost-thread-dev \
   && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update \
+  && apt-get install -y \
+  ros-humble-controller-manager \
+  ros-humble-ros2-control \
+  ros-humble-ros2-controllers \
+  && rm -rf /var/lib/apt/lists/*
+
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build && source install/setup.bash"
 # RUN colcon build
 # RUN source install/setup.bash
