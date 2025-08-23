@@ -12,7 +12,7 @@ void GripperCamNode::init()
   // Initialize camera
   // for (int i = 0; i >= 0; i--)
   // {
-  cap_.open(1, cv::CAP_V4L2); // Open /dev/video0
+  cap_.open(0, cv::CAP_V4L2); // Open /dev/video0
   if (cap_.isOpened())
   {
     found_cam = true;
