@@ -61,7 +61,7 @@ def generate_launch_description():
             "-c",
             "/controller_manager",
             "--controller-manager-timeout",
-            "100",
+            "1000",
         ],
     )
 
@@ -99,7 +99,7 @@ def generate_launch_description():
             "-c",
             "/controller_manager",
             "--controller-manager-timeout",
-            "100",
+            "1000",
         ],
     )
 
@@ -148,10 +148,10 @@ def generate_launch_description():
 
     ld.add_action(controller_manager_node)
     ld.add_action(spawn_joint_controller)
+    ld.add_action(robot_state_publisher_node)
+    ld.add_action(joint_state_broadcaster)
     ld.add_action(gripper_controller)
     ld.add_action(ph_controller)
     ld.add_action(camera_controller)
-    ld.add_action(robot_state_publisher_node)
-    ld.add_action(joint_state_broadcaster)
     ld.add_action(LogInfo(msg=['Gripper value: ', gripper]))
     return ld

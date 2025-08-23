@@ -1,6 +1,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/int32.hpp>
 #include <libserial/SerialStream.h>
+#include <libserial/SerialPort.h>
 
 #include <chrono>
 
@@ -67,7 +68,7 @@ private:
     {
       std::string gripper_param = this->get_parameter("gripper").as_string();
 
-      RCLCPP_INFO(this->get_logger(), gripper_param.c_str());
+      // RCLCPP_INFO(this->get_logger(), gripper_param.c_str());
 
       if (gripper_param == "none")
       {
@@ -75,20 +76,25 @@ private:
         rclcpp::shutdown();
         return;
       }
-      serial_port_ << gripper_param;
-      serial_port_.flush();
+      gripper_param += "#";
+      serial_port_.Write(gripper_param);
+      // serial_port_ << gripper_param;
+      // serial_port_.flush();
       first_run_ = false;
+      RCLCPP_INFO(this->get_logger(), "Set gripper mode: %s", gripper_param.c_str());
     }
     else
     {
-      std::string message = std::to_string(pos_) + "\n";
-      serial_port_ << message;
-      serial_port_.flush();
+      std::string message = std::to_string(pos_); // + "\n";
+      message += "#";
+      serial_port_.Write(message);
+      // serial_port_ << message;
+      // serial_port_.flush();
+      // RCLCPP_INFO(this->get_logger(), "Sent to Arduino: %s", message.c_str());
     }
-    // RCLCPP_INFO(this->get_logger(), "Sent to Arduino: %s", message.c_str());
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  SerialStream serial_port_;
+  SerialPort serial_port_;
 };
 
 int main(int argc, char *argv[])

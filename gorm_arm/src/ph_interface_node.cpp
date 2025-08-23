@@ -15,7 +15,7 @@ public:
     // Initialize serial port
     try
     {
-      serial_port_.Open("/dev/ttyACM1");
+      serial_port_.Open("/dev/ttyACM0");
       serial_port_.SetBaudRate(BaudRate::BAUD_115200);
       serial_port_.SetCharacterSize(CharacterSize::CHAR_SIZE_8);
       serial_port_.SetFlowControl(FlowControl::FLOW_CONTROL_NONE);
@@ -58,7 +58,8 @@ private:
 
     if (first_run_)
     {
-      serial_port_.Write("ph");
+      std::string nano_mode = "ph#";
+      serial_port_.Write(nano_mode);
       first_run_ = false;
     }
 
