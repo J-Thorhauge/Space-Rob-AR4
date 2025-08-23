@@ -45,6 +45,7 @@ void GripperCamNode::init()
 
 void GripperCamNode::timer_callback()
 {
+  RCLCPP_INFO(this->get_logger(), "Timer triggered");
   cv::Mat frame;
   cap_ >> frame;
 
@@ -62,6 +63,7 @@ void GripperCamNode::timer_callback()
 
   auto image_msg = cv_image_.toImageMsg();
   image_pub_.publish(image_msg);
+  RCLCPP_INFO(this->get_logger(), "Captured frame: %dx%d", frame.cols, frame.rows);
 
   auto cam_info = camera_info_manager_->getCameraInfo();
   cam_info.header.stamp = stamp;
