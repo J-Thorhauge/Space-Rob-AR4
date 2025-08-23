@@ -10,15 +10,15 @@ void GripperCamNode::init()
 {
   bool found_cam = false;
   // Initialize camera
-  for (int i = 0; i < 3; i++)
+  // for (int i = 0; i >= 0; i--)
+  // {
+  cap_.open(0, cv::CAP_V4L2); // Open /dev/video0
+  if (cap_.isOpened())
   {
-    cap_.open(i); // Open /dev/video0
-    if (cap_.isOpened())
-    {
-      found_cam = true;
-      break;
-    }
+    found_cam = true;
+    break;
   }
+  // }
 
   if (!found_cam)
   {
@@ -27,8 +27,8 @@ void GripperCamNode::init()
     return;
   }
 
-  cap_.set(cv::CAP_PROP_AUTO_EXPOSURE, 0.25);
-  cap_.set(cv::CAP_PROP_EXPOSURE, -6);
+  // cap_.set(cv::CAP_PROP_AUTO_EXPOSURE, 0.25);
+  // cap_.set(cv::CAP_PROP_EXPOSURE, -6);
 
   // Load camera calibration
   camera_info_manager_ = std::make_shared<camera_info_manager::CameraInfoManager>(
