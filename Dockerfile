@@ -27,7 +27,7 @@ RUN groupadd -f video && usermod -aG video ros
 
 # USER ros
 
-RUN git clone -b Docker-usb-stuff https://github.com/J-Thorhauge/Space-Rob-AR4.git
+RUN git clone -b Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
 
 RUN cd Space-Rob-AR4/
 
