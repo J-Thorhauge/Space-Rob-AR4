@@ -3,10 +3,11 @@
 ROS 2 driver of the manipulator arm for GORMnnin Robotics.
 Tested with ROS 2 Humble on Ubuntu 22.04.
 
-**Features:**
+Written by Jonas Thorhauge, [jthorh21@student.aau.dk]()
 
+<!-- **Features:**
 - MoveIt control
-- Joystick control
+- Joystick control -->
 
 ## Overview
 
@@ -95,18 +96,20 @@ ssh manipulator@192.168.10.219
 Password: 'man'
    - Run the docker container using:
 ```bash
-cd Space-Rob-AR4/
 docker run -it --user ros --network=host --ipc=host -v /dev:/dev --privileged gorm_test:latest
 ```
    - Launch the drivers with:
 ```bash
+cd Space-Rob-AR4/
 ros2 launch gorm_arm driver.launch.py
 ```
-or if not using the gripper or camera:
-```bash
-ros2 launch gorm_arm driver.launch.py run_gripper:=False run_camera:=False
-```
-   - The hardware driver must always be run, in order to control the arm.
+Several arguments are available to modify the lanuch, based on what you have connected:
+   - `run_gripper:=True/False` (True by default)
+   - `gripper:=big/small/none` (none by default)
+   - `run_camera:=True/False` (True by default)
+   - `run_ph:=True/False` (False by default)
+
+The hardware driver must always be run, in order to control the arm.
 
 ### 2. Controller module - either `moveit.launch.py` or `servo.launch.py`
 The controller is launched on your machine, as one of two options:
@@ -125,45 +128,27 @@ ros2 launch gorm_arm moveit.launch.py
 ros2 launch gorm_arm servo.launch.py
 ```
 
-<!-- ### 3. Gripper module - `gripper_interface_node` or `gripper_serial_adjusted.py`
 
-   - Enables the gripper interface node, which translates ros topic messages to serial commands for the gripper.
-   - Allows control of the gripper via the throttle lever on the joystick
+## Other stuff
 
+### Rebuilding the docker image
+To rebuild the docker image on the Raspberry Pi, ssh to it and run:
 ```bash
-ros2 run gorm_arm gripper_interface_node
+cd Space-Rob-AR4/
+docker build -t gorm_arm .
+```
+If you don't want to build from cache add `--no-cache` to the build.
+### Setting the camera exposure manually
+The camera may be overexposed in some lighting scenarios, being unable to auto-adjust.
+In this case run the following command to turn off auto exposure:
+```bash
+v4l2-ctl -d /dev/video2 --set-ctrl=auto_exposure=1
+```
+And follow it with this command to manually set an exposure, from 1 to 5000, with 157 being default.
+```bash
+v4l2-ctl -d /dev/video2 --set-ctrl=exposure_time_absolute=157
 ```
 
-   - Alternatively, the serial controller gripper script can be used for manual, specific control of the gripper.
-   - To run the gripper serial interface find the port which the gripper is connected to an run:
-
-```bash
-python3 gorm_arm/Python_scripts/gripper_serial_adjusted.py --usb_port /dev/ttyACM1
-``` -->
-
-<!-- ---
-
-### TLDR;
-Run the following in three terminals
-```bash
-cd ~/ar_ros_driver
-source install/setup.bash
-ros2 launch gorm_arm driver.launch.py
-```
-Wait for the robot to complete the homing procedure...
-```bash
-cd ~/ar_ros_driver
-source install/setup.bash
-ros2 launch gorm_arm serial.launch.py
-```
-The joystick control is now enabled. (Alternatively, replace the last command with `moveit.launch.py` for moveit drag-and-drop control.)
-```bash
-cd ~/ar_ros_driver
-source install/setup.bash
-ros2 run gorm_arm gripper_interface_node
-```
-The gripper controller is now enabled.
- -->
 ---
 ### Disclaimer
 When running servo control, the motors of the manipulator become very hot over the course of a few minutes. For this reason, try to keep sessions below two or three minutes, before shutting down the servo node, to let the motors cool.
