@@ -50,6 +50,14 @@ RUN apt-get update \
   ffmpeg \
   && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update \
+  && apt-get install -y \
+  libboost-system-dev \
+  libboost-filesystem-dev \
+  libboost-program-options-dev \
+  libboost-thread-dev \
+  && rm -rf /var/lib/apt/lists/*
+
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build && source install/setup.bash"
 # RUN colcon build
 # RUN source install/setup.bash
