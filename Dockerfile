@@ -27,7 +27,7 @@ RUN groupadd -f video && usermod -aG video ros
 
 # USER ros
 
-RUN git clone -b Docker-camera-3-for-real https://github.com/J-Thorhauge/Space-Rob-AR4.git
+RUN git clone -b Docker-camera3-for-real https://github.com/J-Thorhauge/Space-Rob-AR4.git
 
 RUN cd Space-Rob-AR4/
 

@@ -16,7 +16,7 @@ void GripperCamNode::init()
   if (cap_.isOpened())
   {
     found_cam = true;
-    break;
+    // break;
   }
   // }
 
