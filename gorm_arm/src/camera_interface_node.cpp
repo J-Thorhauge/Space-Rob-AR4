@@ -12,7 +12,7 @@ void GripperCamNode::init()
   // Initialize camera
   // for (int i = 0; i >= 0; i--)
   // {
-  cap_.open(2); // Open /dev/video0
+  cap_.open(0); // Open /dev/video0
   if (cap_.isOpened())
   {
     // RCLCPP_INFO(this->get_logger(), "Delaying");
