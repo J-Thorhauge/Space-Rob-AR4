@@ -2,6 +2,7 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/image.hpp>
+#include <sensor_msgs/msg/compressed_image.hpp>
 #include <sensor_msgs/msg/camera_info.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <image_transport/image_transport.hpp>
@@ -30,6 +31,7 @@ private:
   rclcpp::TimerBase::SharedPtr timer_;
   image_transport::Publisher image_pub_;
   rclcpp::Publisher<sensor_msgs::msg::CameraInfo>::SharedPtr camera_info_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::CompressedImage>::SharedPtr compressed_pub_;
 
   std::shared_ptr<camera_info_manager::CameraInfoManager> camera_info_manager_;
 
