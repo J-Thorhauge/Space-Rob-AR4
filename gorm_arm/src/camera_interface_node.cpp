@@ -12,9 +12,18 @@ void GripperCamNode::init()
   // Initialize camera
   // for (int i = 0; i >= 0; i--)
   // {
-  cap_.open(0, cv::CAP_V4L2); // Open /dev/video0
+  cap_.open(2); // Open /dev/video0
   if (cap_.isOpened())
   {
+    // RCLCPP_INFO(this->get_logger(), "Delaying");
+    // std::this_thread::sleep_for(std::chrono::seconds(1));
+    // RCLCPP_INFO(this->get_logger(), "MJPG");
+    // cap_.set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'));
+    // RCLCPP_INFO(this->get_logger(), "Set frame");
+    // cap_.set(cv::CAP_PROP_FRAME_WIDTH, 640);
+    // cap_.set(cv::CAP_PROP_FRAME_HEIGHT, 480);
+    // RCLCPP_INFO(this->get_logger(), "Set framerate");
+    // cap_.set(cv::CAP_PROP_FPS, 15);
     found_cam = true;
     // break;
   }
@@ -45,7 +54,7 @@ void GripperCamNode::init()
 
 void GripperCamNode::timer_callback()
 {
-  RCLCPP_INFO(this->get_logger(), "Timer triggered");
+  // RCLCPP_INFO(this->get_logger(), "Timer triggered");
   cv::Mat frame;
   cap_ >> frame;
 
