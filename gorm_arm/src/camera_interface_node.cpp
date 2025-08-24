@@ -29,9 +29,9 @@ void GripperCamNode::init()
 
   // Publishers
   image_transport::ImageTransport it(rclcpp::Node::shared_from_this());
-  image_pub_ = it.advertise("gripper/camera/image_raw", 10);
+  // image_pub_ = it.advertise("gripper/camera/image_raw", 10);
 
-  camera_info_pub_ = this->create_publisher<sensor_msgs::msg::CameraInfo>("gripper/camera/camera_info", 10);
+  // camera_info_pub_ = this->create_publisher<sensor_msgs::msg::CameraInfo>("gripper/camera/camera_info", 10);
 
   // NEW: compressed publisher
   compressed_pub_ = this->create_publisher<sensor_msgs::msg::CompressedImage>(
@@ -62,8 +62,8 @@ void GripperCamNode::timer_callback()
   cv_image_.encoding = "bgr8";
   cv_image_.image = frame;
 
-  auto image_msg = cv_image_.toImageMsg();
-  image_pub_.publish(image_msg);
+  // auto image_msg = cv_image_.toImageMsg();
+  // image_pub_.publish(image_msg);
 
   // --- COMPRESSED IMAGE ---  (NEW)
   sensor_msgs::msg::CompressedImage compressed_msg;
@@ -79,13 +79,13 @@ void GripperCamNode::timer_callback()
 
   compressed_pub_->publish(compressed_msg);
 
-  RCLCPP_INFO(this->get_logger(), "Captured frame: %dx%d", frame.cols, frame.rows);
+  // RCLCPP_INFO(this->get_logger(), "Captured frame: %dx%d", frame.cols, frame.rows);
 
   // --- CAMERA INFO ---
-  auto cam_info = camera_info_manager_->getCameraInfo();
-  cam_info.header.stamp = stamp;
-  cam_info.header.frame_id = "camera_frame";
-  camera_info_pub_->publish(cam_info);
+  // auto cam_info = camera_info_manager_->getCameraInfo();
+  // cam_info.header.stamp = stamp;
+  // cam_info.header.frame_id = "camera_frame";
+  // camera_info_pub_->publish(cam_info);
 }
 
 int main(int argc, char *argv[])
