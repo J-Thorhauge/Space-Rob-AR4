@@ -1,30 +1,19 @@
 # Gorm Arm ROS Driver
 
-ROS 2 driver of the manipulator arm for GORMnnin Robotics.
-Tested with ROS 2 Humble on Ubuntu 22.04.
-
-**Features:**
-
-- MoveIt control
-- Joystick control
+ROS 2 driver of the manipulator arm for GORM.
+Runs in ROS 2 Humble on Ubuntu 22.04.
+Tested on Raspberry Pi 5, running Docker image on ubuntu 24.04
 
 ## Overview
 
 #### Launch files in *gorm_arm* :
-- **demo.launch.py**
-  - Joystick demo on a simulated manipulator in Rviz, to practice or show off the joystick control.
 - **driver.launch.py**
   - ROS interfaces for the arm, built on the ros2_control framework.
   - Manages joint offsets, limits and conversion between joint and actuator messages.
   - Handles communication with the microcontroller.
-- **moveit.launch.py**
-  - MoveIt module for motion planning.
-  - Controlling the arm through Rviz by moving the tool frame.
-- **servo.launch.py**
-  - Servoing control for the manipulator.
-  - Robot visualizing through Rviz.
 
 ## Docker installation
+Install the repository on the device that is connected to the Teensy 4.1 and Arduino Nano Every. Most likely a Raspberry Pi.
 - Clone this repository:
   ```bash
   git clone -b Docker https://github.com/J-Thorhauge/Space-Rob-AR4.git
@@ -32,18 +21,14 @@ Tested with ROS 2 Humble on Ubuntu 22.04.
 - Build the image:
   ```bash
   cd Space-Rob-AR4/
-  docker build -t gorm_arm .
-  ```
-  If the image builds based on previous cashe, even though you have made changes, run the following to clear the builder cashe:
-  ```bash
-  docker builder prune --all
+  docker build --no-cache -t gorm_arm .
   ```
 - Run the container:
   ```bash
   docker run -it --user ros --network=host --ipc=host -v /dev:/dev --privileged gorm_arm:latest
   ```
 
-## Manual Installation (Don't do this one)
+<!-- ## Manual Installation (Don't do this one, I haven't checked if it works in ages)
 
 - Install [ROS 2 Humble](https://docs.ros.org/en/humble/Installation.html) for Ubuntu 22.04
 - Clone this repository:
@@ -71,7 +56,7 @@ Tested with ROS 2 Humble on Ubuntu 22.04.
 ### Firmware Flashing
 
 The Teensy sketch provided in [gorm_arm_firmware](./gorm_arm_firmware/)
-should be installed on the Teensy 4.1 on the manipulator. 
+should be installed on the Teensy 4.1 on the manipulator.  -->
 
 <!-- ### [Optional] Running in Docker Container
 
@@ -90,60 +75,87 @@ rocker --ssh --x11 \
 
 ## Usage
 
-### Simulated arm
-
-A simulated arm with joystick control.
-To launch, run:
-
+   - Run the docker container using:
 ```bash
-ros2 launch gorm_arm demo.launch.py
+docker run -it --network=host --ipc=host -v /dev:/dev --privileged --device=/dev/video0 gorm_arm:latest
 ```
-
-### Real world arm
-To control the arm you have to launch three modules in sepperate terminals:
-
-#### 1. Arm hardware driver - `driver.launch.py`
-
-   - The hardware driver must always be run, in order to control the arm.
-   - For controlling the real-world arm, you will need to run the `annin_ar4_driver` module:
-
+   - Launch the drivers with:
 ```bash
 ros2 launch gorm_arm driver.launch.py
 ```
+Several arguments are available to modify the lanuch, based on what you have connected:
+   - `run_gripper:=True/False` (True by default)
+   - `gripper:=big/small/none` (none by default)
+   - `run_camera:=True/False` (True by default)
+   - `run_ph:=True/False` (False by default)
 
-#### 2. Controller module - either `moveit.launch.py` or `servo.launch.py`
+The hardware driver must always be run, in order to control the arm.
 
-   - `moveit.launch.py` launches Rviz with a simple MoveIt controller, to allow manual control by moving the tool frame.
-   - Simple control is launched with:
-
-```bash
-ros2 launch gorm_arm moveit.launch.py
-```
-
-   - `servo.launch.py` launches Rviz with a MoveIt Servo controller, to allow manual control through a connected joystick.
-   - Servo control is launched with:
+The camera feed can be viewed with:
 
 ```bash
-ros2 launch gorm_arm servo.launch.py
+ros2 run rqt_image_view rqt_image_view
 ```
 
-#### 3. Gripper module - `gripper_interface_node` or `gripper_serial_adjusted.py`
+Should you want to run only the camera, this can be done with:
+```bash
+ros2 run gorm_arm camera_interface_node
+```
 
-   - Enables the gripper interface node, which translates ros topic messages to serial commands for the gripper.
-   - Allows control of the gripper via the throttle lever on the joystick
+## Important notes
+
+### General checklist
+   - Make sure the manipulator is in a safe position before starting the homing sequence.
+   - Make sure the sample gripper is connected before turning on the power in order to tare the load cell properly
+   - Make sure belts are tightened.
+
+
+### Usefull debugging
+#### Setting the camera exposure manually
+The camera may be overexposed in some lighting scenarios, being unable to auto-adjust.
+In this case run the following command to turn off auto exposure:
+```bash
+v4l2-ctl -d /dev/video0 --set-ctrl=auto_exposure=1
+```
+And follow it with this command to manually set an exposure, from 1 to 5000, with 157 being default.
+```bash
+v4l2-ctl -d /dev/video0 --set-ctrl=exposure_time_absolute=5
+```
+#### Ssh connection
 
 ```bash
-ros2 run gorm_arm gripper_interface_node
+ssh manipulator@192.168.10.219
 ```
 
-   - Alternatively, the serial controller gripper script can be used for manual, specific control of the gripper.
-   - To run the gripper serial interface find the port which the gripper is connected to an run:
-
+#### Check device connections
+Usb ports are set up for my own computer, so you may have to fiddle with the correct usb connections for a while. The Nano should be on `/dev/ttyACM0`, and the Teensy should be on `/dev/ttyACM1`. Start with connecting the nano, then the Teensy, as this "should" give them the right adresses. The camera can be connected at any time.
 ```bash
-python3 gorm_arm/Python_scripts/gripper_serial_adjusted.py --usb_port /dev/ttyACM1
+ls /dev/ttyACM*
 ```
+We want to see `/dev/ttyACM0` and `/dev/ttyACM1`. 
+```bash
+ls /dev/video*
+```
+We want to see `/dev/video0`.
 
----
+### Frequently used commands
+#### Sampling task
+```bash
+ros2 launch gorm_arm driver.launch.py gripper:=big
+```
+#### Maintenance task
+```bash
+ros2 launch gorm_arm driver.launch.py gripper:=small
+```
+#### Science task
+```bash
+ros2 launch gorm_arm driver.launch.py run_gripper:=False run_ph:=True
+```
+#### Amputated limb
+```bash
+ros2 launch gorm_arm driver.launch.py run_camera:=False run_gripper:=False
+```
+<!-- ---
 
 ### TLDR;
 Run the following in three terminals
@@ -164,13 +176,11 @@ cd ~/ar_ros_driver
 source install/setup.bash
 ros2 run gorm_arm gripper_interface_node
 ```
-The gripper controller is now enabled.
+The gripper controller is now enabled. -->
 
 ---
 ### Disclaimer
 When running servo control, the motors of the manipulator become very hot over the course of a few minutes. For this reason, try to keep sessions below two or three minutes, before shutting down the servo node, to let the motors cool.
-
-Usb ports are set up for my own computer, so you may have to fiddle with the correct usb connections for a while. Start with getting the teensy to connect, then the joystick (this should auto connect), then the seeeduino.
 
 Please direct any criticisms to Carsten at [chpn21@student.aau.dk]()
 
