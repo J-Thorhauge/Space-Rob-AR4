@@ -316,7 +316,7 @@ namespace moveit_servo
 
         shape_msgs::msg::SolidPrimitive rover_wheel_l;
         rover_wheel_l.type = rover_wheel_l.BOX;
-        rover_wheel_l.dimensions = { 0.23, 1.1, 0.47 };
+        rover_wheel_l.dimensions = { 0.23, 0.97, 0.47 };
 
         geometry_msgs::msg::Pose rover_wheel_l_pose;
         rover_wheel_l_pose.position.x = -((0.45/2)-0.125+(0.23/2));
@@ -325,7 +325,7 @@ namespace moveit_servo
 
         shape_msgs::msg::SolidPrimitive rover_wheel_r;
         rover_wheel_r.type = rover_wheel_r.BOX;
-        rover_wheel_r.dimensions = { 0.23, 1.1, 0.47 };
+        rover_wheel_r.dimensions = { 0.23, 0.97, 0.47 };
 
         geometry_msgs::msg::Pose rover_wheel_r_pose;
         rover_wheel_r_pose.position.x = 0.45/2 + 0.125 + 0.23/2;
