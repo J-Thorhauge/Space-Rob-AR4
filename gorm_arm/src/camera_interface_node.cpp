@@ -39,7 +39,7 @@ void GripperCamNode::init()
 
   // Timer
   timer_ = this->create_wall_timer(
-      std::chrono::milliseconds(100), // 10 Hz
+      std::chrono::milliseconds(50), // 10 Hz
       std::bind(&GripperCamNode::timer_callback, this));
 }
 

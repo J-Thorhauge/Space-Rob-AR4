@@ -4,7 +4,7 @@
 namespace gorm_arm_driver
 {
 
-  std::string par_serial_port = "/dev/ttyACM1";
+  std::string par_serial_port = "/dev/serial/by-id/usb-Teensyduino_USB_Serial_14871200-if00";
   bool par_calibrate = true;
   // std::string par_calib = "0012345";
   // std::string par_calib = "3120345";
