@@ -29,9 +29,9 @@ void GripperCamNode::init()
 
   // Publishers
   image_transport::ImageTransport it(rclcpp::Node::shared_from_this());
-  // image_pub_ = it.advertise("gripper/camera/image_raw", 10);
+  image_pub_ = it.advertise("gripper/camera/raw", 10);
 
-  // camera_info_pub_ = this->create_publisher<sensor_msgs::msg::CameraInfo>("gripper/camera/camera_info", 10);
+  camera_info_pub_ = this->create_publisher<sensor_msgs::msg::CameraInfo>("gripper/camera/camera_info", 10);
 
   // NEW: compressed publisher
   compressed_pub_ = this->create_publisher<sensor_msgs::msg::CompressedImage>(
@@ -62,8 +62,8 @@ void GripperCamNode::timer_callback()
   cv_image_.encoding = "bgr8";
   cv_image_.image = frame;
 
-  // auto image_msg = cv_image_.toImageMsg();
-  // image_pub_.publish(image_msg);
+  auto image_msg = cv_image_.toImageMsg();
+  image_pub_.publish(image_msg);
 
   // --- COMPRESSED IMAGE ---  (NEW)
   sensor_msgs::msg::CompressedImage compressed_msg;
