@@ -9,7 +9,7 @@ GripperCamNode::GripperCamNode()
 void GripperCamNode::init()
 {
   bool found_cam = false;
-
+  std::this_thread::sleep_for(std::chrono::milliseconds(4000));
   cap_.open(0); // Open /dev/video0
   if (cap_.isOpened())
   {

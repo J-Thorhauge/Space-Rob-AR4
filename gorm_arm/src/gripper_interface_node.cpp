@@ -77,7 +77,16 @@ private:
         return;
       }
       gripper_param += "#";
-      serial_port_.Write(gripper_param);
+      std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+      try
+      {
+        serial_port_.Write(gripper_param);
+      }
+      catch (const std::runtime_error &e)
+      {
+        RCLCPP_ERROR(this->get_logger(), "Serial write failed: %s", e.what());
+      }
+      // serial_port_.Write(gripper_param);
       // serial_port_ << gripper_param;
       // serial_port_.flush();
       first_run_ = false;
@@ -87,7 +96,16 @@ private:
     {
       std::string message = std::to_string(pos_); // + "\n";
       message += "#";
-      serial_port_.Write(message);
+      try
+      {
+        serial_port_.Write(message);
+      }
+      catch (const std::runtime_error &e)
+      {
+        RCLCPP_ERROR(this->get_logger(), "Serial write failed: %s", e.what());
+      }
+
+      // serial_port_.Write(message);
       // serial_port_ << message;
       // serial_port_.flush();
       // RCLCPP_INFO(this->get_logger(), "Sent to Arduino: %s", message.c_str());
