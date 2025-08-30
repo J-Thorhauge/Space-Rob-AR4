@@ -4,7 +4,7 @@
 namespace gorm_arm_driver
 {
 
-  std::string par_serial_port = "/dev/ttyACM0";
+  std::string par_serial_port = "/dev/ttyACM1";
   bool par_calibrate = true;
   // std::string par_calib = "0012345";
   // std::string par_calib = "3120345";
