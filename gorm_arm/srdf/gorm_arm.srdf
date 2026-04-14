@@ -1,8 +1,11 @@
 <?xml version="1.0" ?>
-<!--This does not replace URDF, and is not an extension of URDF.
-    This is a format for representing semantic information about the robot structure.
-    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+<!--
+This does not replace URDF, and is not an extension of URDF.
+This is a format for representing semantic information about the robot structure.
+A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
 -->
+
+<!-- The first bit here is a bunch of preset joint configurations -->
 <robot name="gorm_arm">
   <group name="gorm_arm">
     <joint name="joint_1" />
@@ -87,7 +90,10 @@
   </group_state>
 
 
-
+<!-- 
+This disables all self collisions, but this is not ideal 
+and there is probably a better way to do this 
+-->
 
   <disable_collisions link1="base_link" link2="link_1"/>
   <disable_collisions link1="base_link" link2="link_2"/>

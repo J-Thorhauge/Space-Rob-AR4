@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="gorm_arm">
 
+  <!-- 
+  This is an unnecessarily complex robot description, 
+  it should ideally be split into several smaller xacro files. 
+  Also, we're probably not going to use the inertias. 
+  -->
+
   <link name="world" />
 
   <joint name="base_joint" type="fixed">
@@ -218,6 +224,10 @@
     <origin xyz="0 0 0.0" rpy="0 0 0" />
   </joint>
 
+<!-- 
+All of the ros2 control parameters are written twice, unnecessarily.
+Only one of these should be necessary, but I don't know which one.
+-->
 
   <ros2_control 
     name="gorm_arm" 

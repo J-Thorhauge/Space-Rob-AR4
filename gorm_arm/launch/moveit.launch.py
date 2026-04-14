@@ -68,19 +68,20 @@ def generate_launch_description():
             description="Model of AR4",
         ))
 
+    # Get the robot description from the xacro file
     urdf_folder = os.path.join(get_package_share_directory("gorm_arm"), "urdf")
     urdf = os.path.join(urdf_folder, "gorm_arm.urdf")
     robot_description_values = ParameterValue(Command(['xacro ', urdf]), value_type=str)
     robot_description = {'robot_description': robot_description_values}
 
-    # MoveIt Configuration
+    # Get the semantic description from the srdf file
     srdf_folder = os.path.join(get_package_share_directory("gorm_arm"), "srdf")
     srdf = os.path.join(srdf_folder, "gorm_arm.srdf")
     with open(srdf, 'r') as f:
         semantic_content_values = f.read()
     semantic_content = {'robot_description_semantic': semantic_content_values}
 
-
+    # Yoink the kinematics configuration from the yaml file
     robot_kinematics = {
         "robot_description_kinematics":
         load_yaml(
@@ -89,6 +90,7 @@ def generate_launch_description():
         )
     }
 
+    # Get the joint limits from a separate yaml file
     joint_limits = ParameterFile(
         PathJoinSubstitution([
             FindPackageShare("gorm_arm"),
@@ -102,6 +104,8 @@ def generate_launch_description():
                                    "config/ompl_planning.yaml")
     pilz_planning_yaml = load_yaml("gorm_arm",
                                    "config/pilz_planning.yaml")
+    
+    # We load both the ompl and the pilz planning pipelines, but we set the default to pilz
     planning_pipeline_config = {
         "default_planning_pipeline": "pilz",
         "planning_pipelines": ["ompl", "pilz"],
@@ -115,6 +119,7 @@ def generate_launch_description():
         "moveit_simple_controller_manager/MoveItSimpleControllerManager",
     }
 
+    # This file tells moveit which interfaces it can use for the arm, eg. what joints there are
     moveit_controllers = ParameterFile(
         PathJoinSubstitution([
             FindPackageShare("gorm_arm"),
@@ -123,6 +128,7 @@ def generate_launch_description():
         allow_substs=True,
     )
 
+    # Trajectory Execution Configuration
     trajectory_execution = {
         "moveit_manage_controllers": False,
         "trajectory_execution.allowed_execution_duration_scaling": 1.2,
@@ -130,6 +136,7 @@ def generate_launch_description():
         "trajectory_execution.allowed_start_tolerance": 0.01,
     }
 
+    # Planning Scene Monitor Configuration
     planning_scene_monitor_parameters = {
         "publish_planning_scene": True,
         "publish_geometry_updates": True,

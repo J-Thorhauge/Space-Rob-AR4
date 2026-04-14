@@ -16,31 +16,37 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
+    # Launch configuration variables
     run_gripper = LaunchConfiguration("run_gripper")
     gripper = LaunchConfiguration("gripper")
     run_ph = LaunchConfiguration("run_ph")
     run_camera = LaunchConfiguration("run_camera")
+
+    # Get the robot description from the xacro file
     urdf_folder = os.path.join(get_package_share_directory("gorm_arm"), "urdf")
     urdf = os.path.join(urdf_folder, "gorm_arm.urdf")
     robot_description_values = ParameterValue(Command(['xacro ', urdf]), value_type=str)
     robot_description = {'robot_description': robot_description_values}
 
-
+    # Get the controller configuration file
     joint_controllers_cfg = PathJoinSubstitution([
         FindPackageShare("gorm_arm"), 
         "config", 
         "controllers.yaml",
     ])
 
+    # This file is useless, it gets immediately overridden by the other config
     update_rate_config_file = PathJoinSubstitution([
         FindPackageShare("gorm_arm"),
         "config",
         "controller_update_rate.yaml",
     ])
 
+    # Also useless, just a partial controller config
     controllers_folder = os.path.join(get_package_share_directory("gorm_arm"), "config")
     ros2_controllers_path = os.path.join(controllers_folder, "ros2_controllers.yaml")
 
+    # Launch the controller manager node, which will load the robot description and the controllers
     controller_manager_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
@@ -49,10 +55,11 @@ def generate_launch_description():
             joint_controllers_cfg,
             # ros2_controllers_path
         ],
-        remappings=[('~/robot_description', 'robot_description')],
+        remappings=[('~/robot_description', 'robot_description')], #This remap should not be necessary
         output="screen",
     )
 
+    # Spawn the joint trajectory controller (Is this necessary or is it spawned by the previous launch?)
     spawn_joint_controller = Node(
         package="controller_manager",
         executable="spawner",
@@ -65,6 +72,7 @@ def generate_launch_description():
         ],
     )
 
+    # Gripper controller node (connects to the Teensy via usb to control the servo gripper)
     gripper_controller = Node(
         package="gorm_arm",
         executable="gripper_interface_node",
@@ -72,18 +80,23 @@ def generate_launch_description():
         condition=IfCondition(run_gripper),
     )
 
+    # pH controller node (connects to the pH device via usb and publishes the readings)
     ph_controller = Node(
         package="gorm_arm",
         executable="ph_interface_node",
         condition=IfCondition(run_ph),
     )
 
+    # Camera controller node (connects to the camera device via usb and publishes the frames)
     camera_controller = Node(
         package="gorm_arm",
         executable="camera_interface_node",
         condition=IfCondition(run_camera),
     )
 
+    # Robot state publisher node
+    # Not sure what the difference is between this and the joint state broadcaster but,
+    # I think this one publishes the robot state to tf and joint states
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -91,6 +104,9 @@ def generate_launch_description():
         parameters=[robot_description],
     )
 
+    # Joint state broadcaster node
+    # Again not sure what the difference is between this and the robot state publisher but,
+    # I think this one publishes the joint states to tf and /joint_states
     joint_state_broadcaster = Node(
         package="controller_manager",
         executable="spawner",
@@ -103,6 +119,7 @@ def generate_launch_description():
         ],
     )
 
+    # Add all nodes to the launch description
     ld = LaunchDescription()
     ld.add_action(
         DeclareLaunchArgument(
